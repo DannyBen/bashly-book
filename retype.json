@@ -2,10 +2,23 @@
   "input": "src",
   "output": "docs",
   "cname": "bashly.dannyb.co",
+
   "branding": {
-    "title": "Bashly",
+    "logo": "assets/logo.svg",
+    "logoDark": "assets/logo-dark.svg",
     "label": "v0.6.1"
   },
+
+  "meta": {
+    "title": " | Bashly - Bash CLI Framework"
+  },
+
+  "edit": {
+    "repo": "https://github.com/DannyBen/bashly-book/",
+    "base": "src",
+    "branch": "master"
+  },
+
   "links": [
     {
       "text": "GitHub",
