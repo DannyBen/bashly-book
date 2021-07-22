@@ -1,4 +1,5 @@
 ---
+icon: dot
 order: 100
 ---
 
