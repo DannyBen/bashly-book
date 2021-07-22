@@ -32,6 +32,13 @@
     }
   ],
   "footer": {
-    "copyright": "&copy; Copyright {{ year }}. All rights reserved."
+    "copyright": "&copy; Copyright {{ year }}. All rights reserved.",
+    "links": [
+      {
+        "text": "Site Source",
+        "link": "https://github.com/DannyBen/bashly-book",
+        "target": "blank"
+      }
+    ]
   }
 }
