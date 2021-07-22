@@ -1,0 +1,24 @@
+{
+  "input": "src",
+  "output": "docs",
+  "cname": "bashly.dannyb.co",
+  "branding": {
+    "title": "Bashly",
+    "label": "v0.6.1"
+  },
+  "links": [
+    {
+      "text": "GitHub",
+      "link": "https://github.com/DannyBen/bashly",
+      "target": "blank"
+    },
+    {
+      "text": "Issues",
+      "link": "https://github.com/DannyBen/bashly/issues",
+      "target": "blank"
+    }
+  ],
+  "footer": {
+    "copyright": "&copy; Copyright {{ year }}. All rights reserved."
+  }
+}
