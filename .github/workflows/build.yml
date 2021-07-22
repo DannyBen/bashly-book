@@ -3,7 +3,7 @@ name: Build and to GitHub Pages
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   publish:
