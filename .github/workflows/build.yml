@@ -1,0 +1,28 @@
+name: Build and to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  publish:
+    name: Publish to retype branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+
+      - name: Build site
+        uses: retypeapp/action-build@v1
+
+      - name: Publish to GitHub Pages
+        uses: retypeapp/action-github-pages@v1
+        with:
+          update-branch: true
