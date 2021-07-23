@@ -31,6 +31,13 @@
       "target": "blank"
     }
   ],
+
+  "integrations": {
+    "googleAnalytics": {
+      "id": "G-0MC7P9VV8W"
+    }
+  },
+
   "footer": {
     "copyright": "&copy; Copyright {{ year }}. All rights reserved.",
     "links": [
