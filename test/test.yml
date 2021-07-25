@@ -1,0 +1,33 @@
+# Test workflow
+# Cannot be used at the moment, since the target folder needs to be built
+
+name: Test
+on:
+  pull_request:
+  push: { branches: master }
+
+jobs:
+  test:
+    name: Run test suite
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with: 
+        ruby-version: '3.0'
+        bundler-cache: true
+
+    - name: Install linux dependencies
+      run: sudo apt install -y aspell aspell-en
+
+    - name: Start static site server
+      run: |
+        httpme docs > /dev/null 2>&1 &
+        sleep 3
+
+    - name: Run tests
+      run: bundle exec test/test.sh

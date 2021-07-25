@@ -13,6 +13,4 @@ For development purposes, you will need these:
 ### Optional
 
 - [opcode](https://github.com/DannyBen/opcode)
-- foreman - `gem install foreman`
-- filewatcher - `gem install filewatcher`
-- [httpme](https://github.com/DannyBen/httpme) - `gem install httpme`
+- All the ruby dependencies - `bundle install`

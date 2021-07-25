@@ -1,0 +1,67 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    colsole (0.7.2)
+    docopt (0.6.1)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
+    ffi (1.15.3)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
+    filewatcher (1.1.1)
+      optimist (~> 3.0)
+    foreman (0.87.2)
+    http (5.0.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.2)
+      llhttp-ffi (~> 0.3.0)
+    http-cookie (1.0.4)
+      domain_name (~> 0.5)
+    http-form_data (2.3.0)
+    httpme (0.1.4)
+      colsole (~> 0.7)
+      mister_bin (~> 0.7)
+      puma (~> 5.1)
+      rack (~> 2.2)
+    llhttp-ffi (0.3.1)
+      ffi-compiler (~> 1.0)
+      rake (~> 13.0)
+    mister_bin (0.7.1)
+      colsole (~> 0.5)
+      docopt (~> 0.6)
+    nio4r (2.5.7)
+    nokogiri (1.11.7-x86_64-linux)
+      racc (~> 1.4)
+    optimist (3.0.1)
+    public_suffix (4.0.6)
+    puma (5.3.2)
+      nio4r (~> 2.0)
+    racc (1.5.2)
+    rack (2.2.3)
+    rake (13.0.6)
+    sla (0.3.4)
+      colsole (~> 0.7, >= 0.7.1)
+      mister_bin (~> 0.7)
+      nokogiri (~> 1.10)
+      webcache (~> 0.7)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.7)
+    webcache (0.8.0)
+      http (~> 5.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  filewatcher
+  foreman
+  httpme
+  sla
+
+BUNDLED WITH
+   2.2.16
