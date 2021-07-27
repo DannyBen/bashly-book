@@ -7,14 +7,17 @@ order: 70
 
 If an environment variable is defined as required (false by default), the execution of the script will be halted with a friendly error if it is not set.
 
+In addition, you can specify a default value for the environment variable, which will be used in case the user has not defined it in their environment.
+
 ==- :icon-code-review: Example
 ```yaml bashly.yml
 environment_variables:
   - name: config_path
+    help: Location of the config file
+    default: ~/config.ini
+  - name: api_key
+    help: Your API key
     required: true
-    help: |-
-      Location of the config file.
-      Default: ~/config.ini
 ```
 ===
 
@@ -36,4 +39,8 @@ The message to display when using `--help`. Can have multiple lines.
 Specify if this variable is required.
 ===
 
+## `default`
 
+=== `default: string`
+The value to use in case it is not provided by the user. Implies that this environment variable is optional.
+===
