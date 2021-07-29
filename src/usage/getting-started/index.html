@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MC7P9VV8W"></script>
-    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-0MC7P9VV8W');</script>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>Extensible Scripts | Bashly - Bash CLI Framework</title>
-    <meta name="title" content="Extensible Scripts | Bashly - Bash CLI Framework">
-    <meta name="description" content="You may configure your generated bash script to delegate any unknown command to an external executable, by setting the" />
+    <title>Getting Started</title>
+    <meta name="title" content="Getting Started">
+    <meta name="description" content="Everything in bashly originates from a single configuration file, named bashly.yml." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bashly.dannyb.co/advanced/extensible-scripts/">
-    <meta property="og:title" content="Extensible Scripts | Bashly - Bash CLI Framework">
-    <meta property="og:description" content="You may configure your generated bash script to delegate any unknown command to an external executable, by setting the">
+    <meta property="og:url" content="/src/usage/getting-started/">
+    <meta property="og:title" content="Getting Started">
+    <meta property="og:description" content="Everything in bashly originates from a single configuration file, named bashly.yml.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://bashly.dannyb.co/advanced/extensible-scripts/">
-    <meta property="twitter:title" content="Extensible Scripts | Bashly - Bash CLI Framework">
-    <meta property="twitter:description" content="You may configure your generated bash script to delegate any unknown command to an external executable, by setting the">
+    <meta property="twitter:url" content="/src/usage/getting-started/">
+    <meta property="twitter:title" content="Getting Started">
+    <meta property="twitter:description" content="Everything in bashly originates from a single configuration file, named bashly.yml.">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -47,11 +44,8 @@
         <div class="flex items-center justify-between h-full py-2 md:w-75">
             <div class="flex items-center px-2 md:px-6">
                 <a id="docs-site-logo" href="/" class="flex items-center leading-snug text-2xl">
-                    <span class="flex-grow-0 flex-shrink-0 overflow-hidden">
-                        <img class="max-h-10 dark:hidden md:inline-block" src="/assets/logo.svg">
-                        <img class="max-h-10 hidden dark:inline-block" src="/assets/logo-dark.svg">
-                    </span>
-                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.6.2</span>
+                    <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Project Name</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
             </div>
 
             <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -62,10 +56,7 @@
             <nav class="hidden md:flex">
     <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
         <li class="md:mr-6">
-            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://github.com/DannyBen/bashly" target="_blank">GitHub</a>
-        </li>
-        <li class="md:mr-6">
-            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://github.com/DannyBen/bashly/issues" target="_blank">Issues</a>
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://retype.com/guides/getting-started/">Getting Started</a>
         </li>
     </ul>
 </nav>
@@ -152,10 +143,7 @@
                 <nav>
                     <ul class="flex flex-wrap justify-center items-center">
                         <li class="mr-6">
-                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/DannyBen/bashly">GitHub</a>
-                        </li>
-                        <li class="mr-6">
-                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/DannyBen/bashly/issues">Issues</a>
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://retype.com/guides/getting-started/">Getting Started</a>
                         </li>
                     </ul>
                 </nav>
@@ -186,76 +174,37 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="extensible-scripts" class="break-words">
+<doc-anchor-target id="getting-started" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#extensible-scripts">#</doc-anchor-trigger>
-        <span>Extensible Scripts</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#getting-started">#</doc-anchor-trigger>
+        <span>Getting Started</span>
     </h1>
 </doc-anchor-target>
-<p>You may configure your generated bash script to delegate any unknown command to an external executable, by setting the <code v-pre>extensible</code> option to either <code v-pre>true</code>, or to a different external command.</p>
-<p>This is similar to how <code v-pre>git</code> works. When you execute <code v-pre>git whatever</code>, the <code v-pre>git</code> command will look for a file named <code v-pre>git-whatever</code> in the path, and execute it.</p>
-<p>Note that this option cannot be specified together with the <code v-pre>default</code> option, since both specify a handler for unknown commands.</p>
-<p>The <code v-pre>extensible</code> option supports two operation modes:</p>
-<doc-anchor-target id="extension-mode">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#extension-mode">#</doc-anchor-trigger>
-        <span>Extension Mode</span>
-    </h2>
-</doc-anchor-target>
-<p><code v-pre>extensible: true</code></p>
-<p>By setting <code v-pre>extensible</code> to <code v-pre>true</code>, a specially named executable will be called when an unknown command is called by the user.</p>
-<p>Given this configuration:</p>
+<p>Everything in bashly originates from a single configuration file, named <code v-pre>bashly.yml</code>.</p>
+<p>This configuration file can be set up to generate two types of scripts:</p>
+<ol>
+<li>Script with commands (for example, like <code v-pre>docker</code> or <code v-pre>git</code>).</li>
+<li>Script without commands (for example, like <code v-pre>ls</code>)</li>
+</ol>
+<p>This is detected automatically by the contents of the configuration: If it contains a <code v-pre>commands</code> definition, it will generate a script with commands.</p>
+<p>In an empty directory, create a sample configuration file by running any of these commands:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">bashly.yml</div>
-<pre class="language-yaml"><code v-pre class="language-yaml">name: myscript
-help: Example
-version: 0.1.0
-extensible: true
+<pre class="language-bash"><code v-pre class="language-bash">$ bashly init
 
-commands:
-- name: upload
-  help: Upload a file</code></pre>
+# or, to generate a simpler configuration:
+$ bashly init --minimal</code></pre>
 </doc-codeblock></div>
-<p>And this user command:</p>
+<p>This will create a sample <code v-pre>src/bashly.yml</code> file. You can edit this file to specify which arguments, flags and commands you need in your bash script.</p>
+<p>Then, generate an initial bash script and function placeholder scripts by running:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">$ myscript something
-</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">$ bashly generate</code></pre>
 </doc-codeblock></div>
-<p>The generated script will look for an executable named <code v-pre>myscript-something</code> in the path. If found, it will be called.</p>
-<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/extensible#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
-    <span>Extensible Extension Example</span>
-</a></p>
-<doc-anchor-target id="delegate-mode">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#delegate-mode">#</doc-anchor-trigger>
-        <span>Delegate Mode</span>
-    </h2>
-</doc-anchor-target>
-<p><code v-pre>extensible: &lt;executable name&gt;</code></p>
-<p>By setting <code v-pre>extensible</code> to any string, unknown command calls by the user will be delegated to the executable with that name.</p>
-<p>Given this configuration:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">bashly.yml</div>
-<pre class="language-yaml"><code v-pre class="language-yaml">name: mygit
-help: Example
-version: 0.1.0
-extensible: git
-
-commands:
-- name: push
-  help: Push to my repository</code></pre>
-</doc-codeblock></div>
-<p>And this user command:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">$ mygit status
-</code></pre>
-</doc-codeblock></div>
-<p>The generated script will execute <code v-pre>git status</code>.</p>
-<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/extensible-delegate#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
-    <span>Extensible Delegate Example</span>
-</a></p>
+<p>This will:</p>
+<ol>
+<li>Create the bash executable script.</li>
+<li>Create files for you to edit in the <code v-pre>src</code> folder.</li>
+</ol>
+<p>Finally, edit the files in the <code v-pre>src</code> folder. Each of your script&#x27;s commands get their own file. Once you edit, run <code v-pre>bashly generate</code> again to merge the content from your functions back into the script.</p>
 
 
 
@@ -264,27 +213,26 @@ commands:
                 <doc-toolbar-member-filter-no-results />
             </div>
 
-            <div class="flex flex-wrap items-center justify-between mt-14">
-    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/DannyBen/bashly-book/blob/master/src/advanced/extensible-scripts.md" target="_blank" rel="noopener">
-        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-        <span>Edit this page</span>
-    </a>
-
-    <!--<p class="my-2.5 text-gray-500 dark:text-dark-350 text-sm">Last updated on <strong>2021-03-14</strong> by <strong>Geoffrey McGill</strong></p>-->
-</div>
-
+            
 <nav class="flex mt-14">
     <div class="w-1/2">
-        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/advanced/bash-completion/">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/src/installation/">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
             <span>
                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                <span class="block mt-1">Bash Completion</span>
+                <span class="block mt-1">Installation</span>
             </span>
         </a>
     </div>
 
     <div class="w-1/2">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/src/usage/writing-your-scripts/">
+            <span>
+                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                <span class="block mt-1">Writing Your Scripts</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        </a>
     </div>
 </nav>
 
@@ -295,9 +243,6 @@ commands:
             <footer class="flex flex-wrap items-center justify-between">
     <div>
         <ul class="flex flex-wrap items-center text-sm">
-    <li>
-        <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://github.com/DannyBen/bashly-book" target="_blank">Site Source</a>
-    </li>
 </ul>
 
     </div>
@@ -332,6 +277,6 @@ commands:
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Extensible Scripts", icon: "file", hasPrism: true, hasMermaid: false }</script>
+        <script>window.__DOCS__ = { "title": "Getting Started", icon: "file", hasPrism: true, hasMermaid: false }</script>
     </body>
 </html>
