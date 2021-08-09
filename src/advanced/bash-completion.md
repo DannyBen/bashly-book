@@ -11,7 +11,7 @@ By running any of the `bashly add comp` commands, you can add this functionality
 
 
 ==- `bashly add comp script`
-Creates a standalone completion script that can be sourced or copies to the system's bash completions directory.
+Creates a standalone completion script that can be sourced or copied to the system's bash completions directory.
 
 ==- `bashly add comp function`
 Creates a function in your `./src/lib` directory that echoes a completion script. You can then call this function from any command (for example `yourcli completions`) and your users will be able to install the completions by running `eval "$(yourcli completions)"`.
@@ -39,9 +39,10 @@ commands:
 - Anything between `<...>` will be added using the `compgen -A action` flag.
 - Anything else, will be appended to the `compgen -W` flag.
 
-For more information about these custom completions, see the documentation for the [completely][completely] gem.
+For more information about these custom completions, see the [documentation for the completely][completely-docs] gem.
 
 
 
 [completely]: https://github.com/DannyBen/completely
+[completely-docs]: https://github.com/DannyBen/completely#suggesting-files-directories-and-other-bash-built-ins
 [compgen]: https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion-Builtins.html
