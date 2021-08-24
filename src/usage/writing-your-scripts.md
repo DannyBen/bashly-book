@@ -85,3 +85,8 @@ To get a starting point, you can run the convenience command:
 ```shell
 $ bashly add lib
 ```
+
+## Initialization function
+
+Any code within the `src/initialize.sh` file will be called before anything else
+in your generated bash script. 
