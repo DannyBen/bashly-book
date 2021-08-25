@@ -24,6 +24,8 @@ yaml_load "settings.yml" "config_"   # use prefix
 eval $(yaml_load "settings.yml")     # create variables in scope
 ````
 
+[!button variant="primary" icon="code-review" text="YAML Example"](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme)
+
 ## INI handler
 
 Adds the ability to create, read and write INI files.
@@ -67,6 +69,8 @@ if config_has_key "key" ; then
 fi
 ```
 
+[!button variant="primary" icon="code-review" text="Config Example"](https://github.com/DannyBen/bashly/tree/master/examples/config-ini#readme)
+
 ## Color output
 
 Adds functions for printing colored strings.
@@ -83,3 +87,5 @@ echo "before $(green_bold this is green_bold) after"
 ```
 
 See the generated script in `src/lib/colors.sh` for the full list of colors.
+
+[!button variant="primary" icon="code-review" text="Colors Example"](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme)

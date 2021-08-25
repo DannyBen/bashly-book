@@ -41,6 +41,8 @@ commands:
 
 For more information about these custom completions, see the [documentation for the completely][completely-docs] gem.
 
+[!button variant="primary" icon="code-review" text="Bash Completions Example"](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme)
+
 
 
 [completely]: https://github.com/DannyBen/completely
