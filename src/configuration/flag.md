@@ -5,7 +5,11 @@ order: 80
 
 # Flag
 
-The flag's value will be available to you as `${args[--output]}` in your bash function (regardless of whether the user provided it with the long or short form).
+Specify flags (required or optional) used by your script.
+
+The flag's value will be available to you as `${args[--output]}` in your bash
+function (regardless of whether the user provided it with the long or short
+form).
 
 ==- :icon-code-review: Example
 ```yaml bashly.yml
@@ -18,7 +22,7 @@ flags:
     short: -u
     arg: name
     help: Repository user name.
-    require: true
+    required: true
 ```
 ===
 

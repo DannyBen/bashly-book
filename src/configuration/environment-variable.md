@@ -5,9 +5,13 @@ order: 70
 
 # Environment Variable
 
-If an environment variable is defined as required (false by default), the execution of the script will be halted with a friendly error if it is not set.
+Specify environment variables (required or optional) used by your script.
 
-In addition, you can specify a default value for the environment variable, which will be used in case the user has not defined it in their environment.
+If an environment variable is defined as required (false by default), the
+execution of the script will be halted with a friendly error if it is not set.
+
+In addition, you can specify a default value for the environment variable, which
+will be used in case the user has not defined it in their environment.
 
 ==- :icon-code-review: Example
 ```yaml bashly.yml

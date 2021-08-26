@@ -5,15 +5,15 @@ order: 90
 
 # Argument
 
-Specify positional arguments required by your script.
+Specify positional arguments (required or optional) used by your script.
 
-The argument's value will be available to you as `${args[name]}` in your bash function.
+The argument's value will be available to you as `${args[name]}` in your bash
+function.
 
 ==- :icon-code-review: Example
 ```yaml bashly.yml
 args:
   - name: user
-    short: u
     help: AWS Username.
 
   - name: role
