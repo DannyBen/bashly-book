@@ -29,9 +29,9 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.8.2.683293372658" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.8.2.683299943839" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.8.2.683293372658" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.2.683299943839" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.8.2" defer data-turbo-track="reload"></script>
 </head>
     <body>
@@ -202,6 +202,22 @@
     <figcaption class="caption">Bashly Demo</figcaption>
 </figure>
 </p>
+<doc-anchor-target id="how-it-works">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-it-works">#</doc-anchor-trigger>
+        <span>How it works</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li>You provide a YAML configuration file, describing commands, sub-commands,
+arguments, and flags. Running <code v-pre>bashly init</code> creates an initial sample YAML
+file for you (<a href="https://github.com/DannyBen/bashly/tree/master/examples/minimal#bashlyyml">example</a>).</li>
+<li>Bashly then automatically generates a bash script (when you run
+<code v-pre>bashly generate</code>) that can parse and validate user input, provide help
+messages, and run your code for each command (<a href="https://github.com/DannyBen/bashly/blob/master/examples/minimal/download">example</a>).</li>
+<li>Your code for each command is kept in a separate file, and can be merged
+again if you change it (<a href="https://github.com/DannyBen/bashly/blob/master/examples/minimal/src/root_command.sh">example</a>).</li>
+</ol>
 <doc-anchor-target id="features">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
