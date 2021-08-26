@@ -13,7 +13,7 @@ Note that this option cannot be specified together with the `default` option, si
 
 The `extensible` option supports two operation modes:
 
-## Extension Mode
+## Extension mode
 
 `extensible: true`
 
@@ -43,7 +43,7 @@ The generated script will look for an executable named `myscript-something` in t
 
 [!button variant="primary" icon="code-review" text="Extensible Extension Example"](https://github.com/DannyBen/bashly/tree/master/examples/extensible#readme)
 
-## Delegate Mode
+## Delegate mode
 
 `extensible: <executable name>`
 

@@ -10,7 +10,7 @@ The examples folder contains many detailed and documented example configuration 
 [!button variant="primary" icon="code-review" text="Open Examples"](https://github.com/DannyBen/bashly/tree/master/examples#readme)
 
 
-## Real World Examples
+## Real world examples
 
 These tools were developed using bashly. You can review their code to learn more about using bashly.
 

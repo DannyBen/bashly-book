@@ -12,6 +12,17 @@ The design intention is to let you focus on your specific code, without worrying
 
 [![Bashly Demo](/assets/cast.svg)](/demo/)
 
+## How it works
+
+1. You provide a YAML configuration file, describing commands, sub-commands,
+   arguments, and flags. Running `bashly init` creates an initial sample YAML
+   file for you ([example](https://github.com/DannyBen/bashly/tree/master/examples/minimal#bashlyyml)).
+2. Bashly then automatically generates a bash script (when you run
+   `bashly generate`) that can parse and validate user input, provide help
+   messages, and run your code for each command ([example](https://github.com/DannyBen/bashly/blob/master/examples/minimal/download)).
+3. Your code for each command is kept in a separate file, and can be merged
+   again if you change it ([example](https://github.com/DannyBen/bashly/blob/master/examples/minimal/src/root_command.sh)).
+
 ## Features
 
 Bashly is responsible for:
