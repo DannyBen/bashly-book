@@ -42,7 +42,7 @@ You can then use thees functions anywhere in your script:
 
 ```bash
 # Create a new config file.
-# There is normally no need to use this fucntion, it is used by other
+# There is normally no need to use this function, it is used by other
 # functions as needed.
 config_init
 

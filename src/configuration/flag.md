@@ -65,10 +65,12 @@ Specify if this flag is required.
 The value to use in case it is not provided by the user. Implies that this flag is optional, and only makes sense when the flag has an argument.
 ===
 
+[!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
+
 ## `allowed`
 
 === `allowed: array`
 Limit the allowed values. Can be used in conjunction with `default` and `required`.
 ===
 
-
+[!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)

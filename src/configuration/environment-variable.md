@@ -48,3 +48,5 @@ Specify if this variable is required.
 === `default: string`
 The value to use in case it is not provided by the user. Implies that this environment variable is optional.
 ===
+
+[!button variant="primary" icon="code-review" text="Environment Variables Example"](https://github.com/DannyBen/bashly/tree/master/examples/environment-variables#readme)

@@ -7,7 +7,7 @@ icon: code-review
 
 The examples folder contains many detailed and documented example configuration files, with their output.
 
-[!button variant="primary" icon="code-review" text="Open Examples"](https://github.com/DannyBen/bashly/tree/master/examples#readme)
+[!button variant="primary" icon="code-review" text="View All Examples"](https://github.com/DannyBen/bashly/tree/master/examples#readme)
 
 
 ## Real world examples

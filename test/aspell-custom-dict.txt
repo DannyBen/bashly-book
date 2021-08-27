@@ -1,6 +1,7 @@
 personal_ws-1.1 en 22 
 Alf
 alf
+api
 arg
 args
 AWS
@@ -13,6 +14,7 @@ compgen
 config
 Config
 dannyben
+del
 dev
 eval
 fi
@@ -25,6 +27,7 @@ myscript
 PWD
 repo
 repos
+runtime
 src
 Unregister
 url

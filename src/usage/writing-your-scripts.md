@@ -86,6 +86,8 @@ To get a starting point, you can run the convenience command:
 $ bashly add lib
 ```
 
+[!button variant="primary" icon="code-review" text="Custom Includes Example"](https://github.com/DannyBen/bashly/tree/master/examples/custom-includes#readme)
+
 ## Initialization function
 
 Any code within the `src/initialize.sh` file will be called before anything else

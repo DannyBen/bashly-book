@@ -98,6 +98,8 @@ as summary wherever appropriate.
 
 Add a custom message that will be displayed at the end of the `--help` text. 
 
+[!button variant="primary" icon="code-review" text="Footer Example"](https://github.com/DannyBen/bashly/tree/master/examples/footer#readme)
+
 ===
 
 ## `group` 
@@ -109,6 +111,8 @@ before this command.
 
 This option is purely for display purposes, and needs to be specified only for
 the first command in each group.
+
+[!button variant="primary" icon="code-review" text="Command Groups Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme)
 
 ===
 
@@ -135,6 +139,8 @@ command that have at least one required argument.
 !!! Note
 Applicable only in sub-commands.
 !!!
+
+[!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme)
 
 ===
 
@@ -168,6 +174,8 @@ Specify the array of commands. Each command will have its own args and flags.
 Using `commands` on a given command implies that this command does not have flags or args.
 !!!
 
+[!button variant="primary" icon="code-review" text="Commands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands#readme) [!button variant="primary" icon="code-review" text="Sub-Commands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-nested#readme) 
+
 ===
 
 ## `catch_all` 
@@ -181,8 +189,15 @@ It can be set in one of three ways:
 
 - Set to `true` to just enable it.
 - Set to a string, to show this string in the usage help text.
-- Set to a hash containing `label` and `help` keys, to show a detailed help for
-  it when running with `--help`.
+- Set to a hash containing `label`, `help` and `required` keys, to show a
+  detailed help for it when running with `--help`. By default, `catch_all`
+  arguments are optional, but you can specify `required: true` to require at
+  least one argument.
+
+To access arguments captured by `catch_all` in your script, use the
+`$other_args` array (or call the `inspect_args` command to see them).
+
+[!button variant="primary" icon="code-review" text="Catch All Example"](https://github.com/DannyBen/bashly/tree/master/examples/catch-all#readme) [!button variant="primary" icon="code-review" text="Catch All Advanced Example"](https://github.com/DannyBen/bashly/tree/master/examples/catch-all-advanced#readme)
 
 ===
 
@@ -214,6 +229,8 @@ Specify an array of environment variables required or desired by your script.
 Specify an array of any required external dependencies (commands). The script
 execution will be halted with a friendly error unless all dependency commands
 exist.
+
+[!button variant="primary" icon="code-review" text="Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme)
 
 ===
 
