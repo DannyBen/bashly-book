@@ -1,5 +1,6 @@
 ---
 icon: rocket
+order: 100
 ---
 
 # Getting Started
