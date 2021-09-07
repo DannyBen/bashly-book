@@ -9,7 +9,10 @@ You may configure your generated bash script to delegate any unknown command to 
 
 This is similar to how `git` works. When you execute `git whatever`, the `git` command will look for a file named `git-whatever` in the path, and execute it.
 
-Note that this option cannot be specified together with the `default` option, since both specify a handler for unknown commands.
+!!! Note
+The `extensible` option cannot be specified together with the `default` option,
+since both specify a handler for unknown commands.
+!!!
 
 The `extensible` option supports two operation modes:
 

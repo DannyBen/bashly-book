@@ -30,8 +30,10 @@ flag_requires_an_argument: "%{name} requires an argument: %{usage}"
 invalid_argument: "invalid argument: %s"
 ```
 
-Note that some strings contain special tokens, such as `%s` and `%{name}`.
+!!! Note
+Some strings contain special tokens, such as `%s` and `%{name}`.
 These will be replaced at runtime and you should keep them in your custom
 strings.
+!!!
 
 [!button variant="primary" icon="code-review" text="Custom Strings Example"](https://github.com/DannyBen/bashly/tree/master/examples/custom-strings#readme)

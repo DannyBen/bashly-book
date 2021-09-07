@@ -75,8 +75,7 @@ name: download
 short: d*  # anything that starts with d
 ```
 
-!!! Note
-Applicable only in sub-commands.
+!!! Applicable only in sub-commands.
 !!!
 
 ===
@@ -122,8 +121,7 @@ the first command in each group.
 
 The string to display when using `--version`.
 
-!!! Note
-Applicable only in the main command.
+!!! Applicable only in the main command.
 !!!
 
 ===
@@ -136,8 +134,7 @@ Setting this to `true` on any command, will cause any **unrecognized** command
 line to be passed to this command. This means that it should be used only for
 command that have at least one required argument.
 
-!!! Note
-Applicable only in sub-commands.
+!!! Applicable only in sub-commands.
 !!!
 
 [!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme)
@@ -251,8 +248,7 @@ Specify that this command can be extended by external means.
 
 [!ref](/advanced/extensible-scripts.md)
 
-!!! Note
-Applicable only in the main command.
+!!! Applicable only in the main command.
 !!!
 
 ===
