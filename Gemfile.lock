@@ -34,7 +34,7 @@ GEM
       colsole (~> 0.5)
       docopt (~> 0.6)
     nio4r (2.5.7)
-    nokogiri (1.11.7-x86_64-linux)
+    nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     optimist (3.0.1)
     public_suffix (4.0.6)
