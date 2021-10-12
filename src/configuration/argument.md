@@ -15,7 +15,7 @@ Bashly supports these additional argument formats as input:
 
 - `-abc` same as `-a -b -c`
 - `-a=arg` same as `-a arg`
-- `--flag=arg` sams as `--flag arg`
+- `--flag=arg` same as `--flag arg`
 !!!
 
 ==- :icon-code-review: Example

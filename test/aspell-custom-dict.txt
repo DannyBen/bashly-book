@@ -1,4 +1,5 @@
 personal_ws-1.1 en 22 
+abc
 Alf
 alf
 api
@@ -10,12 +11,15 @@ bashly
 boolean
 changelog
 CLI
+cli
+codescan
 compgen
 config
 Config
 dannyben
 del
 dev
+env
 eval
 fi
 ini
@@ -28,9 +32,11 @@ PWD
 repo
 repos
 runtime
+shellcheck
 src
 Unregister
 url
+usr
 yaml
 YAML
 yml
