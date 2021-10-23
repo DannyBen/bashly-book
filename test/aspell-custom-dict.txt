@@ -19,6 +19,7 @@ Config
 dannyben
 del
 dev
+dir
 env
 eval
 fi

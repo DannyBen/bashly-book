@@ -77,3 +77,11 @@ Remember to set the [`arg`](#arg) name when using this option.
 ===
 
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
+
+## `validate`
+
+=== `validate: string`
+Add custom validation functions.
+===
+
+[!ref](/advanced/validations)

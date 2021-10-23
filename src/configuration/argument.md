@@ -76,3 +76,11 @@ Limit the allowed values. Can be used in conjunction with `default` and
 ===
 
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
+
+## `validate`
+
+=== `validate: string`
+Add custom validation functions.
+===
+
+[!ref](/advanced/validations)
