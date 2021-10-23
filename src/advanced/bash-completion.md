@@ -39,6 +39,14 @@ commands:
 - Anything between `<...>` will be added using the `compgen -A action` flag.
 - Anything else, will be appended to the `compgen -W` flag.
 
+!!! Note
+In case you are using the
+[Argument `allowed` option](../configuration/argument.md#allowed) or 
+the [Flag argument `allowed` option](../configuration/flag.md#allowed),
+these will be automatically added to the completions list as well.
+!!!
+
+
 For more information about these custom completions, see the [documentation for the completely][completely-docs] gem.
 
 [!button variant="primary" icon="code-review" text="Bash Completions Example"](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme)

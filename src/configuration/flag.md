@@ -70,7 +70,10 @@ The value to use in case it is not provided by the user. Implies that this flag 
 ## `allowed`
 
 === `allowed: array`
-Limit the allowed values. Can be used in conjunction with `default` and `required`.
+Limit the allowed arguments. Can be used in conjunction with `default` and
+`required`.
+
+Remember to set the [`arg`](#arg) name when using this option.
 ===
 
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)

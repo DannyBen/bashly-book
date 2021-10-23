@@ -5,6 +5,7 @@ url: bashly.dannyb.co
 server:
   host: 0.0.0.0
   port: 3000
+  watch: { polling: 3000 }
 
 branding:
   logo: assets/logo.svg
