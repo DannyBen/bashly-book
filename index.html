@@ -29,9 +29,9 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.10.688144118550" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.10.688582867205" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.10.688144118550" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.10.688582867205" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
 </head>
     <body>
@@ -52,7 +52,7 @@
                         <img class="max-h-10 dark:hidden md:inline-block" src="/assets/logo.svg">
                         <img class="max-h-10 hidden dark:inline-block" src="/assets/logo-dark.svg">
                     </span>
-                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.6.8</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.6.9</span>
             </div>
 
             <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -214,7 +214,7 @@ arguments, and flags. Running <code v-pre>bashly init</code> creates an initial 
 file for you (<a href="https://github.com/DannyBen/bashly/tree/master/examples/minimal#bashlyyml">example</a>).</li>
 <li>Bashly then automatically generates a bash script (when you run
 <code v-pre>bashly generate</code>) that can parse and validate user input, provide help
-messages, and run your code for each command (<a href="https://github.com/DannyBen/bashly/blob/master/examples/minimal/download">example</a>).</li>
+messages, and run your code for each command.</li>
 <li>Your code for each command is kept in a separate file, and can be merged
 again if you change it (<a href="https://github.com/DannyBen/bashly/blob/master/examples/minimal/src/root_command.sh">example</a>).</li>
 </ol>
