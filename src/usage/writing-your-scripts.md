@@ -98,3 +98,14 @@ in your generated bash script.
 
 In case you wish to replace the header in the generated script, simply put the new
 content in `src/header.sh`.
+
+## Hidden comments
+
+Any comment in your source files that begins with two `#` symbols, will be 
+removed from the final generated script. This is ideal for adding developer
+notes that should not be visible to your end users.
+
+```bash
+## this comment will be hidden
+# this one will be visible
+```

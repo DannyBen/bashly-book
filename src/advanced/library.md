@@ -89,3 +89,28 @@ echo "before $(green_bold this is green_bold) after"
 See the generated script in `src/lib/colors.sh` for the full list of colors.
 
 [!button variant="primary" icon="code-review" text="Colors Example"](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme)
+
+## Auto-update
+
+Files added by the `bashly add *` commands can be automatically updated to their
+original state by running
+
+```bash
+bashly generate --upgrade
+````
+
+The `--upgrade` flag will scan all the files in the `src/lib` directory for a 
+special magic comment in this format:
+
+```
+[@bashly-upgrade <library>]
+```
+
+When found, and assuming the path of the file matches the one in the library,
+this file will be updated.
+
+You are encouraged to modify the generated library functions to your liking, but
+if you do so, remember to remove this magic comment to prevent accidentally 
+overriding it in future runs of `bashly generate --upgrade`.
+
+
