@@ -75,7 +75,7 @@ name: download
 short: d*  # anything that starts with d
 ```
 
-!!! Applicable only in sub-commands.
+!!! Not applicable on the main command.
 !!!
 
 ===
@@ -126,7 +126,7 @@ The string to display when using `--version`.
 
 ===
 
-## `default` 
+## `default`
 
 === `default: boolean`
 
@@ -134,10 +134,23 @@ Setting this to `true` on any command, will cause any **unrecognized** command
 line to be passed to this command. This means that it should be used only for
 command that have at least one required argument.
 
-!!! Applicable only in sub-commands.
+!!! Not applicable on the main command.
 !!!
 
 [!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme)
+
+===
+
+## `private`
+
+=== `private: boolean`
+
+Setting this to `true` on any command, will hide it from the command list.
+
+!!! Not applicable on the main command.
+!!!
+
+[!button variant="primary" icon="code-review" text="Private Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme)
 
 ===
 
