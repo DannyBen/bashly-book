@@ -1,6 +1,6 @@
 ---
 icon: dot
-# order: 100
+order: 70
 ---
 
 # Bash Completion
@@ -30,10 +30,10 @@ purposes.
 
 The bash completions generation is completely automatic, but you will have to
 regenerate the completion function whenever you make changes to your
-`bashly.uml` file. 
+`bashly.yml` file. 
 
 !!! Note
-By tunning `bashly generate --upgrade`, your completions function 
+By running `bashly generate --upgrade`, your completions function 
 (generated with `bashly add comp function`) will be regenerated.
 !!!
 
