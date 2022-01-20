@@ -16,7 +16,7 @@ gem install bashly
 +++ Docker
 
 ```shell
-alias bashly='docker run --rm -it --volume "$PWD:/app" dannyben/bashly'
+alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" dannyben/bashly'
 ```
 
 +++
