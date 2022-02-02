@@ -11,6 +11,10 @@ The flag's value will be available to you as `${args[--output]}` in your bash
 function (regardless of whether the user provided it with the long or short
 form).
 
+!!! Note
+Most properties are optional, unless specified otherwise.
+!!!
+
 ==- :icon-code-review: Example
 ```yaml bashly.yml
 flags:
@@ -28,18 +32,19 @@ flags:
 
 ## `long`
 
-=== `long: string`
-The long form of the flag.
+=== `long: string (required, unless short is provided)`
+The long form of the flag, including the `--` prefix.
 ===
 
 ## `short`
 
-=== `short: string`
-The short form of the flag.
+=== `short: string (required, unless long is provided)`
+The short form of the flag, including the `-` prefix.
 
 !!! Special handling for -v and -h
 The `-v` and `-h` flags will be used as the short options for `--version` and `--help` respectively **only if you are not using them in any of your own flags**.
 !!!
+===
 
 ## `help`
 

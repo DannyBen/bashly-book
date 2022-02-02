@@ -13,6 +13,10 @@ execution of the script will be halted with a friendly error if it is not set.
 In addition, you can specify a default value for the environment variable, which
 will be used in case the user has not defined it in their environment.
 
+!!! Note
+Most properties are optional, unless specified otherwise.
+!!!
+
 ==- :icon-code-review: Example
 ```yaml bashly.yml
 environment_variables:
@@ -27,7 +31,7 @@ environment_variables:
 
 ## `name`
 
-=== `name: string`
+=== `name: string (required)`
 The name of the variable. Use a lowercase name, it will be automatically capitalized.
 ===
 

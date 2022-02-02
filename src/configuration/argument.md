@@ -18,6 +18,10 @@ Bashly supports these additional argument formats as input:
 - `--flag=arg` same as `--flag arg`
 !!!
 
+!!! Note
+Most properties are optional, unless specified otherwise.
+!!!
+
 ==- :icon-code-review: Example
 ```yaml bashly.yml
 args:
@@ -34,7 +38,7 @@ args:
 
 ## `name`
 
-=== `name: string`
+=== `name: string (required)`
 The name of the argument. Use lowercase letters, since it serves multiple
 purposes:
 

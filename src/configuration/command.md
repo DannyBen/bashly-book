@@ -14,6 +14,10 @@ The `command` object serves two purposes, it:
 Unless otherwise specified, these definitions can be used for both the root
 command and sub-commands (under the `commands` definition).
 
+!!! Note
+Most properties are optional, unless specified otherwise.
+!!!
+
 ==- :icon-code-review: Example
 ```yaml bashly.yml
 name: rush
@@ -57,7 +61,7 @@ commands:
 
 ## `name`
 
-=== `name: string`
+=== `name: string (required)`
 The name of the script or sub-command.
 ===
 
@@ -90,6 +94,20 @@ This option can have multiple lines. In this case, the first line will be used
 as summary wherever appropriate.
 
 ===
+
+## `filename` 
+
+=== `filename: string`
+
+The path (relative to `src`) to the partial source code file, in case you wish
+to store your source files in a different path than the default one.
+
+This is useful for scripts that contain many commands.
+
+[!button variant="primary" icon="code-review" text="Command Filenames Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-filenames#readme)
+
+===
+
 
 ## `footer` 
 
