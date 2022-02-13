@@ -1,6 +1,6 @@
 ---
 icon: dot
-order: 60
+order: 50
 ---
 
 # Split Config

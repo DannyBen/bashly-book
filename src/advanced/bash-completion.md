@@ -1,6 +1,6 @@
 ---
 icon: dot
-order: 70
+order: 60
 ---
 
 # Bash Completion

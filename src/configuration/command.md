@@ -250,7 +250,7 @@ Specify an array of environment variables required or desired by your script.
 
 ===
 
-## `dependencies` 
+## `dependencies`
 
 === `dependencies: array`
 
@@ -259,6 +259,17 @@ execution will be halted with a friendly error unless all dependency commands
 exist.
 
 [!button variant="primary" icon="code-review" text="Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme)
+
+===
+
+## `filters`
+
+=== `filters: array`
+
+Add custom filter functions that will prevent the command from running unless 
+certain conditions are met.
+
+[!ref](/advanced/filters)
 
 ===
 
