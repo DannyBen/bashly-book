@@ -29,28 +29,35 @@ environment_variables:
 ```
 ===
 
-## `name`
 
-=== `name: string (required)`
-The name of the variable. Use a lowercase name, it will be automatically capitalized.
-===
+## name
 
-## `help`
+[!badge String]
+[!badge variant="danger" text="Required"]
 
-=== `help: string`
+The name of the variable. Use a lowercase name, it will be automatically
+capitalized wherever needed.
+
+
+## help
+
+[!badge String]
+
 The message to display when using `--help`. Can have multiple lines.
-===
 
-## `required`
 
-=== `required: boolean`
+## required
+
+[!badge Boolean]
+
 Specify if this variable is required.
-===
 
-## `default`
 
-=== `default: string`
-The value to use in case it is not provided by the user. Implies that this environment variable is optional.
-===
+## default
+
+[!badge String]
+
+The value to use in case it is not provided by the user. Implies that this
+environment variable is optional.
 
 [!button variant="primary" icon="code-review" text="Environment Variables Example"](https://github.com/DannyBen/bashly/tree/master/examples/environment-variables#readme)

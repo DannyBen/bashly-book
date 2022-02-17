@@ -27,64 +27,76 @@ Most properties are optional, unless specified otherwise.
 args:
   - name: user
     help: AWS Username.
+    required: true
 
   - name: role
     help: User role.
+    default: admin
     allowed:
       - admin
       - guest
+
+  - name: key
+    help: Path to SSH key.
+    validate: file_exists
 ```
 ===
 
-## `name`
 
-=== `name: string (required)`
+## name
+
+[!badge String]
+[!badge variant="danger" text="Required"]
+
 The name of the argument. Use lowercase letters, since it serves multiple
 purposes:
 
 - It will be capitalized in the help text.
 - It will be used as the hash key in the `${args[...]}` associative bash array.
-===
 
-## `help`
 
-=== `help: string`
+## help
+
+[!badge String]
+
 The message to display when using `--help`. Can have multiple lines.
-===
 
-## `required`
 
-=== `required: true`
+## required
+
+[!badge Boolean]
+
 Specify that this argument is required.
 
 !!! Note
 Once you define an optional argument (without `required: true`) then you cannot
 define required arguments after it.
 !!!
-===
 
-## `default`
 
-=== `default: string`
+## default
+
+[!badge String]
+
 The value to use in case it is not provided by the user. Implies that this
 argument is optional.
-===
 
 [!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
 
-## `allowed`
+## allowed
 
-=== `allowed: array`
-Limit the allowed values. Can be used in conjunction with `default` and
-`required`.
-===
+[!badge Array of Strings]
+
+Limit the allowed values to a specified whitelist. Can be used in conjunction
+with [`default`](#default) and [`required`](#required).
 
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
 
-## `validate`
 
-=== `validate: string`
-Add custom validation functions.
-===
+## validate
+
+[!badge String]
+
+Apply a custom validation function.
 
 [!ref](/advanced/validations)
