@@ -27,6 +27,25 @@ flags:
     arg: name
     help: Repository user name.
     required: true
+
+  - long: --profile
+    arg: name
+    help: Profile name
+    allowed: [production, stage, dev]
+    default: dev
+
+  - long: --verbose
+    short: -v
+    help: Verbosity level (up to -vvv)
+    repeatable: true
+
+  - long: --cache
+    help: Enable cache
+    conflicts: [--no-cache]
+
+  - long: --no-cache
+    help: Disable cache
+    conflicts: [--cache]
 ```
 ===
 
@@ -75,13 +94,24 @@ The value to use in case it is not provided by the user. Implies that this flag 
 ## `allowed`
 
 === `allowed: array`
-Limit the allowed arguments. Can be used in conjunction with `default` and
-`required`.
+Limit the allowed arguments. Can be used in conjunction with [`default`](#default) and
+[`required`](#required).
 
 Remember to set the [`arg`](#arg) name when using this option.
 ===
 
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
+
+## `conflicts`
+
+=== `conflicts: array`
+Specify that this flag is mutually exclusive with one or more other flags.
+
+This option should be specified on both sides of the exclusivity.
+===
+
+[!button variant="primary" icon="code-review" text="Conflicts Example"](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme)
+
 
 ## `repeatable`
 
