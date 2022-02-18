@@ -27,12 +27,12 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.11.2.698169462651" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.698484417746" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.698169462651" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.698484417746" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.698169462651" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.698169462651" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.698484417746" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.698484417746" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -52,7 +52,7 @@
                         <img class="max-h-10 dark:hidden md:inline-block" src="/assets/logo.svg">
                         <img class="max-h-10 hidden dark:inline-block" src="/assets/logo-dark.svg">
                     </span>
-                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.7.5</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.7.6</span>
             </div>
 
             <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -265,21 +265,28 @@ commands:
 <doc-anchor-target id="name">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#name">#</doc-anchor-trigger>
-        <span><code v-pre>name</code></span>
+        <span>name</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="name-string-required">
-    <template #title><code v-pre>name: string (required)</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>String</span>
+</span>
+<span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-red-600 bg-red-100 h-6 px-2 text-xs rounded-md">
+    <span>Required</span>
+</span></p>
 <p>The name of the script or sub-command.</p>
-</doc-panel>
 <doc-anchor-target id="short">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#short">#</doc-anchor-trigger>
-        <span><code v-pre>short</code></span>
+        <span>short</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="short-string">
-    <template #title><code v-pre>short: string</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>String</span>
+</span>
+<span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>Sub-Commands Only</span>
+</span></p>
 <p>An additional, optional pattern, usually used to denote a
 one letter variation of the command name.</p>
 <p>You can add <code v-pre>*</code> as a suffix, to denote a <em>starts with</em> pattern - for example:</p>
@@ -288,44 +295,27 @@ one letter variation of the command name.</p>
 <pre class="language-yaml"><code v-pre class="language-yaml">name: download
 short: d*  # anything that starts with d</code></pre>
 </doc-codeblock></div>
-<div class="flex mb-6">
-    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3">
-            <h5>Not applicable on the main command.</h5>
-        </div>
-    </div>
-</div>
-</doc-panel>
 <doc-anchor-target id="help">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#help">#</doc-anchor-trigger>
-        <span><code v-pre>help</code></span>
+        <span>help</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="help-string">
-    <template #title><code v-pre>help: string</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>String</span>
+</span></p>
 <p>The header text to display when using <code v-pre>--help</code>.</p>
 <p>This option can have multiple lines. In this case, the first line will be used
 as summary wherever appropriate.</p>
-</doc-panel>
 <doc-anchor-target id="filename">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#filename">#</doc-anchor-trigger>
-        <span><code v-pre>filename</code></span>
+        <span>filename</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="filename-string">
-    <template #title><code v-pre>filename: string</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>String</span>
+</span></p>
 <p>The path (relative to <code v-pre>src</code>) to the partial source code file, in case you wish
 to store your source files in a different path than the default one.</p>
 <p>This is useful for scripts that contain many commands.</p>
@@ -333,29 +323,32 @@ to store your source files in a different path than the default one.</p>
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Command Filenames Example</span>
 </a></p>
-</doc-panel>
 <doc-anchor-target id="footer">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#footer">#</doc-anchor-trigger>
-        <span><code v-pre>footer</code></span>
+        <span>footer</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="footer-string">
-    <template #title><code v-pre>footer: string</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>String</span>
+</span></p>
 <p>Add a custom message that will be displayed at the end of the <code v-pre>--help</code> text.</p>
 <p><a href="https://github.com/DannyBen/bashly/tree/master/examples/footer#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Footer Example</span>
 </a></p>
-</doc-panel>
 <doc-anchor-target id="group">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#group">#</doc-anchor-trigger>
-        <span><code v-pre>group</code></span>
+        <span>group</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="group-string">
-    <template #title><code v-pre>group: string</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>String</span>
+</span>
+<span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>Sub-Commands Only</span>
+</span></p>
 <p>In case you have many commands, use this option to specify a caption to display
 before this command.</p>
 <p>This option is purely for display purposes, and needs to be specified only for
@@ -364,106 +357,64 @@ the first command in each group.</p>
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Command Groups Example</span>
 </a></p>
-</doc-panel>
 <doc-anchor-target id="version">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#version">#</doc-anchor-trigger>
-        <span><code v-pre>version</code></span>
+        <span>version</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="version-string">
-    <template #title><code v-pre>version: string</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>String</span>
+</span>
+<span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>Root Command Only</span>
+</span></p>
 <p>The string to display when using <code v-pre>--version</code>.</p>
-<div class="flex mb-6">
-    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3">
-            <h5>Applicable only in the main command.</h5>
-        </div>
-    </div>
-</div>
-</doc-panel>
 <doc-anchor-target id="default">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#default">#</doc-anchor-trigger>
-        <span><code v-pre>default</code></span>
+        <span>default</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="default-boolean">
-    <template #title><code v-pre>default: boolean</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Boolean</span>
+</span>
+<span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>Sub-Commands Only</span>
+</span></p>
 <p>Setting this to <code v-pre>true</code> on any command, will cause any <strong>unrecognized</strong> command
 line to be passed to this command. This means that it should be used only for
 command that have at least one required argument.</p>
-<div class="flex mb-6">
-    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3">
-            <h5>Not applicable on the main command.</h5>
-        </div>
-    </div>
-</div>
 <p><a href="https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Default Command Example</span>
 </a></p>
-</doc-panel>
 <doc-anchor-target id="private">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#private">#</doc-anchor-trigger>
-        <span><code v-pre>private</code></span>
+        <span>private</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="private-boolean">
-    <template #title><code v-pre>private: boolean</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Boolean</span>
+</span>
+<span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>Sub-Commands Only</span>
+</span></p>
 <p>Setting this to <code v-pre>true</code> on any command, will hide it from the command list.</p>
-<div class="flex mb-6">
-    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3">
-            <h5>Not applicable on the main command.</h5>
-        </div>
-    </div>
-</div>
 <p><a href="https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Private Command Example</span>
 </a></p>
-</doc-panel>
 <doc-anchor-target id="args">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#args">#</doc-anchor-trigger>
-        <span><code v-pre>args</code></span>
+        <span>args</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="args-array">
-    <template #title><code v-pre>args: array</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Array of Arguments</span>
+</span></p>
 <p>Specify the array of positional arguments this script needs.</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
@@ -479,15 +430,15 @@ command that have at least one required argument.</p>
     <a href="/configuration/argument/" class="absolute block inset-0"></a>
 </div>
 </p>
-</doc-panel>
 <doc-anchor-target id="flags">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#flags">#</doc-anchor-trigger>
-        <span><code v-pre>flags</code></span>
+        <span>flags</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="flags-array">
-    <template #title><code v-pre>flags: array</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Array of Flags</span>
+</span></p>
 <p>Specify the array of option flags this script needs.</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
@@ -503,15 +454,15 @@ command that have at least one required argument.</p>
     <a href="/configuration/flag/" class="absolute block inset-0"></a>
 </div>
 </p>
-</doc-panel>
 <doc-anchor-target id="commands">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#commands">#</doc-anchor-trigger>
-        <span><code v-pre>commands</code></span>
+        <span>commands</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="commands-array">
-    <template #title><code v-pre>commands: array</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Array of Commands</span>
+</span></p>
 <p>Specify the array of commands. Each command will have its own args and flags.</p>
 <div class="flex mb-6">
     <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
@@ -538,15 +489,15 @@ command that have at least one required argument.</p>
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Sub-Commands Example</span>
 </a></p>
-</doc-panel>
 <doc-anchor-target id="catch_all">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#catch_all">#</doc-anchor-trigger>
-        <span><code v-pre>catch_all</code></span>
+        <span>catch_all</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="catch-all-boolean-or-string-or-hash">
-    <template #title><code v-pre>catch_all: boolean or string or hash</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Boolean / String / Hash</span>
+</span></p>
 <p>Specify that this command should allow for additional arbitrary arguments or
 flags.</p>
 <p>It can be set in one of three ways:</p>
@@ -567,15 +518,15 @@ least one argument.</li>
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Catch All Advanced Example</span>
 </a></p>
-</doc-panel>
 <doc-anchor-target id="completions">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#completions">#</doc-anchor-trigger>
-        <span><code v-pre>completions</code></span>
+        <span>completions</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="completions-array">
-    <template #title><code v-pre>completions: array</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Array of Strings</span>
+</span></p>
 <p>Specify an array of additional completion suggestions when used in conjunction
 with <code v-pre>bashly add comp</code>.</p>
 <p>
@@ -592,15 +543,15 @@ with <code v-pre>bashly add comp</code>.</p>
     <a href="/advanced/bash-completion/" class="absolute block inset-0"></a>
 </div>
 </p>
-</doc-panel>
 <doc-anchor-target id="environment_variables">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#environment_variables">#</doc-anchor-trigger>
-        <span><code v-pre>environment_variables</code></span>
+        <span>environment_variables</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="environment-variables-array">
-    <template #title><code v-pre>environment_variables: array</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Array of Environment Variables</span>
+</span></p>
 <p>Specify an array of environment variables required or desired by your script.</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
@@ -616,15 +567,15 @@ with <code v-pre>bashly add comp</code>.</p>
     <a href="/configuration/environment-variable/" class="absolute block inset-0"></a>
 </div>
 </p>
-</doc-panel>
 <doc-anchor-target id="dependencies">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#dependencies">#</doc-anchor-trigger>
-        <span><code v-pre>dependencies</code></span>
+        <span>dependencies</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="dependencies-array">
-    <template #title><code v-pre>dependencies: array</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Array of Strings</span>
+</span></p>
 <p>Specify an array of any required external dependencies (commands). The script
 execution will be halted with a friendly error unless all dependency commands
 exist.</p>
@@ -632,15 +583,15 @@ exist.</p>
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Dependencies Example</span>
 </a></p>
-</doc-panel>
 <doc-anchor-target id="filters">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#filters">#</doc-anchor-trigger>
-        <span><code v-pre>filters</code></span>
+        <span>filters</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="filters-array">
-    <template #title><code v-pre>filters: array</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Array of Strings</span>
+</span></p>
 <p>Add custom filter functions that will prevent the command from running unless
 certain conditions are met.</p>
 <p>
@@ -657,26 +608,29 @@ certain conditions are met.</p>
     <a href="/advanced/filters/" class="absolute block inset-0"></a>
 </div>
 </p>
-</doc-panel>
 <doc-anchor-target id="examples">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#examples">#</doc-anchor-trigger>
-        <span><code v-pre>examples</code></span>
+        <span>examples</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="examples-array">
-    <template #title><code v-pre>examples: array</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Array of Strings</span>
+</span></p>
 <p>Specify an array of examples to show when using <code v-pre>--help</code>. Each example can have
 multiple lines.</p>
-</doc-panel>
 <doc-anchor-target id="extensible">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#extensible">#</doc-anchor-trigger>
-        <span><code v-pre>extensible</code></span>
+        <span>extensible</span>
     </h2>
 </doc-anchor-target>
-<doc-panel id="extensible-boolean-or-string">
-    <template #title><code v-pre>extensible: boolean or string</code></template>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Boolean / String</span>
+</span>
+<span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
+    <span>Root Command Only</span>
+</span></p>
 <p>Specify that this command can be extended by external means.</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
@@ -692,24 +646,6 @@ multiple lines.</p>
     <a href="/advanced/extensible-scripts/" class="absolute block inset-0"></a>
 </div>
 </p>
-<div class="flex mb-6">
-    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3">
-            <h5>Applicable only in the main command.</h5>
-        </div>
-    </div>
-</div>
-</doc-panel>
 
 
 
