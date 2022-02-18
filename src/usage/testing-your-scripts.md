@@ -13,6 +13,11 @@ use in your script, is also valid.
 
 ## Approval Testing
 
+!!!success Tip
+Run `bashly add test` to add a `test` folder to your project, with the 
+Approvals.bash framework.
+!!!
+
 In cases where your scripts are more elaborate, or when you wish to ensure
 your scripts behave as expected, you can use any bash testing framework to test
 your scripts.
