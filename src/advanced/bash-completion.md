@@ -32,7 +32,7 @@ The bash completions generation is completely automatic, but you will have to
 regenerate the completion function whenever you make changes to your
 `bashly.yml` file. 
 
-!!! Note
+!!!success Tip
 By running `bashly generate --upgrade`, your completions function 
 (generated with `bashly add comp function`) will be regenerated.
 !!!

@@ -38,8 +38,7 @@ filter_docker_running() {
 
 [!button variant="primary" icon="code-review" text="Filters Example"](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme)
 
-
-!!! Notes
+!!!success Tips
 - To verify a program is installed, use [`dependencies`](/configuration/command/#dependencies) instead.
 - To verify an environment variable is defined, use [`environment_variables`](/configuration/command/#environment_variables) instead.
 !!!
