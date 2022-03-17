@@ -16,13 +16,11 @@ jobs:
 
       - name: Set up .NET
         uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 5.0.x
 
       - name: Build site
-        uses: retypeapp/action-build@v1
+        uses: retypeapp/action-build@v2
 
       - name: Publish to GitHub Pages
-        uses: retypeapp/action-github-pages@v1
+        uses: retypeapp/action-github-pages@v2
         with:
           update-branch: true
