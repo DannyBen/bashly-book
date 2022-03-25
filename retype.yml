@@ -23,9 +23,11 @@ edit:
 links:
   - text: GitHub
     link: https://github.com/DannyBen/bashly
+    icon: mark-github
     target: blank
   - text: Issues
     link: https://github.com/DannyBen/bashly/issues
+    icon: issue-opened
     target: blank
 
 integrations:
