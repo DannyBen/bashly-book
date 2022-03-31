@@ -8,7 +8,7 @@ icon: code-review
 The examples folder in the GitHub repository contains many detailed and
 documented example configuration files, with their output.
 
-[!button variant="primary" icon="code-review" text="View All Examples"](https://github.com/DannyBen/bashly/tree/master/examples#readme)
+[!button variant="primary" icon="code-review" text="View Examples on GitHub"](https://github.com/DannyBen/bashly/tree/master/examples#readme)
 
 All examples are listed below for convenience.
 
