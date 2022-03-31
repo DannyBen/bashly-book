@@ -138,7 +138,7 @@ the number of times it was entered.
 
 When the flag has an argument, the user can provide it in the form of
 `-d value1 -d "value 2"`. In this case, the received value will be formatted
-as a quotes, space-delimited string which you will need to convert to array with
+as a quoted, space-delimited string which you will need to convert to array with
 something like `eval "data=(${args[--data]})"`.
 
 [!button variant="primary" icon="code-review" text="Repeatable Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable#readme)
