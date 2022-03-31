@@ -1,0 +1,23 @@
+title   "Bashly Book Toolbelt"
+summary "Helpers for the bashly book generation"
+
+help   "Copy and adapt the bashly examples index"
+action :examples do
+  source = "/vagrant/gems/bashly/examples/README.md"
+  target = "src/examples.md"
+
+  examples = File.read source
+  doc = File.read target
+
+  # remove everything before the first H2
+  examples = examples[/##.*$/m]
+
+  # update github internal links to external
+  examples.gsub! /\[(.+)\]\(([^)]+)\)/ do
+    "[#{$1}](https://github.com/DannyBen/bashly/tree/master/examples/#{$2})"
+  end
+
+  tag = "<!-- EXAMPLES INDEX -->"
+  doc.gsub! /#{tag}(.*)#{tag}/m, "#{tag}\n#{examples}\n#{tag}"
+  File.write target, doc
+end
