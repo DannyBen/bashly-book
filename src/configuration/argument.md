@@ -92,6 +92,18 @@ with [`default`](#default) and [`required`](#required).
 
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
 
+## repeatable
+
+[!badge Boolean]
+
+Specify that this argument can be provided multiple times.
+
+The received value will be formatted as a quoted, space-delimited string which
+you will need to convert to array with something like
+`eval "data=(${args[path]})"`.
+
+[!button variant="primary" icon="code-review" text="Repeatable Argument Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-arg#readme)
+
 
 ## validate
 

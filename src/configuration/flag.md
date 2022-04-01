@@ -130,7 +130,7 @@ This option should be specified on both sides of the exclusivity.
 
 [!badge Boolean]
 
-Specify that this argument can be provided multiple times.
+Specify that this flag can be provided multiple times.
 
 When the flag does not have an argument, the user can provide it multiple times
 in the form of `-v -v -v` or `-vvv`. In this case, the received value will be
