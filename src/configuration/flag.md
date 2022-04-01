@@ -141,7 +141,7 @@ When the flag has an argument, the user can provide it in the form of
 as a quoted, space-delimited string which you will need to convert to array with
 something like `eval "data=(${args[--data]})"`.
 
-[!button variant="primary" icon="code-review" text="Repeatable Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable#readme)
+[!button variant="primary" icon="code-review" text="Repeatable Flag Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-flag#readme)
 
 
 ## validate

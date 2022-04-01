@@ -36,7 +36,7 @@ All examples are listed below for convenience.
 - [extensible](https://github.com/DannyBen/bashly/tree/master/examples/extensible#readme) - letting your script's users extend the script
 - [extensible-delegate](https://github.com/DannyBen/bashly/tree/master/examples/extensible-delegate#readme) - extending your script by delegating commands to an external executable
 - [whitelist](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme) - arguments and flags with a predefined allowed list of values
-- [repeatable](https://github.com/DannyBen/bashly/tree/master/examples/repeatable#readme) - allowing flags to be provided multiple times
+- [repeatable-flag](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-flag#readme) - allowing flags to be provided multiple times
 - [conflicts](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme) - defining mutually exclusive flags
 - [command-private](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme) - hiding commands from the command list
 - [stdin](https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme) - reading input from stdin
