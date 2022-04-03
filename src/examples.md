@@ -66,6 +66,10 @@ All examples are listed below for convenience.
 - [completions](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
 - [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding argument validation functions
 
+## Other Examples
+
+- [heredoc](https://github.com/DannyBen/bashly/tree/master/examples/heredoc#readme) - using heredoc strings
+
 <!-- EXAMPLES INDEX -->
 
 
