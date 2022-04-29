@@ -69,6 +69,8 @@ All examples are listed below for convenience.
 ## Other Examples
 
 - [heredoc](https://github.com/DannyBen/bashly/tree/master/examples/heredoc#readme) - using heredoc strings
+- [heredoc-alt](https://github.com/DannyBen/bashly/tree/master/examples/heredoc-alt#readme) - using heredoc strings in the lib directory
+- [settings](https://github.com/DannyBen/bashly/tree/master/examples/settings#readme) - using the `settings.yml` file to adjust bashly's behavior
 
 <!-- EXAMPLES INDEX -->
 
