@@ -30,12 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.704535636224" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.705495089140" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.704535636224" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.705495089140" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.704535636224" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.704535636224" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.705495089140" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.705495089140" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -198,12 +198,22 @@
 <doc-tabs>
 <doc-tab id="gem">
 <template #title>Gem</template>
+<p>If you have Ruby 2.7 or higher (<code v-pre>ruby -v</code>), use this installation method:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">gem install bashly</code></pre>
 </doc-codeblock></div>
 </doc-tab>
+<doc-tab id="homebrew">
+<template #title>Homebrew</template>
+<p>Mac users can enable Ruby gem installation first, and then install bashly:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">brew install brew-gem
+brew gem install bashly</code></pre>
+</doc-codeblock></div>
+</doc-tab>
 <doc-tab id="docker">
 <template #title>Docker</template>
+<p>If you have docker installed, you can create an alias that will run the docker image:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume &quot;$PWD:/app&quot; dannyben/bashly'</code></pre>
 </doc-codeblock></div>
