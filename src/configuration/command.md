@@ -26,7 +26,7 @@ version: 0.6.5
 
 commands:
 - name: add
-  short: a
+  alias: a
   help: Register a local repository
   args:
   - name: repo
@@ -41,7 +41,7 @@ commands:
   - rush add default ~/rush-repos/default
 
 - name: remove
-  short: r
+  alias: r
   help: Unregister a local repository
   args:
   - name: repo
@@ -68,20 +68,34 @@ commands:
 The name of the script or sub-command.
 
 
-## short
+## alias
 
-[!badge String]
+[!badge String / Array]
 [!badge variant="warning" text="Sub-Commands Only"]
 
-An additional, optional pattern, usually used to denote a
-one letter variation of the command name.
+!!! Note
+This command used to be called `short` in bashly < 0.8.0
+!!!
+
+One or more additional optional names for this command. This can be used to
+create a shortcut for a command, or provide alternative names for it.
+
+This option accepts either a string, or an array of strings.
 
 You can add `*` as a suffix, to denote a *starts with* pattern - for example:
 
 ```yaml bashly.yml
+name: index
+alias: i  # simple shortcut
+
 name: download
-short: d*  # anything that starts with d
+alias: d*  # anything that starts with d
+
+name: upload
+alias: [u, push]  # upload, u and push will all run the same command
 ```
+
+[!button variant="primary" icon="code-review" text="Command Aliases Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-aliases#readme)
 
 ## help
 
