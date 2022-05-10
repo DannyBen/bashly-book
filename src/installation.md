@@ -5,7 +5,7 @@ order: 99
 
 # Installation
 
-If you have Ruby 2.7 or later, installing the bashly gem is the preferred method. Otherwise, you can use the bashly docker image.
+Install bashly using one of these methods.
 
 +++ Gem
 
