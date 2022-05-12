@@ -23,7 +23,7 @@ help: Sample application
 
 commands:
   name: download
-  short: d
+  alias: d
   help: Download something
 
   args:
@@ -48,7 +48,7 @@ commands:
 
 ```yaml download.yml
 name: download
-short: d
+alias: d
 help: Download something
 
 args:
@@ -78,7 +78,7 @@ commands:
 
 ```shell download_command.sh
 name: download
-short: d
+alias: d
 help: Download a file
 args:
 - name: source
