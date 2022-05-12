@@ -30,12 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.705495623066" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.705647040233" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.705495623066" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.705647040233" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.705495623066" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.705495623066" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.705647040233" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.705647040233" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -229,7 +229,7 @@ version: 0.6.5
 
 commands:
 - name: add
-  short: a
+  alias: a
   help: Register a local repository
   args:
   - name: repo
@@ -244,7 +244,7 @@ commands:
   - rush add default ~/rush-repos/default
 
 - name: remove
-  short: r
+  alias: r
   help: Unregister a local repository
   args:
   - name: repo
@@ -274,26 +274,55 @@ commands:
     <span>Required</span>
 </span></p>
 <p>The name of the script or sub-command.</p>
-<doc-anchor-target id="short">
+<doc-anchor-target id="alias">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#short">#</doc-anchor-trigger>
-        <span>short</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#alias">#</doc-anchor-trigger>
+        <span>alias</span>
     </h2>
 </doc-anchor-target>
 <p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
-    <span>String</span>
+    <span>String / Array</span>
 </span>
 <span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
     <span>Sub-Commands Only</span>
 </span></p>
-<p>An additional, optional pattern, usually used to denote a
-one letter variation of the command name.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Note</h5>
+<p>This command used to be called <code v-pre>short</code> in bashly &lt; 0.8.0</p>
+        </div>
+    </div>
+</div>
+<p>One or more additional optional names for this command. This can be used to
+create a shortcut for a command, or provide alternative names for it.</p>
+<p>This option accepts either a string, or an array of strings.</p>
 <p>You can add <code v-pre>*</code> as a suffix, to denote a <em>starts with</em> pattern - for example:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">bashly.yml</div>
-<pre class="language-yaml"><code v-pre class="language-yaml">name: download
-short: d*  # anything that starts with d</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml">name: index
+alias: i  # simple shortcut
+
+name: download
+alias: d*  # anything that starts with d
+
+name: upload
+alias: [u, push]  # upload, u and push will all run the same command</code></pre>
 </doc-codeblock></div>
+<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/command-aliases#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
+    <span>Command Aliases Example</span>
+</a></p>
 <doc-anchor-target id="help">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#help">#</doc-anchor-trigger>
