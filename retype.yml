@@ -29,6 +29,10 @@ links:
     link: https://github.com/DannyBen/bashly/issues
     icon: issue-opened
     target: blank
+  - text: Discussions
+    link: https://github.com/DannyBen/bashly/discussions
+    icon: comment-discussion
+    target: blank
 
 integrations:
   googleAnalytics:
