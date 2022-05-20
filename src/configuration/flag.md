@@ -113,6 +113,17 @@ Remember to set the [`arg`](#arg) name when using this option.
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
 
 
+## completions
+
+[!badge Array of Strings]
+
+Specify an array of additional completion suggestions when used in conjunction
+with `bashly add comp`.
+
+Remember to set the [`arg`](#arg) name when using this option.
+
+[!ref](/advanced/bash-completion.md)
+
 ## conflicts
 
 [!badge Array of Strings]
