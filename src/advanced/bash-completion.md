@@ -28,8 +28,8 @@ purposes.
 
 ===
 
-The bash completions generation is completely automatic, but you will have to
-regenerate the completion function whenever you make changes to your
+The bash completions generation is **completely automatic**, but you will have
+to regenerate the completion function whenever you make changes to your
 `bashly.yml` file. 
 
 !!!success Tip
@@ -37,9 +37,12 @@ By running `bashly generate --upgrade`, your completions function
 (generated with `bashly add comp function`) will be regenerated.
 !!!
 
-In addition to suggesting sub-commands and flags, you can instruct bashly to
-also suggest files, directories, users, git branches and more. To do this, add
-another option in your `bashly.yml` on the command you wish to alter:
+## Custom command completions
+
+In addition to the automatic suggestion of sub-commands and flags, you can
+instruct bashly to also suggest files, directories, users, git branches and
+more. To do this, add another option in your `bashly.yml` on the command you
+wish to alter:
 
 ```yaml bashly.yml
 commands:
@@ -52,6 +55,28 @@ commands:
 
 ```
 
+## Custom flag completions
+
+The `completions` option is also available on flags that have an `arg`.
+Similarly to the `allowed` option for arguments, the allowed list is added
+to the suggestions automatically (without the need to use `completions`).
+
+```yaml bashly.yml
+commands:
+- name: login
+  help: Login to SETI
+  flags:
+  - long: --user
+    arg: username
+    completions:
+    - <user>
+  - long: --protocol
+    arg: protocol
+    allowed:
+      - ssh
+      - telnet
+```
+
 - Anything between `<...>` will be added using the `compgen -A action` flag.
 - Anything else, will be appended to the `compgen -W` flag.
 
@@ -62,9 +87,12 @@ the [Flag argument `allowed` option](../configuration/flag.md#allowed),
 these will be automatically added to the completions list as well.
 !!!
 
+## Additional documentation
 
 For more information about these custom completions, see the
-[documentation for the completely][completely-docs] gem.
+[documentation for the completely gem][completely-docs].
+
+## Example
 
 [!button variant="primary" icon="code-review" text="Bash Completions Example"](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme)
 
