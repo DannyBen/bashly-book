@@ -30,12 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.705951291274" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.706513277981" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.705951291274" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.706513277981" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.705951291274" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.705951291274" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.706513277981" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.706513277981" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -55,7 +55,7 @@
                                 <img class="max-h-10 dark:hidden md:inline-block" src="/assets/logo.svg">
                                 <img class="max-h-10 hidden dark:inline-block" src="/assets/logo-dark.svg">
                             </span>
-                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.8.0</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.8.1</span>
                     </div>
         
                     <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -229,8 +229,8 @@ script. You can then call this function from any command (for example <code v-pr
 purposes.</p>
    </doc-panel>
 </doc-panels>
-<p>The bash completions generation is completely automatic, but you will have to
-regenerate the completion function whenever you make changes to your
+<p>The bash completions generation is <strong>completely automatic</strong>, but you will have
+to regenerate the completion function whenever you make changes to your
 <code v-pre>bashly.yml</code> file.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-green-500"></div>
@@ -250,9 +250,16 @@ regenerate the completion function whenever you make changes to your
         </div>
     </div>
 </div>
-<p>In addition to suggesting sub-commands and flags, you can instruct bashly to
-also suggest files, directories, users, git branches and more. To do this, add
-another option in your <code v-pre>bashly.yml</code> on the command you wish to alter:</p>
+<doc-anchor-target id="custom-command-completions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-command-completions">#</doc-anchor-trigger>
+        <span>Custom command completions</span>
+    </h2>
+</doc-anchor-target>
+<p>In addition to the automatic suggestion of sub-commands and flags, you can
+instruct bashly to also suggest files, directories, users, git branches and
+more. To do this, add another option in your <code v-pre>bashly.yml</code> on the command you
+wish to alter:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">bashly.yml</div>
 <pre class="language-yaml"><code v-pre class="language-yaml">commands:
@@ -263,6 +270,31 @@ another option in your <code v-pre>bashly.yml</code> on the command you wish to 
   - &lt;user&gt;
   - $(git branch 2&gt; /dev/null)
 </code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="custom-flag-completions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-flag-completions">#</doc-anchor-trigger>
+        <span>Custom flag completions</span>
+    </h2>
+</doc-anchor-target>
+<p>The <code v-pre>completions</code> option is also available on flags that have an <code v-pre>arg</code>.
+Similarly to the <code v-pre>allowed</code> option for arguments, the allowed list is added
+to the suggestions automatically (without the need to use <code v-pre>completions</code>).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">bashly.yml</div>
+<pre class="language-yaml"><code v-pre class="language-yaml">commands:
+- name: login
+  help: Login to SETI
+  flags:
+  - long: --user
+    arg: username
+    completions:
+    - &lt;user&gt;
+  - long: --protocol
+    arg: protocol
+    allowed:
+      - ssh
+      - telnet</code></pre>
 </doc-codeblock></div>
 <ul>
 <li>Anything between <code v-pre>&lt;...&gt;</code> will be added using the <code v-pre>compgen -A action</code> flag.</li>
@@ -289,8 +321,20 @@ these will be automatically added to the completions list as well.</p>
         </div>
     </div>
 </div>
+<doc-anchor-target id="additional-documentation">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#additional-documentation">#</doc-anchor-trigger>
+        <span>Additional documentation</span>
+    </h2>
+</doc-anchor-target>
 <p>For more information about these custom completions, see the
-<a href="https://github.com/DannyBen/completely#suggesting-files-directories-and-other-bash-built-ins">documentation for the completely</a> gem.</p>
+<a href="https://github.com/DannyBen/completely#suggesting-files-directories-and-other-bash-built-ins">documentation for the completely gem</a>.</p>
+<doc-anchor-target id="example">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#example">#</doc-anchor-trigger>
+        <span>Example</span>
+    </h2>
+</doc-anchor-target>
 <p><a href="https://github.com/DannyBen/bashly/tree/master/examples/completions#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Bash Completions Example</span>
