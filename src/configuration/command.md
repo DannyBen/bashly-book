@@ -172,6 +172,18 @@ Setting this to `true` on any command, will hide it from the command list.
 [!button variant="primary" icon="code-review" text="Private Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme)
 
 
+## expose
+
+[!badge Boolean]
+[!badge variant="warning" text="Sub-Commands Only"]
+
+Setting this to `true` on any command that has sub-commands, will show its
+sub-commands in the help text of the parent command. This works well with the
+[`group`](#group) option.
+
+[!button variant="primary" icon="code-review" text="Commands Expose Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme)
+
+
 ## args
 
 [!badge Array of Arguments]
