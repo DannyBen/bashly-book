@@ -136,8 +136,7 @@ Add a custom message that will be displayed at the end of the `--help` text.
 In case you have many commands, use this option to specify a caption to display
 before this command.
 
-This option is purely for display purposes, and needs to be specified only for
-the first command in each group.
+This option is purely for display purposes.
 
 [!button variant="primary" icon="code-review" text="Command Groups Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme)
 
