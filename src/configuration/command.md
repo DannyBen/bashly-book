@@ -70,7 +70,7 @@ The name of the script or sub-command.
 
 ## alias
 
-[!badge String / Array]
+[!badge String / Array of Strings]
 [!badge variant="warning" text="Sub-Commands Only"]
 
 !!! Note
@@ -173,12 +173,19 @@ Setting this to `true` on any command, will hide it from the command list.
 
 ## expose
 
-[!badge Boolean]
+[!badge Boolean / String]
 [!badge variant="warning" text="Sub-Commands Only"]
 
-Setting this to `true` on any command that has sub-commands, will show its
-sub-commands in the `--help` text of the parent command. This works well with
-the [`group`](#group) option.
+Setting this to `true` or `always` on any command that has sub-commands, will
+show its sub-commands in the help or usage text of the parent command.
+
+- Set to `true` to show the sub-commands only when the parent command is
+  executed with `--help`.
+- Set to `always` to show the sub-commands also when the parent command is
+  executed without any arguments.
+
+You can use `expose` with the [`group`](#group) option, to show sub-commands
+in a logical, visual grouping.
 
 [!button variant="primary" icon="code-review" text="Commands Expose Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme)
 
