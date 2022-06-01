@@ -124,6 +124,8 @@ Remember to set the [`arg`](#arg) name when using this option.
 [!badge Array of Strings]
 
 Specify that this flag is mutually exclusive with one or more other flags.
+The values of this array should be the long versions of the flags:
+`conflicts: [--other, --another]`
 
 !!! Note
 This option should be specified on both sides of the exclusivity.
