@@ -50,7 +50,9 @@ flags:
 ===
 
 
-## long
+## Basic Options
+
+### long
 
 [!badge String]
 [!badge variant="danger" text="Required (unless short is provided)"]
@@ -58,7 +60,7 @@ flags:
 The long form of the flag, including the `--` prefix.
 
 
-## short
+### short
 
 [!badge String]
 [!badge variant="danger" text="Required (unless long is provided)"]
@@ -70,28 +72,24 @@ The `-v` and `-h` flags will be used as the short options for `--version` and `-
 !!!
 
 
-## help
+### help
 
 [!badge String]
 
 The text to display when using `--help`. Can have multiple lines.
 
 
-## arg
+### arg
 
 [!badge String]
 
 If the flag requires an argument, specify its name here.
 
 
-## required
 
-[!badge Boolean]
+## Common Options
 
-Specify if this flag is required.
-
-
-## default
+### default
 
 [!badge String]
 
@@ -100,8 +98,16 @@ is optional, and only makes sense when the flag has an argument.
 
 [!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
 
+### required
 
-## allowed
+[!badge Boolean]
+
+Specify if this flag is required.
+
+
+## Advanced Options
+
+### allowed
 
 [!badge Array of Strings]
 
@@ -113,7 +119,22 @@ Remember to set the [`arg`](#arg) name when using this option.
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
 
 
-## completions
+### conflicts
+
+[!badge Array of Strings]
+
+Specify that this flag is mutually exclusive with one or more other flags.
+The values of this array should be the long versions of the flags:
+`conflicts: [--other, --another]`
+
+!!! Note
+This option should be specified on both sides of the exclusivity.
+!!!
+
+[!button variant="primary" icon="code-review" text="Conflicts Example"](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme)
+
+
+### completions
 
 [!badge Array of Strings]
 
@@ -124,20 +145,8 @@ Remember to set the [`arg`](#arg) name when using this option.
 
 [!ref](/advanced/bash-completion.md)
 
-## conflicts
 
-[!badge Array of Strings]
-
-Specify that this flag is mutually exclusive with one or more other flags.
-
-!!! Note
-This option should be specified on both sides of the exclusivity.
-!!!
-
-[!button variant="primary" icon="code-review" text="Conflicts Example"](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme)
-
-
-## repeatable
+### repeatable
 
 [!badge Boolean]
 
@@ -155,7 +164,7 @@ something like `eval "data=(${args[--data]})"`.
 [!button variant="primary" icon="code-review" text="Repeatable Flag Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-flag#readme)
 
 
-## validate
+### validate
 
 [!badge String]
 

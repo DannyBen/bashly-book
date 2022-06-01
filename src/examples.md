@@ -43,6 +43,7 @@ All examples are listed below for convenience.
 - [command-private](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme) - hiding commands from the command list
 - [stdin](https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme) - reading input from stdin
 - [filters](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme) - preventing commands from running unless custom conditions are met
+- [commands-expose](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme) - showing subcommands in the parent's help
 
 ## Customization
 
@@ -72,6 +73,7 @@ All examples are listed below for convenience.
 - [heredoc](https://github.com/DannyBen/bashly/tree/master/examples/heredoc#readme) - using heredoc strings
 - [heredoc-alt](https://github.com/DannyBen/bashly/tree/master/examples/heredoc-alt#readme) - using heredoc strings in the lib directory
 - [settings](https://github.com/DannyBen/bashly/tree/master/examples/settings#readme) - using the `settings.yml` file to adjust bashly's behavior
+- [help-command](https://github.com/DannyBen/bashly/tree/master/examples/help-command#readme) - adding a help command to your script
 
 <!-- EXAMPLES INDEX -->
 

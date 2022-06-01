@@ -43,7 +43,9 @@ args:
 ===
 
 
-## name
+## Basic Options
+
+### name
 
 [!badge String]
 [!badge variant="danger" text="Required"]
@@ -55,14 +57,27 @@ purposes:
 - It will be used as the hash key in the `${args[...]}` associative bash array.
 
 
-## help
+### help
 
 [!badge String]
 
 The message to display when using `--help`. Can have multiple lines.
 
 
-## required
+## Common Options
+
+
+### default
+
+[!badge String]
+
+The value to use in case it is not provided by the user. Implies that this
+argument is optional.
+
+[!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
+
+
+### required
 
 [!badge Boolean]
 
@@ -74,16 +89,9 @@ define required arguments after it.
 !!!
 
 
-## default
+## Advanced Options
 
-[!badge String]
-
-The value to use in case it is not provided by the user. Implies that this
-argument is optional.
-
-[!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
-
-## allowed
+### allowed
 
 [!badge Array of Strings]
 
@@ -92,7 +100,8 @@ with [`default`](#default) and [`required`](#required).
 
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
 
-## repeatable
+
+### repeatable
 
 [!badge Boolean]
 
@@ -105,7 +114,7 @@ you will need to convert to array with something like
 [!button variant="primary" icon="code-review" text="Repeatable Argument Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-arg#readme)
 
 
-## validate
+### validate
 
 [!badge String]
 

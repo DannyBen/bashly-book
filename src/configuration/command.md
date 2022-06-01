@@ -60,7 +60,10 @@ commands:
 ===
 
 
-## name
+
+## Basic Options
+
+### name
 
 [!badge String]
 [!badge variant="danger" text="Required"]
@@ -68,9 +71,9 @@ commands:
 The name of the script or sub-command.
 
 
-## alias
+### alias
 
-[!badge String / Array]
+[!badge String / Array of Strings]
 [!badge variant="warning" text="Sub-Commands Only"]
 
 !!! Note
@@ -97,7 +100,8 @@ alias: [u, push]  # upload, u and push will all run the same command
 
 [!button variant="primary" icon="code-review" text="Command Aliases Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-aliases#readme)
 
-## help
+
+### help
 
 [!badge String]
 
@@ -106,73 +110,7 @@ The header text to display when using `--help`.
 This option can have multiple lines. In this case, the first line will be used
 as summary wherever appropriate.
 
-
-## filename
-
-[!badge String]
-
-The path (relative to `src`) to the partial source code file, in case you wish
-to store your source files in a different path than the default one.
-
-This is useful for scripts that contain many commands.
-
-[!button variant="primary" icon="code-review" text="Command Filenames Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-filenames#readme)
-
-
-## footer
-
-[!badge String]
-
-Add a custom message that will be displayed at the end of the `--help` text. 
-
-[!button variant="primary" icon="code-review" text="Footer Example"](https://github.com/DannyBen/bashly/tree/master/examples/footer#readme)
-
-
-## group
-
-[!badge String]
-[!badge variant="warning" text="Sub-Commands Only"]
-
-In case you have many commands, use this option to specify a caption to display
-before this command.
-
-This option is purely for display purposes, and needs to be specified only for
-the first command in each group.
-
-[!button variant="primary" icon="code-review" text="Command Groups Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme)
-
-
-## version
-
-[!badge String]
-[!badge variant="warning" text="Root Command Only"]
-
-The string to display when using `--version`.
-
-
-## default
-
-[!badge Boolean]
-[!badge variant="warning" text="Sub-Commands Only"]
-
-Setting this to `true` on any command, will cause any **unrecognized** command
-line to be passed to this command. This means that it should be used only for
-command that have at least one required argument.
-
-[!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme)
-
-
-## private
-
-[!badge Boolean]
-[!badge variant="warning" text="Sub-Commands Only"]
-
-Setting this to `true` on any command, will hide it from the command list.
-
-[!button variant="primary" icon="code-review" text="Private Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme)
-
-
-## args
+### args
 
 [!badge Array of Arguments]
 
@@ -181,7 +119,7 @@ Specify the array of positional arguments this script needs.
 [!ref](argument.md)
 
 
-## flags
+### flags
 
 [!badge Array of Flags]
 
@@ -190,7 +128,7 @@ Specify the array of option flags this script needs.
 [!ref](flag.md)
 
 
-## commands
+### commands
 
 [!badge Array of Commands]
 
@@ -203,7 +141,74 @@ Using `commands` on a given command implies that this command does not have flag
 [!button variant="primary" icon="code-review" text="Commands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands#readme) [!button variant="primary" icon="code-review" text="Sub-Commands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-nested#readme) 
 
 
-## catch_all
+
+### version
+
+[!badge String]
+[!badge variant="warning" text="Root Command Only"]
+
+The string to display when using `--version`.
+
+
+
+## Common Options
+
+
+### default
+
+[!badge Boolean]
+[!badge variant="warning" text="Sub-Commands Only"]
+
+Setting this to `true` on any command, will cause any **unrecognized** command
+line to be passed to this command. This means that it should be used only for
+command that have at least one required argument.
+
+[!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme)
+
+
+### environment_variables
+
+[!badge Array of Environment Variables]
+
+Specify an array of environment variables required or desired by your script. 
+
+[!ref](environment-variable.md)
+
+
+### examples
+
+[!badge Array of Strings]
+
+Specify an array of examples to show when using `--help`. Each example can have
+multiple lines.
+
+
+### footer
+
+[!badge String]
+
+Add a custom message that will be displayed at the end of the `--help` text. 
+
+[!button variant="primary" icon="code-review" text="Footer Example"](https://github.com/DannyBen/bashly/tree/master/examples/footer#readme)
+
+
+### group
+
+[!badge String]
+[!badge variant="warning" text="Sub-Commands Only"]
+
+In case you have many commands, use this option to specify a caption to display
+before this command.
+
+This option is purely for display purposes.
+
+[!button variant="primary" icon="code-review" text="Command Groups Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme)
+
+
+
+## Advanced Options
+
+### catch_all
 
 [!badge Boolean / String / Hash]
 
@@ -225,7 +230,7 @@ To access arguments captured by `catch_all` in your script, use the
 [!button variant="primary" icon="code-review" text="Catch All Example"](https://github.com/DannyBen/bashly/tree/master/examples/catch-all#readme) [!button variant="primary" icon="code-review" text="Catch All Advanced Example"](https://github.com/DannyBen/bashly/tree/master/examples/catch-all-advanced#readme)
 
 
-## completions
+### completions
 
 [!badge Array of Strings]
 
@@ -235,16 +240,7 @@ with `bashly add comp`.
 [!ref](/advanced/bash-completion.md)
 
 
-## environment_variables
-
-[!badge Array of Environment Variables]
-
-Specify an array of environment variables required or desired by your script. 
-
-[!ref](environment-variable.md)
-
-
-## dependencies
+### dependencies
 
 [!badge Array of Strings]
 
@@ -255,7 +251,48 @@ exist.
 [!button variant="primary" icon="code-review" text="Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme)
 
 
-## filters
+### expose
+
+[!badge Boolean / String]
+[!badge variant="warning" text="Sub-Commands Only"]
+
+Setting this to `true` or `always` on any command that has sub-commands, will
+show its sub-commands in the help or usage text of the parent command.
+
+- Set to `true` to show the sub-commands only when the parent command is
+  executed with `--help`.
+- Set to `always` to show the sub-commands also when the parent command is
+  executed without any arguments.
+
+You can use `expose` with the [`group`](#group) option, to show sub-commands
+in a logical, visual grouping.
+
+[!button variant="primary" icon="code-review" text="Commands Expose Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme)
+
+
+### extensible
+
+[!badge Boolean / String]
+[!badge variant="warning" text="Root Command Only"]
+
+Specify that this command can be extended by external means.
+
+[!ref](/advanced/extensible-scripts.md)
+
+
+### filename
+
+[!badge String]
+
+The path (relative to `src`) to the partial source code file, in case you wish
+to store your source files in a different path than the default one.
+
+This is useful for scripts that contain many commands.
+
+[!button variant="primary" icon="code-review" text="Command Filenames Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-filenames#readme)
+
+
+### filters
 
 [!badge Array of Strings]
 
@@ -265,19 +302,11 @@ certain conditions are met.
 [!ref](/advanced/filters)
 
 
-## examples
+### private
 
-[!badge Array of Strings]
+[!badge Boolean]
+[!badge variant="warning" text="Sub-Commands Only"]
 
-Specify an array of examples to show when using `--help`. Each example can have
-multiple lines.
+Setting this to `true` on any command, will hide it from the command list.
 
-
-## extensible
-
-[!badge Boolean / String]
-[!badge variant="warning" text="Root Command Only"]
-
-Specify that this command can be extended by external means.
-
-[!ref](/advanced/extensible-scripts.md)
+[!button variant="primary" icon="code-review" text="Private Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme)
