@@ -30,11 +30,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.706513277981" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707409564769" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.706513277981" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707409564769" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.706513277981" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707409564769" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -54,7 +54,7 @@
                                 <img class="max-h-10 dark:hidden md:inline-block" src="/assets/logo.svg">
                                 <img class="max-h-10 hidden dark:inline-block" src="/assets/logo-dark.svg">
                             </span>
-                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.8.1</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.8.2</span>
                     </div>
         
                     <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -259,6 +259,7 @@ documented example configuration files, with their output.</p>
 <li><a href="https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme">command-private</a> - hiding commands from the command list</li>
 <li><a href="https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme">stdin</a> - reading input from stdin</li>
 <li><a href="https://github.com/DannyBen/bashly/tree/master/examples/filters#readme">filters</a> - preventing commands from running unless custom conditions are met</li>
+<li><a href="https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme">commands-expose</a> - showing subcommands in the parent&#x27;s help</li>
 </ul>
 <doc-anchor-target id="customization">
     <h2>
@@ -308,6 +309,7 @@ documented example configuration files, with their output.</p>
 <li><a href="https://github.com/DannyBen/bashly/tree/master/examples/heredoc#readme">heredoc</a> - using heredoc strings</li>
 <li><a href="https://github.com/DannyBen/bashly/tree/master/examples/heredoc-alt#readme">heredoc-alt</a> - using heredoc strings in the lib directory</li>
 <li><a href="https://github.com/DannyBen/bashly/tree/master/examples/settings#readme">settings</a> - using the <code v-pre>settings.yml</code> file to adjust bashly&#x27;s behavior</li>
+<li><a href="https://github.com/DannyBen/bashly/tree/master/examples/help-command#readme">help-command</a> - adding a help command to your script</li>
 </ul>
 <!-- EXAMPLES INDEX -->
 <doc-anchor-target id="real-world-examples">
