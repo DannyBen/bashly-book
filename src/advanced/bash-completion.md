@@ -87,6 +87,21 @@ the [Flag argument `allowed` option](../configuration/flag.md#allowed),
 these will be automatically added to the completions list as well.
 !!!
 
+## Completions in ZSH
+
+If you are using Oh-My-Zsh, bash completions should already be enabled,
+otherwise, you should enable completion by adding this to your `~/.zshrc`
+(if is it not already there):
+
+```bash
+# Load completion functions
+autoload -Uz +X compinit && compinit
+autoload -Uz +X bashcompinit && bashcompinit
+```
+
+After adding this (and restarting your session), you should be able to source
+any bash completion script in zsh.
+
 ## Additional documentation
 
 For more information about these custom completions, see the
@@ -95,7 +110,6 @@ For more information about these custom completions, see the
 ## Example
 
 [!button variant="primary" icon="code-review" text="Bash Completions Example"](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme)
-
 
 
 [completely]: https://github.com/DannyBen/completely
