@@ -99,6 +99,11 @@ in your generated bash script.
 In case you wish to replace the header in the generated script, simply put the new
 content in `src/header.sh`.
 
+!!! Note
+Be sure to start it with a shebang:
+`#!/usr/bin/env bash`
+!!!
+
 ## Hidden comments
 
 Any comment in your source files that begins with two `#` symbols, will be 
