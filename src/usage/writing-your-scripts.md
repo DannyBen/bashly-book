@@ -100,7 +100,7 @@ In case you wish to replace the header in the generated script, simply put the n
 content in `src/header.sh`.
 
 !!! Note
-Be sure to start it with a shebang:
+Be sure to start your header with a shebang:
 `#!/usr/bin/env bash`
 !!!
 
