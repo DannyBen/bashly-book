@@ -10,7 +10,7 @@ server:
 branding:
   logo: assets/logo.svg
   logoDark: assets/logo-dark.svg
-  label: v0.8.3
+  label: v0.8.4
 
 meta:
   title: " | Bashly - Bash CLI Framework"
