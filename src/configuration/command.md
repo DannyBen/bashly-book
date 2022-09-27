@@ -161,7 +161,7 @@ The string to display when using `--version`.
 
 Setting this to `true` on any command, will cause any **unrecognized** command
 line to be passed to this command. This means that it should be used only for
-command that have at least one required argument.
+command that have at least one argument.
 
 [!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme)
 
