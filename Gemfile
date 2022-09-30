@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "filewatcher"
+gem "filewatcher-cli"
 gem "foreman"
 gem "httpme"
 gem "sla"

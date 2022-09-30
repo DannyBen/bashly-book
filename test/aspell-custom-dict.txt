@@ -5,7 +5,9 @@ alf
 api
 arg
 args
+autoload
 AWS
+bashcompinit
 Bashly
 bashly
 bashly's
@@ -15,6 +17,7 @@ CLI
 cli
 codescan
 compgen
+compinit
 config
 Config
 dannyben
@@ -45,8 +48,13 @@ stdin
 Unregister
 url
 usr
+Uz
 vvv
 yaml
 YAML
 yml
 yourcli
+ZSH
+Zsh
+zsh
+zshrc
