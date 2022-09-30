@@ -1,6 +1,7 @@
 # Bashly Documentation Site
 
-This is the source for [bashly.dannyb.co](https://bashly.dannyb.co).
+This is the source for [bashly.dannyb.co](https://bashly.dannyb.co) - the
+documentation site for [bashly](https://github.com/DannyBen/bashly)
 
 ## Development
 

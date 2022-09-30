@@ -125,6 +125,15 @@ Specify the array of positional arguments this script needs.
 
 Specify the array of option flags this script needs.
 
+!!! Note
+Flags that are defined in a command that has sub-commands, are considered
+"global flags", and will be available to all sub-commands, in addition to any
+flag defined in any of the sub-commands themselves.
+
+The [docker-like example](https://github.com/DannyBen/bashly/tree/master/examples/docker-like#readme)
+demonstrates this this feature.
+!!!
+
 [!ref](flag.md)
 
 

@@ -94,6 +94,13 @@ $ bashly add lib
 Any code within the `src/initialize.sh` file will be called before anything else
 in your generated bash script. 
 
+!!!success Tip
+If your script defines [`Environment Variables`](/configuration/environment-variable)
+with [`default`](/configuration/environment-variable/#default) values, these
+values will be available to you in the `initialize.sh` file.
+!!!
+
+
 ## Custom header
 
 In case you wish to replace the header in the generated script, simply put the new
