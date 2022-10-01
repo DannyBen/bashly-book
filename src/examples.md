@@ -39,6 +39,7 @@ All examples are listed below for convenience.
 - [whitelist](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme) - arguments and flags with a predefined allowed list of values
 - [repeatable-arg](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-arg#readme) - allowing arguments to be provided multiple times
 - [repeatable-flag](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-flag#readme) - allowing flags to be provided multiple times
+- [reusable-flags](https://github.com/DannyBen/bashly/tree/master/examples/reusable-flags#readme) - reuse flag definition for multiple commands
 - [conflicts](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme) - defining mutually exclusive flags
 - [command-private](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme) - hiding commands from the command list
 - [stdin](https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme) - reading input from stdin
