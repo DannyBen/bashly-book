@@ -131,7 +131,7 @@ Flags that are defined in a command that has sub-commands, are considered
 flag defined in any of the sub-commands themselves.
 
 The [docker-like example](https://github.com/DannyBen/bashly/tree/master/examples/docker-like#readme)
-demonstrates this this feature.
+demonstrates this feature.
 !!!
 
 [!ref](flag.md)
