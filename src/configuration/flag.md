@@ -12,6 +12,14 @@ function (regardless of whether the user provided it with the long or short
 form).
 
 !!! Note
+Bashly supports these additional flag formats as input:
+
+- `-abc` same as `-a -b -c`
+- `-a=arg` same as `-a arg`
+- `--flag=arg` same as `--flag arg`
+!!!
+
+!!! Note
 Most properties are optional, unless specified otherwise.
 !!!
 

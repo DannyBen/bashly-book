@@ -8,15 +8,7 @@ order: 90
 Specify positional arguments (required or optional) used by your script.
 
 The argument's value will be available to you as `${args[name]}` in your bash
-function (even if it was provided using the short syntax).
-
-!!! Note
-Bashly supports these additional argument formats as input:
-
-- `-abc` same as `-a -b -c`
-- `-a=arg` same as `-a arg`
-- `--flag=arg` same as `--flag arg`
-!!!
+function.
 
 !!! Note
 Most properties are optional, unless specified otherwise.
