@@ -23,6 +23,10 @@ which will create the following file:
 # All settings are optional (with their default values provided below), and
 # can also be set with an environment variable with the same name, capitalized
 # and prefixed by `BASHLY_` - for example: BASHLY_SOURCE_DIR
+#
+# When setting environment variables, you can use:
+# - "0", "false" or "no" to represent false
+# - "1", "true" or "yes" to represent true
 
 # The path containing the bashly configuration and source files
 source_dir: src
@@ -39,6 +43,10 @@ strict: false
 # When true, the generated script will use tab indentation instead of spaces
 # (every 2 leading spaces will be converted to a tab character)
 tab_indent: false
+
+# When true, the generated script will consider any argument in the form of
+# `-abc` as if it is `-a -b -c`.
+compact_short_flags: true
 
 # Set to 'production' or 'development':
 # - production    generate a smaller script, without file markers
