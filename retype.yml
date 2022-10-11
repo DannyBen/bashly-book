@@ -7,6 +7,9 @@ server:
   port: 3000
   watch: { polling: 3000 }
 
+editor:
+  enabled: true
+
 branding:
   logo: assets/logo.svg
   logoDark: assets/logo-dark.svg
