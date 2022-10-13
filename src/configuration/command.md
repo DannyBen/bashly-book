@@ -311,6 +311,32 @@ certain conditions are met.
 [!ref](/advanced/filters)
 
 
+### function
+
+[!badge String]
+
+The base name of the internal functions bashly will use when generating the
+script.
+
+This is useful for scripts that contain several commands that otherwise evaluate
+to the same internal function name.
+
+Note that the name specified here is just used as a base name. Bashly will
+generate several functions from it:
+
+- `<base>_command`
+- `<base>_usage`
+- and possibly more
+
+!!! Note
+Under most circumstances you should avoid using this directive. It is provided
+as a "last resort" mechanism to help in solving more complex scenarios.
+!!!
+
+[!button variant="primary" icon="code-review" text="Command Function Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-function#readme)
+
+
+
 ### private
 
 [!badge Boolean]
