@@ -324,8 +324,8 @@ to the same internal function name.
 Note that the name specified here is just used as a base name. Bashly will
 generate several functions from it:
 
-- `<base>_command`
-- `<base>_usage`
+- `<cli name>_<base function name>_command`
+- `<cli name>_<base function name>_usage`
 - and possibly more
 
 !!! Note

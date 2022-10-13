@@ -54,6 +54,7 @@ All examples are listed below for convenience.
 - [custom-script-header](https://github.com/DannyBen/bashly/tree/master/examples/custom-script-header#readme) - configuring a different script header
 - [footer](https://github.com/DannyBen/bashly/tree/master/examples/footer#readme) - adding a footer to the help message
 - [command-filenames](https://github.com/DannyBen/bashly/tree/master/examples/command-filenames#readme) - configuring paths for your source scripts
+- [command-function](https://github.com/DannyBen/bashly/tree/master/examples/command-function#readme) - configuring custom internal function names
 - [split-config](https://github.com/DannyBen/bashly/tree/master/examples/split-config#readme) - splitting your `bashly.yml` into several smaller files
 
 ## Real-world-like examples
