@@ -7,10 +7,13 @@ server:
   port: 3000
   watch: { polling: 3000 }
 
+editor:
+  enabled: true
+
 branding:
   logo: assets/logo.svg
   logoDark: assets/logo-dark.svg
-  label: v0.8.8
+  label: v0.8.9
 
 meta:
   title: " | Bashly - Bash CLI Framework"
