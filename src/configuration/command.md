@@ -186,11 +186,12 @@ Specify an array of environment variables required or desired by your script.
 
 ### examples
 
-[!badge Array of Strings]
+[!badge String / Array of Strings]
 
-Specify an array of examples to show when using `--help`. Each example can have
-multiple lines.
+Specify an array of examples to show when using `--help`, or a multi-line
+string. 
 
+[!button variant="primary" icon="code-review" text="Command Examples Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-examples#readme)
 
 ### footer
 

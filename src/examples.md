@@ -23,6 +23,7 @@ All examples are listed below for convenience.
 
 - [command-default](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme) - configuring a default command
 - [command-aliases](https://github.com/DannyBen/bashly/tree/master/examples/command-aliases#readme) - allowing a command to be called with multiple names
+- [command-examples](https://github.com/DannyBen/bashly/tree/master/examples/command-examples#readme) - configuring command examples
 - [dependencies](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme) - halting script execution unless certain dependencies are installed
 - [environment-variables](https://github.com/DannyBen/bashly/tree/master/examples/environment-variables#readme) - halting script execution unless certain environment variables are set
 - [default-values](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme) - arguments and flags with default values
