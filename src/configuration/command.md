@@ -170,7 +170,7 @@ The string to display when using `--version`.
 
 Setting this to `true` on any command, will cause any **unrecognized** command
 line to be passed to this command. This means that it should be used only for
-command that have at least one argument.
+commands that have at least one argument.
 
 [!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme)
 
@@ -252,11 +252,27 @@ with `bashly add comp`.
 
 ### dependencies
 
-[!badge Array of Strings]
+[!badge Array of Strings / Hash]
 
-Specify an array of any required external dependencies (commands). The script
+Specify a list of any required external dependencies (commands). The script
 execution will be halted with a friendly error unless all dependency commands
 exist.
+
+This can be provided either as a simple array, or as a hash of `command: help message`
+pairs. For example:
+
+```yaml bashly.yml
+# array syntax
+dependencies:
+  - docker
+  - curl
+
+# hash syntax
+dependencies:
+  docker: see https://docker.com for installation instructions
+  git: "install by running: sudo apt install git"
+```
+
 
 [!button variant="primary" icon="code-review" text="Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme)
 
