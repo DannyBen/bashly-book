@@ -85,12 +85,14 @@ All examples are listed below for convenience.
 
 These tools were developed using bashly. You can review their code to learn more about using bashly.
 
-- [Rush][rush] - a Personal Package Manager
 - [Alf][alf] - a generator for bash aliases and sub-aliases
 - [git-changelog][git-changelog] - a change log generator
+- [Respec][respec] - a convenience wrapper for ruby's rspec
+- [Rush][rush] - a Personal Package Manager
 - [slack-emoji-toolkit][slack-emoji-toolkit] - liberate your custom Slack emojis
 
-[rush]: https://github.com/DannyBen/rush-cli
 [alf]: https://github.com/DannyBen/alf
 [git-changelog]: https://github.com/DannyBen/git-changelog
+[respec]: https://github.com/DannyBen/respec
+[rush]: https://github.com/DannyBen/rush-cli
 [slack-emoji-toolkit]: https://github.com/wilhelm-murdoch/slack-emoji-toolkit

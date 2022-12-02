@@ -61,6 +61,13 @@ environment variable is optional.
 
 [!button variant="primary" icon="code-review" text="Environment Variables Example"](https://github.com/DannyBen/bashly/tree/master/examples/environment-variables#readme)
 
+### private
+
+[!badge Boolean]
+
+Setting this to `true` on any environment variable, will hide it from the help
+text. This only makes sense when `default` is set.
+
 ### required
 
 [!badge Boolean]
