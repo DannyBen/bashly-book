@@ -165,14 +165,15 @@ The string to display when using `--version`.
 
 ### default
 
-[!badge Boolean]
+[!badge Boolean / String]
 [!badge variant="warning" text="Sub-Commands Only"]
 
-Setting this to `true` on any command, will cause any **unrecognized** command
-line to be passed to this command. This means that it should be used only for
-commands that have at least one argument.
+- Setting this to `true` on any command, will cause any **unrecognized**
+  command line to be passed to this command.
+- Settings this to `force` will also execute this command (instead of showing
+  the root usage text) when executed without any arguments.
 
-[!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme)
+[!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme) [!button variant="primary" icon="code-review" text="Forced Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default-force#readme)
 
 
 ### environment_variables

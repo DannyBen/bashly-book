@@ -22,6 +22,7 @@ All examples are listed below for convenience.
 ## Basic features
 
 - [command-default](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme) - configuring a default command
+- [command-default-force](https://github.com/DannyBen/bashly/tree/master/examples/command-default-force#readme) - configuring a default command that runs instead of showing the usage text
 - [command-aliases](https://github.com/DannyBen/bashly/tree/master/examples/command-aliases#readme) - allowing a command to be called with multiple names
 - [command-examples](https://github.com/DannyBen/bashly/tree/master/examples/command-examples#readme) - configuring command examples
 - [dependencies](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme) - halting script execution unless certain dependencies are installed
