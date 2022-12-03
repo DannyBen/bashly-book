@@ -53,6 +53,8 @@ compact_short_flags: true
 # - development   generate with file markers
 env: development
 
+# The extension to use when reading/writing partial script snippets.
+partials_extension: sh
 ```
 
 [!button variant="primary" icon="code-review" text="Settings Example"](https://github.com/DannyBen/bashly/tree/master/examples/settings#readme)
