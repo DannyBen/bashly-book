@@ -50,6 +50,7 @@ All examples are listed below for convenience.
 
 ## Customization
 
+- [colors-usage](https://github.com/DannyBen/bashly/tree/master/examples/colors-usage#readme) - adding colors to the usage text
 - [command-groups](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme) - grouping sub-commands in logical sections
 - [custom-strings](https://github.com/DannyBen/bashly/tree/master/examples/custom-strings#readme) - configuring the script's error and usage texts
 - [custom-includes](https://github.com/DannyBen/bashly/tree/master/examples/custom-includes#readme) - adding and organizing your custom functions
