@@ -6,4 +6,4 @@ hidden: true
 
 # Demo
 
-[![Bashly Demo](assets/cast.svg)](assets/cast.svg)
+[![Bashly Demo](assets/cast.gif)](assets/cast.gif)

@@ -10,7 +10,7 @@ label: Welcome
 
 The design intention is to let you focus on your specific code, without worrying about command line argument parsing, usage texts, error messages and other functions that are usually handled by a framework in any other programming language.
 
-[![Bashly Demo](/assets/cast.svg)](/demo/)
+[![Bashly Demo](/assets/cast.gif)](/demo/)
 
 ## How it works
 
