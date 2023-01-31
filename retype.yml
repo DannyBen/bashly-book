@@ -13,7 +13,7 @@ editor:
 branding:
   logo: assets/logo.svg
   logoDark: assets/logo-dark.svg
-  label: v0.9.4
+  label: v0.9.5
 
 meta:
   title: " | Bashly - Bash CLI Framework"
