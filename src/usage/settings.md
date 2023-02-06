@@ -6,17 +6,19 @@ order: 80
 # Settings
 
 Some of bashly's commands can be tweaked through the use of environment
-variables, or a settings file. The environment variables supported by each
-command are shown in the respective command's `--help` message.
+variables, or a settings file.
 
-If you wish to load settings from a configuration file instead of using
-environment variables, you can generate an initial settings file by running:
+If you wish to load settings from a configuration file, you can generate an
+initial settings file by running:
 
 ```shell
 $ bashly add settings
 ```
 
-which will create the following file:
+which will create the `settings.yml` file below.
+
+You can also change the path to this file by setting the environment variable
+`BASHLY_SETTINGS_PATH`.
 
 
 ```yaml settings.yml
@@ -27,9 +29,15 @@ which will create the following file:
 # When setting environment variables, you can use:
 # - "0", "false" or "no" to represent false
 # - "1", "true" or "yes" to represent true
+#
+# If you wish to change the path to this file, set the environment variable
+# BASHLY_SETTINGS_PATH.
 
-# The path containing the bashly configuration and source files
+# The path containing the bashly source files
 source_dir: src
+
+# Tha path to bashly.yml
+config_path: "%{source_dir}/bashly.yml"
 
 # The path to use for creating the bash script
 target_dir: .
