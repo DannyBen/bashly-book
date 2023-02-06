@@ -153,6 +153,11 @@ Remember to set the [`arg`](#arg) name when using this option.
 
 [!ref](/advanced/bash-completion.md)
 
+### private
+
+[!badge Boolean]
+
+Setting this to `true` on any flag, will hide it from the help text.
 
 ### repeatable
 

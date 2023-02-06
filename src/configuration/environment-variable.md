@@ -66,7 +66,7 @@ environment variable is optional.
 [!badge Boolean]
 
 Setting this to `true` on any environment variable, will hide it from the help
-text. This only makes sense when `default` is set.
+text.
 
 ### required
 
