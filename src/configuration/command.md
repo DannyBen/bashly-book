@@ -246,7 +246,7 @@ To access arguments captured by `catch_all` in your script, use the
 [!badge Array of Strings]
 
 Specify an array of additional completion suggestions when used in conjunction
-with `bashly add comp`.
+with `bashly add completions`.
 
 [!ref](/advanced/bash-completion.md)
 

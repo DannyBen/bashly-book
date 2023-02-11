@@ -8,21 +8,21 @@ order: 60
 Bashly comes with built-in bash completions generator, provided by the
 [completely][completely] gem.
 
-By running any of the `bashly add comp` commands, you can add this functionality
+By running `bashly add completions` commands, you can add this functionality
 to your script in one of three ways:
 
 
-==- `bashly add comp script`
-Creates a standalone completion script that can be sourced or copied to the
-system's bash completions directory.
-
-==- `bashly add comp function`
+==- `bashly add completions`
 Creates a function in your `./src/lib` directory that echoes a completion
 script. You can then call this function from any command (for example `yourcli
 completions`) and your users will be able to install the completions by running
 `eval "$(yourcli completions)"`.
 
-==- `bashly add comp yaml`
+==- `bashly add completions_script`
+Creates a standalone completions script that can be sourced or copied to the
+system's bash completions directory.
+
+==- `bashly add completions_yaml`
 Creates the raw data YAML file. This is intended mainly for development
 purposes.
 
@@ -34,7 +34,7 @@ to regenerate the completion function whenever you make changes to your
 
 !!!success Tip
 By running `bashly generate --upgrade`, your completions function 
-(generated with `bashly add comp function`) will be regenerated.
+(generated with `bashly add completions`) will be regenerated.
 !!!
 
 ## Custom command completions
