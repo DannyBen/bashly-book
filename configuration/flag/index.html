@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.728768856478">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.729545936926">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.728768856478" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.729545936926" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.728768856478" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.729545936926" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.728768856478" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.728768856478" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.729545936926" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.729545936926" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -480,7 +480,7 @@ The values of this array should be the long versions of the flags:
     <span>Array of Strings</span>
 </span></p>
 <p>Specify an array of additional completion suggestions when used in conjunction
-with <code v-pre>bashly add comp</code>.</p>
+with <code v-pre>bashly add completions</code>.</p>
 <p>Remember to set the <doc-anchor-trigger to="#arg"><code v-pre>arg</code></doc-anchor-trigger> name when using this option.</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
@@ -496,6 +496,16 @@ with <code v-pre>bashly add comp</code>.</p>
     <a href="../../advanced/bash-completion/" class="absolute block inset-0"></a>
 </div>
 </p>
+<doc-anchor-target id="private">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#private">#</doc-anchor-trigger>
+        <span>private</span>
+    </h3>
+</doc-anchor-target>
+<p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
+    <span>Boolean</span>
+</span></p>
+<p>Setting this to <code v-pre>true</code> on any flag, will hide it from the help text.</p>
 <doc-anchor-target id="repeatable">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#repeatable">#</doc-anchor-trigger>
