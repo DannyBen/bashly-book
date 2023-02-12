@@ -12,7 +12,7 @@ Install bashly using one of these methods.
 If you have Ruby 2.7 or higher (`ruby -v`), use this installation method:
 
 ```shell
-gem install bashly
+gem install bashly --pre
 ```
 
 +++ Homebrew
