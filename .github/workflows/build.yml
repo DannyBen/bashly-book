@@ -12,15 +12,12 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v1
+        uses: actions/checkout@v3
 
       - name: Build site
-        uses: retypeapp/action-build@v2
+        uses: retypeapp/action-build@latest
 
       - name: Publish to GitHub Pages
-        uses: retypeapp/action-github-pages@v2
+        uses: retypeapp/action-github-pages@latest
         with:
           update-branch: true
