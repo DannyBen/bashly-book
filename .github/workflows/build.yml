@@ -9,6 +9,8 @@ jobs:
   publish:
     name: Publish to retype branch
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Check out code
