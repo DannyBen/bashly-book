@@ -42,3 +42,8 @@ Bashly is responsible for:
   - **YAML parsing**.
   - **Bash completions**.
   - and more.
+
+## Sponsored By
+
+<a target='_blank' href="https://rhodecode.com/"><img src='/assets/rhodecode-logo.png' width=280></a>
+
