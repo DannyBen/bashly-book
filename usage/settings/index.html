@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730546061647">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731003021064">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.730546061647" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.731003021064" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.730546061647" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.731003021064" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.730546061647" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.730546061647" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.731003021064" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.731003021064" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -235,73 +235,212 @@
 </doc-anchor-target>
 <p>Some of bashly&#x27;s commands can be tweaked through the use of environment
 variables, or a settings file.</p>
+<doc-anchor-target id="settings-file">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#settings-file">#</doc-anchor-trigger>
+        <span>Settings file</span>
+    </h2>
+</doc-anchor-target>
 <p>If you wish to load settings from a configuration file, you can generate an
 initial settings file by running:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">$ bashly add settings</code></pre>
 </doc-codeblock></div>
-<p>which will create the <code v-pre>settings.yml</code> file below.</p>
+<p>which will create the default <code v-pre>settings.yml</code> file in the working directory.</p>
 <p>You can also change the path to this file by setting the environment variable
 <code v-pre>BASHLY_SETTINGS_PATH</code>.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-green-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-green-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21 9.09c-.55 0-1 .45-1 1v.92c0 4.96-4.04 8.99-9 8.99-4.97 0-9-4.04-9-9s4.04-9 9-9c1.27 0 2.5.26 3.66.78.51.22 1.1 0 1.32-.51.23-.5 0-1.1-.51-1.32C14.06.32 12.56 0 11.01 0H11C4.94 0 0 4.93 0 10.99 0 17.06 4.93 22 10.99 22H11c6.06 0 11-4.93 11-10.99v-.92c0-.56-.45-1-1-1z"></path>
+                    <path d="M8.71 9.31a.996.996 0 10-1.41 1.41l3 3c.19.19.44.29.71.29.27 0 .52-.11.71-.29l10-10.01a.996.996 0 10-1.41-1.41L11 11.6 8.71 9.31z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>YAML Tips</h5>
+<ul>
+<li>The words <code v-pre>yes</code> and <code v-pre>no</code> are equivalent to <code v-pre>true</code> and <code v-pre>false</code></li>
+<li>To specify a <code v-pre>null</code> value, use <code v-pre>~</code></li>
+</ul>
+        </div>
+    </div>
+</div>
+<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/settings#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
+    <span>Settings Example</span>
+</a></p>
+<doc-anchor-target id="environment-variables">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#environment-variables">#</doc-anchor-trigger>
+        <span>Environment variables</span>
+    </h2>
+</doc-anchor-target>
+<p>All settings are optional (with their default values provided below), and
+can also be set with an environment variable with the same name, capitalized
+and prefixed by <code v-pre>BASHLY_</code> - for example: <code v-pre>BASHLY_SOURCE_DIR</code></p>
+<p>When setting environment variables, you can use:</p>
+<ul>
+<li><code v-pre>0</code>, <code v-pre>false</code> or <code v-pre>no</code> to represent false</li>
+<li><code v-pre>1</code>, <code v-pre>true</code> or <code v-pre>yes</code> to represent true</li>
+</ul>
+<doc-anchor-target id="options">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#options">#</doc-anchor-trigger>
+        <span>Options</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="source_dir">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#source_dir">#</doc-anchor-trigger>
+        <span><code v-pre>source_dir</code></span>
+    </h3>
+</doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">settings.yml</div>
-<pre class="language-yaml"><code v-pre class="language-yaml"># All settings are optional (with their default values provided below), and
-# can also be set with an environment variable with the same name, capitalized
-# and prefixed by `BASHLY_` - for example: BASHLY_SOURCE_DIR
-#
-# When setting environment variables, you can use:
-# - &quot;0&quot;, &quot;false&quot; or &quot;no&quot; to represent false
-# - &quot;1&quot;, &quot;true&quot; or &quot;yes&quot; to represent true
-#
-# If you wish to change the path to this file, set the environment variable
-# BASHLY_SETTINGS_PATH.
-
-# The path containing the bashly source files
-source_dir: src
-
-# Tha path to bashly.yml
-config_path: &quot;%{source_dir}/bashly.yml&quot;
-
-# The path to use for creating the bash script
-target_dir: .
-
-# The path to use for upgrading library files, relative to the source dir
-lib_dir: lib
-
-# When true, enable bash strict mode (set -euo pipefail)
-strict: false
-
-# When true, the generated script will use tab indentation instead of spaces
-# (every 2 leading spaces will be converted to a tab character)
-tab_indent: false
-
-# When true, the generated script will consider any argument in the form of
-# `-abc` as if it is `-a -b -c`.
-compact_short_flags: true
-
-# Set to 'production' or 'development':
-# - production    generate a smaller script, without file markers
-# - development   generate with file markers
-env: development
-
-# The extension to use when reading/writing partial script snippets.
-partials_extension: sh
-
-# Display various usage elements in color by providing the name of the color
-# function. The value for each property is a name of a function that is
-# available in your script, for example: `green` or `bold`.
-# You can run `bashly add colors` to add a standard colors library.
-# This option cannot be set via environment variables.
-usage_colors:
+<pre class="language-yaml"><code v-pre class="language-yaml">source_dir: src</code></pre>
+</doc-codeblock></div>
+<p>Set the path containing the bashly source files.</p>
+<doc-anchor-target id="config_path">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#config_path">#</doc-anchor-trigger>
+        <span><code v-pre>config_path</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">config_path: &quot;%{source_dir}/bashly.yml&quot;</code></pre>
+</doc-codeblock></div>
+<p>Set the path to bashly.yml. You can use the special token <code v-pre>%{source_dir}</code> to
+reference the value of the <code v-pre>source_dir</code> option.</p>
+<doc-anchor-target id="target_dir">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#target_dir">#</doc-anchor-trigger>
+        <span><code v-pre>target_dir</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">target_dir: .</code></pre>
+</doc-codeblock></div>
+<p>Set the path to use for creating the final bash script.</p>
+<doc-anchor-target id="lib_dir">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lib_dir">#</doc-anchor-trigger>
+        <span><code v-pre>lib_dir</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">lib_dir: lib</code></pre>
+</doc-codeblock></div>
+<p>Set the path to use for common library files, relative to <code v-pre>source_dir</code>.</p>
+<doc-anchor-target id="strict">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#strict">#</doc-anchor-trigger>
+        <span><code v-pre>strict</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">strict: false</code></pre>
+</doc-codeblock></div>
+<p>Specify which bash options to apply on initialization.</p>
+<ul>
+<li><code v-pre>strict: true</code> - Bash strict mode (<code v-pre>set -euo pipefail</code>)</li>
+<li><code v-pre>strict: false</code> - Non strict, but still exit on error (<code v-pre>set -e</code>).</li>
+</ul>
+<doc-anchor-target id="tab_indent">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tab_indent">#</doc-anchor-trigger>
+        <span><code v-pre>tab_indent</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">tab_indent: false</code></pre>
+</doc-codeblock></div>
+<p>Specify the indentation style of the generated script.</p>
+<ul>
+<li><code v-pre>tab_indent: false</code> - Indent with two spaces.</li>
+<li><code v-pre>tab_indent: true</code> - Indent with Tab (every 2 leading spaces will be converted
+to a tab character).</li>
+</ul>
+<doc-anchor-target id="compact_short_flags">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#compact_short_flags">#</doc-anchor-trigger>
+        <span><code v-pre>compact_short_flags</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">compact_short_flags: true</code></pre>
+</doc-codeblock></div>
+<p>Specify how the generated script should treat flags in the form of <code v-pre>-abc</code></p>
+<ul>
+<li><code v-pre>compact_short_flags: true</code> - Expand <code v-pre>-abc</code> to <code v-pre>-a -b -c</code>.</li>
+<li><code v-pre>compact_short_flags: false</code> - Do not expand <code v-pre>-abc</code> (consider this an invalid input).</li>
+</ul>
+<doc-anchor-target id="env">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#env">#</doc-anchor-trigger>
+        <span><code v-pre>env</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">env: development</code></pre>
+</doc-codeblock></div>
+<p>Specify if the generated script should include development related comments or
+not.</p>
+<ul>
+<li><code v-pre>env: development</code> - Generate with file markers.</li>
+<li><code v-pre>env: production</code> -  Generate a smaller script, without file markers.</li>
+</ul>
+<doc-anchor-target id="partials_extension">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#partials_extension">#</doc-anchor-trigger>
+        <span><code v-pre>partials_extension</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">partials_extension: sh</code></pre>
+</doc-codeblock></div>
+<p>Set the extension to use when reading/writing partial script snippets.</p>
+<doc-anchor-target id="usage_colors">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#usage_colors">#</doc-anchor-trigger>
+        <span><code v-pre>usage_colors</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">usage_colors:
   caption: ~
   command: ~
   arg: ~
   flag: ~
   environment_variable: ~</code></pre>
 </doc-codeblock></div>
-<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/settings#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+<p>Enable color output for several aspects of the help message of the generated
+script. Each of these options may be a name of a color function that exists in
+your script, for example: <code v-pre>green</code> or <code v-pre>bold</code>.</p>
+<p>You can run <code v-pre>bashly add colors</code> to add a standard colors library.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Note</h5>
+<p>This option cannot be set using environment variables.</p>
+        </div>
+    </div>
+</div>
+<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/colors-usage#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
-    <span>Settings Example</span>
+    <span>Usage Colors Example</span>
 </a></p>
 
                                 
