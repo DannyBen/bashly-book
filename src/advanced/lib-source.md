@@ -21,7 +21,7 @@ This can be useful if:
 1. You have multiple bashly-generated scripts, and wish to have a central place
    for shareable libraries.
 2. You wish to create a public source for libraries for bashly.
-3. You wish to create a private sharable libraries source for your organization.
+3. You wish to create a private shareable libraries source for your organization.
 
 ## Specifications
 
