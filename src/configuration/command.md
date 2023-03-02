@@ -3,7 +3,6 @@ icon: dot
 order: 100
 ---
 
-
 # Command
 
 The `command` object serves two purposes, it:
@@ -259,23 +258,40 @@ Specify a list of any required external dependencies (commands). The script
 execution will be halted with a friendly error unless all dependency commands
 exist.
 
-This can be provided either as a simple array, or as a hash of `command: help message`
-pairs. For example:
+This configuration option can be provided in one of three ways:
+
+- A simple array, just listing the needed dependencies.
+- A hash specifying an additional help message to show in case the dependency is
+  not installed (for example, to provide installation instructions).
+- A hash of hashes, providing a list of commands for a single dependency, and
+  an optional help message. This is designed to provide an "or" functionality
+  for a single dependency (for example: curl or wget).
 
 ```yaml bashly.yml
-# array syntax
+# Array syntax
 dependencies:
-  - docker
-  - curl
+- docker
+- curl
 
-# hash syntax
+# Simple hash syntax, to provide additional (optional) help message
 dependencies:
   docker: see https://docker.com for installation instructions
   git: "install by running: sudo apt install git"
+  ruby:
+
+# Explicit hash syntax, to provide additional help message and
+# look for "one of" a given list of dependencies
+dependencies:
+  http_client:
+    command: [curl, wget]
+    help: Run 'sudo apt install curl' or 'sudo apt install wget'
 ```
 
+When a command defines `dependencies`, it will also have the paths of the found
+dependencies in an associative array named `deps`. Call the `inspect_args`
+function from your command code to see this array.
 
-[!button variant="primary" icon="code-review" text="Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme)
+[!button variant="primary" icon="code-review" text="Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme) [!button variant="primary" icon="code-review" text="Alternate Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies-alt#readme)
 
 
 ### expose

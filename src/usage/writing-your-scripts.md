@@ -7,12 +7,16 @@ order: 90
 
 The `bashly generate` command is performing the following actions:
 
-1. Generates placeholder files in the `src` directory - one file for each of the defined commands in your `bashly.yml` file. These files are generated only once and are never overwritten.
-2. Merges all these partial scripts into a single bash script, and saves it in the root directory of your project.
+1. Generates placeholder files in the `src` directory - one file for each of the
+   defined commands in your `bashly.yml` file. These files are generated only once
+   and are never overwritten.
+2. Merges all these partial scripts into a single bash script, and saves it in
+   the root directory of your project.
 
 ## Processing user input
 
-In order to access the parsed arguments in any of your partial scripts, you may simply access the `$args` associative array.
+In order to access the parsed arguments in any of your partial scripts, you may
+simply access the `$args` associative array.
 
 For example:
 
@@ -41,10 +45,12 @@ args:
 
 +++
 
-You will notice that all the arguments of the associative array are printed on screen. This is done by the `inspect_args` function that was inserted into the generated partial script `src/root_command.sh`.
+You will notice that all the arguments of the associative array are printed on
+screen. This is done by the `inspect_args` function that was inserted into the
+generated partial script `src/root_command.sh`.
 
-You can now access these variables by modifying `sec/root_command.sh` like this:
-
+You can now access these variables by modifying `sec/root_command.sh` like
+this:
 
 ```bash src/root_command.sh
 source_url=${args[source]}
@@ -79,7 +85,9 @@ downloading a with --force
 
 ## Adding common functions
 
-In case you wish to add functions that can be used from multiple locations in your code, you can place `*.sh` files inside the `src/lib` - these files will be merged as is to the final bash script.
+In case you wish to add functions that can be used from multiple locations in
+your code, you can place `*.sh` files inside the `src/lib` - these files will
+be merged as is to the final bash script.
 
 To get a starting point, you can run the convenience command:
 
