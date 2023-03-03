@@ -14,7 +14,7 @@ function.
 Most properties are optional, unless specified otherwise.
 !!!
 
-==- :icon-code-review: Example
+==- :icon-code-review: Show Me How
 ```yaml bashly.yml
 args:
   - name: user

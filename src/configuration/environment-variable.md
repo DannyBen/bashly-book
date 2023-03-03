@@ -17,7 +17,7 @@ will be used in case the user has not defined it in their environment.
 Most properties are optional, unless specified otherwise.
 !!!
 
-==- :icon-code-review: Example
+==- :icon-code-review: Show Me How
 ```yaml bashly.yml
 environment_variables:
   - name: config_path
