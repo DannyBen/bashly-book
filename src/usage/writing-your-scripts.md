@@ -116,7 +116,7 @@ content in `src/header.sh`.
 
 !!! Note
 Be sure to start your header with a shebang:
-`#!/usr/bin/env bash`
+`#!/usr/bin/env bash`{style="white-space: nowrap;"}
 !!!
 
 ## Hidden comments
