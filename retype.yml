@@ -50,5 +50,5 @@ footer:
 
 # Add {{ nowrap }} after `...` to prevent line break
 # ref: https://github.com/retypeapp/retype/issues/509
-data:
-  nowrap: '{style="white-space: nowrap;"}'
+# data:
+#   nowrap: '{style="white-space: nowrap;"}'
