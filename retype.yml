@@ -47,4 +47,5 @@ footer:
     - text: Site Source
       link: https://github.com/DannyBen/bashly-book
       target: blank
-    
+data:
+  nowrap: '{style="white-space: nowrap;"}'

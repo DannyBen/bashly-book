@@ -86,8 +86,8 @@ Specify which bash options to apply on initialization.
 - `strict: true` - Bash strict mode (`set -euo pipefail`)
 - `strict: false` - Only exit on errors (`set -e`)
 - `strict: ''` - Do not add any `set` directive
-- `strict: <string>` - Add any other custom `set` directive, for example  
-   `strict: set -o pipefail`
+- `strict: <string>` - Add any other custom `set` directive, for example
+   `strict: set -o pipefail`{{ nowrap }}
 
 ### `tab_indent`
 
