@@ -48,7 +48,7 @@ footer:
       link: https://github.com/DannyBen/bashly-book
       target: blank
 
-# # Add {{ nowrap }} after `...` to prevent line break
-# # ref: https://github.com/retypeapp/retype/issues/509
-# data:
-#   nowrap: '{style="white-space: nowrap;"}'
+# Add {{ nowrap }} after `...` to prevent line break
+# ref: https://github.com/retypeapp/retype/issues/509
+data:
+  nowrap: '{style="white-space: nowrap;"}'
