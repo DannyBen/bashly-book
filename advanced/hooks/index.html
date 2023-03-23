@@ -12,24 +12,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Bash Completion | Bashly - Bash CLI Framework</title>
-    <meta name="title" content="Bash Completion | Bashly - Bash CLI Framework">
-    <meta name="description" content="Bashly comes with built-in bash completions generator, provided by the completely gem." />
+    <title>Before/After Hooks | Bashly - Bash CLI Framework</title>
+    <meta name="title" content="Before/After Hooks | Bashly - Bash CLI Framework">
+    <meta name="description" content="In case you need to run common code before or after executing any command, you can add a file named before.sh" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://bashly.dannyb.co/advanced/bash-completion/" />
+    <link rel="canonical" href="https://bashly.dannyb.co/advanced/hooks/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bashly.dannyb.co/advanced/bash-completion/">
-    <meta property="og:title" content="Bash Completion | Bashly - Bash CLI Framework">
-    <meta property="og:description" content="Bashly comes with built-in bash completions generator, provided by the completely gem.">
+    <meta property="og:url" content="https://bashly.dannyb.co/advanced/hooks/">
+    <meta property="og:title" content="Before/After Hooks | Bashly - Bash CLI Framework">
+    <meta property="og:description" content="In case you need to run common code before or after executing any command, you can add a file named before.sh">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://bashly.dannyb.co/advanced/bash-completion/">
-    <meta property="twitter:title" content="Bash Completion | Bashly - Bash CLI Framework">
-    <meta property="twitter:description" content="Bashly comes with built-in bash completions generator, provided by the completely gem.">
+    <meta property="twitter:url" content="https://bashly.dannyb.co/advanced/hooks/">
+    <meta property="twitter:title" content="Before/After Hooks | Bashly - Bash CLI Framework">
+    <meta property="twitter:description" content="In case you need to run common code before or after executing any command, you can add a file named before.sh">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -38,7 +38,6 @@
     <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.732870905609" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.732870905609" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.732870905609" defer></script>
 
     <!-- Tachyon page accelerator -->
     <script src="https://unpkg.com/tachyonjs@1.0.1/tachyon.min.js" integrity="sha384-YzRhaEvO+tu7clAuAStGkSR0bVr2+IIq1gXxi28k2Wj0gGAdPOuruYnTSFOXLv0I" type="module" crossorigin defer></script>
@@ -230,37 +229,16 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="bash-completion" class="break-words">
+<doc-anchor-target id="beforeafter-hooks" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bash-completion">#</doc-anchor-trigger>
-        <span>Bash Completion</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#beforeafter-hooks">#</doc-anchor-trigger>
+        <span>Before/After Hooks</span>
     </h1>
 </doc-anchor-target>
-<p>Bashly comes with built-in bash completions generator, provided by the
-<a href="https://github.com/DannyBen/completely">completely</a> gem.</p>
-<p>By running <code v-pre>bashly add completions</code> commands, you can add this functionality
-to your script in one of three ways:</p>
-<doc-panels>
-   <doc-panel id="bashly-add-completions" collapsed>
-       <template #title><code v-pre>bashly add completions</code></template>
-<p>Creates a function in your <code v-pre>./src/lib</code> directory that echoes a completion
-script. You can then call this function from any command (for example <code v-pre>yourcli completions</code>) and your users will be able to install the completions by running
-<code v-pre>eval &quot;$(yourcli completions)&quot;</code>.</p>
-   </doc-panel>
-   <doc-panel id="bashly-add-completions-script" collapsed>
-       <template #title><code v-pre>bashly add completions_script</code></template>
-<p>Creates a standalone completions script that can be sourced or copied to the
-system&#x27;s bash completions directory.</p>
-   </doc-panel>
-   <doc-panel id="bashly-add-completions-yaml" collapsed>
-       <template #title><code v-pre>bashly add completions_yaml</code></template>
-<p>Creates the raw data YAML file. This is intended mainly for development
-purposes.</p>
-   </doc-panel>
-</doc-panels>
-<p>The bash completions generation is <strong>completely automatic</strong>, but you will have
-to regenerate the completion function whenever you make changes to your
-<code v-pre>bashly.yml</code> file.</p>
+<p>In case you need to run common code before or after executing <em>any</em> command, you
+can add a file named <code v-pre>before.sh</code> or <code v-pre>after.sh</code> to your source directory.</p>
+<p>Any code within one of these files will be wrapped in its own bash function, and
+executed before or after calling any of the command functions.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-green-500"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -274,115 +252,23 @@ to regenerate the completion function whenever you make changes to your
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Tip</h5>
-<p>By running <code v-pre>bashly generate --upgrade</code>, your completions function
-(generated with <code v-pre>bashly add completions</code>) will be regenerated.</p>
+<p>Run <code v-pre>bashly add hooks</code> to create the two hook files in your source directory.</p>
         </div>
     </div>
 </div>
-<doc-anchor-target id="custom-command-completions">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-command-completions">#</doc-anchor-trigger>
-        <span>Custom command completions</span>
-    </h2>
-</doc-anchor-target>
-<p>In addition to the automatic suggestion of sub-commands and flags, you can
-instruct bashly to also suggest files, directories, users, git branches and
-more. To do this, add another option in your <code v-pre>bashly.yml</code> on the command you
-wish to alter:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">bashly.yml</div>
-<pre class="language-yaml"><code v-pre class="language-yaml">commands:
-- name: upload
-  help: Upload a file
-  completions:
-  - &lt;directory&gt;
-  - &lt;user&gt;
-  - $(git branch 2&gt; /dev/null)
-</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="custom-flag-completions">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-flag-completions">#</doc-anchor-trigger>
-        <span>Custom flag completions</span>
-    </h2>
-</doc-anchor-target>
-<p>The <code v-pre>completions</code> option is also available on flags that have an <code v-pre>arg</code>.
-Similarly to the <code v-pre>allowed</code> option for arguments, the allowed list is added
-to the suggestions automatically (without the need to use <code v-pre>completions</code>).</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">bashly.yml</div>
-<pre class="language-yaml"><code v-pre class="language-yaml">commands:
-- name: login
-  help: Login to SETI
-  flags:
-  - long: --user
-    arg: username
-    completions:
-    - &lt;user&gt;
-  - long: --protocol
-    arg: protocol
-    allowed:
-      - ssh
-      - telnet</code></pre>
-</doc-codeblock></div>
+<p>Note that this is a general purpose feature, that intends to provide a solution
+for use cases that are not covered elsewhere:</p>
 <ul>
-<li>Anything between <code v-pre>&lt;...&gt;</code> will be added using the <code v-pre>compgen -A action</code> flag.</li>
-<li>Anything else, will be appended to the <code v-pre>compgen -W</code> flag.</li>
+<li>To change bash runtime parameters (e.g. <code v-pre>set -o pipefail</code>), use the <a href="../../usage/settings/#strict"><code v-pre>strict</code> setting</a> instead.</li>
+<li>To add custom initialization code, use the <a href="../../usage/writing-your-scripts/#initialization-function">Initialization Function</a> instead.</li>
+<li>To verify a program is installed, use <a href="../../configuration/command/#dependencies"><code v-pre>dependencies</code></a> instead.</li>
+<li>To verify an environment variable is defined, use <a href="../../configuration/command/#environment_variables"><code v-pre>environment_variables</code></a> instead.</li>
+<li>To perform validation operations, use <a href="../validations/">Custom Validations</a> instead.</li>
+<li>To halt the execution of the command unless certain conditions are met, use <a href="../filters/">Custom Filters</a> instead.</li>
 </ul>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note</h5>
-<p>In case you are using the
-<a href="../../configuration/argument/#allowed">Argument <code v-pre>allowed</code> option</a> or
-the <a href="../../configuration/flag/#allowed">Flag argument <code v-pre>allowed</code> option</a>,
-these will be automatically added to the completions list as well.</p>
-        </div>
-    </div>
-</div>
-<doc-anchor-target id="completions-in-zsh">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#completions-in-zsh">#</doc-anchor-trigger>
-        <span>Completions in ZSH</span>
-    </h2>
-</doc-anchor-target>
-<p>If you are using Oh-My-Zsh, bash completions should already be enabled,
-otherwise, you should enable completion by adding this to your <code v-pre>~/.zshrc</code>
-(if is it not already there):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash"># Load completion functions
-autoload -Uz +X compinit &amp;&amp; compinit
-autoload -Uz +X bashcompinit &amp;&amp; bashcompinit</code></pre>
-</doc-codeblock></div>
-<p>After adding this (and restarting your session), you should be able to source
-any bash completion script in zsh.</p>
-<doc-anchor-target id="additional-documentation">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#additional-documentation">#</doc-anchor-trigger>
-        <span>Additional documentation</span>
-    </h2>
-</doc-anchor-target>
-<p>For more information about these custom completions, see the
-<a href="https://github.com/DannyBen/completely#suggesting-files-directories-and-other-bash-built-ins">documentation for the completely gem</a>.</p>
-<doc-anchor-target id="example">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#example">#</doc-anchor-trigger>
-        <span>Example</span>
-    </h2>
-</doc-anchor-target>
-<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/completions#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
-    <span>Bash Completions Example</span>
+    <span>Hooks Example</span>
 </a></p>
 
                                 
@@ -391,7 +277,7 @@ any bash completion script in zsh.</p>
                             </div>
                             <footer class="clear-both">
                                 <div class="flex flex-wrap items-center justify-between mt-14">
-                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/DannyBen/bashly-book/blob/master/src/advanced/bash-completion.md" target="_blank" rel="noopener">
+                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/DannyBen/bashly-book/blob/master/src/advanced/hooks.md" target="_blank" rel="noopener">
                                         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         <span>Edit this page</span>
                                     </a>
@@ -399,20 +285,20 @@ any bash completion script in zsh.</p>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../advanced/hooks/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../advanced/filters/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Before/After Hooks</span>
+                                                <span class="block mt-1">Custom Filters</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../advanced/split-config/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../advanced/bash-completion/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Split Config</span>
+                                                <span class="block mt-1">Bash Completion</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -459,6 +345,6 @@ any bash completion script in zsh.</p>
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Bash Completion", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Before/After Hooks", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
