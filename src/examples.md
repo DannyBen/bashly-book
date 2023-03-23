@@ -73,6 +73,7 @@ All examples are listed below for convenience.
 - [yaml](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme) - using the YAML reading functions
 - [completions](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
 - [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding argument validation functions
+- [hooks](https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme) - adding before/after hooks
 
 ## Other Examples
 

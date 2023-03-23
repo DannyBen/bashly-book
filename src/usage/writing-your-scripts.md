@@ -108,6 +108,13 @@ with [`default`](/configuration/environment-variable/#default) values, these
 values will be available to you in the `initialize.sh` file.
 !!!
 
+## Before/after hooks
+
+Any code within the `src/before.sh` file will be called before executing any
+command, but after processing and validating the command line. Similarly, any
+code within the `src/after.sh` file will be called after executing any command.
+
+[!ref](/advanced/hooks)
 
 ## Custom header
 
