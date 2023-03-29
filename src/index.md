@@ -45,5 +45,9 @@ Bashly is responsible for:
 
 ## Sponsored By
 
-<a target='_blank' href="https://rhodecode.com/"><img src='/assets/rhodecode-logo.png' width=280></a>
-
+<table>
+   <tr>
+      <td><a target='_blank' href="https://rhodecode.com/"><img src='/assets/rhodecode-logo.png' width=240></a></td>
+      <td><a target='_blank' href="https://decisiohealth.com/"><img src='/assets/decisio-logo.png' width=240></a></td>
+   </tr>
+</table>
