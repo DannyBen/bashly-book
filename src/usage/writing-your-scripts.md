@@ -97,7 +97,9 @@ $ bashly add lib
 
 [!button variant="primary" icon="code-review" text="Custom Includes Example"](https://github.com/DannyBen/bashly/tree/master/examples/custom-includes#readme)
 
-## Initialization function
+## Hooks
+
+### Initialization
 
 Any code within the `src/initialize.sh` file will be called before anything else
 in your generated bash script. 
@@ -108,7 +110,7 @@ with [`default`](/configuration/environment-variable/#default) values, these
 values will be available to you in the `initialize.sh` file.
 !!!
 
-## Before/after hooks
+### Before/after hooks
 
 Any code within the `src/before.sh` file will be called before executing any
 command, but after processing and validating the command line. Similarly, any
