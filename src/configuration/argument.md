@@ -87,8 +87,8 @@ define required arguments after it.
 
 [!badge Array of Strings]
 
-Limit the allowed values to a specified whitelist. Can be used in conjunction
-with [`default`](#default) and [`required`](#required).
+Limit the allowed values to a specified whitelist. Must be used in conjunction
+with [`default`](#default) or [`required`](#required).
 
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
 
