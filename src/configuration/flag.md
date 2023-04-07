@@ -120,7 +120,7 @@ Specify if this flag is required.
 [!badge Array of Strings]
 
 Limit the allowed arguments to a given whitelist. Can be used in conjunction
-with [`default`](#default) and[`required`](#required).
+with [`default`](#default) or [`required`](#required).
 
 Remember to set the [`arg`](#arg) name when using this option.
 
