@@ -75,6 +75,12 @@ The long form of the flag, including the `--` prefix.
 
 The short form of the flag, including the `-` prefix.
 
+!!! Note
+If you define `short` only (without defining `long`), then the value
+will be available to you in the `$args` associative array using the short name,
+for example: `${args[-f]}`.
+!!!
+
 !!! Special handling for -v and -h
 The `-v` and `-h` flags will be used as the short options for `--version` and `--help` respectively **only if you are not using them in any of your own flags**.
 !!!
