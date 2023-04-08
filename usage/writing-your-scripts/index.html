@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733440434920">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734253072631">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.733440434920" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.734253072631" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.733440434920" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.734253072631" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.733440434920" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.733440434920" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.734253072631" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.734253072631" defer></script>
 
     <!-- Tachyon page accelerator -->
     <script src="https://unpkg.com/tachyonjs@1.0.1/tachyon.min.js" integrity="sha384-YzRhaEvO+tu7clAuAStGkSR0bVr2+IIq1gXxi28k2Wj0gGAdPOuruYnTSFOXLv0I" type="module" crossorigin defer></script>
@@ -330,11 +330,17 @@ be merged as is to the final bash script.</p>
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
     <span>Custom Includes Example</span>
 </a></p>
-<doc-anchor-target id="initialization-function">
+<doc-anchor-target id="hooks">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#initialization-function">#</doc-anchor-trigger>
-        <span>Initialization function</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#hooks">#</doc-anchor-trigger>
+        <span>Hooks</span>
     </h2>
+</doc-anchor-target>
+<doc-anchor-target id="initialization">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#initialization">#</doc-anchor-trigger>
+        <span>Initialization</span>
+    </h3>
 </doc-anchor-target>
 <p>Any code within the <code v-pre>src/initialize.sh</code> file will be called before anything else
 in your generated bash script.</p>
@@ -358,10 +364,10 @@ values will be available to you in the <code v-pre>initialize.sh</code> file.</p
     </div>
 </div>
 <doc-anchor-target id="beforeafter-hooks">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#beforeafter-hooks">#</doc-anchor-trigger>
         <span>Before/after hooks</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>Any code within the <code v-pre>src/before.sh</code> file will be called before executing any
 command, but after processing and validating the command line. Similarly, any
@@ -372,7 +378,7 @@ code within the <code v-pre>src/after.sh</code> file will be called after execut
         <span class="inline-block mb-px">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
         </span>
-        <span class="inline-block font-medium ml-2">Before/After Hooks</span>
+        <span class="inline-block font-medium ml-2">Function Hooks</span>
     </div>
     <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
         <span>../../advanced/hooks/</span>

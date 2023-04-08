@@ -6,15 +6,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733440434920">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734253072631">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Before/After Hooks | Bashly - Bash CLI Framework</title>
-    <meta name="title" content="Before/After Hooks | Bashly - Bash CLI Framework">
-    <meta name="description" content="In case you need to run common code before or after executing any command, you can add a file named before.sh" />
+    <title>Function Hooks | Bashly - Bash CLI Framework</title>
+    <meta name="title" content="Function Hooks | Bashly - Bash CLI Framework">
+    <meta name="description" content="Bashly provides you with three general purpose hooks that let you inject your own code." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://bashly.dannyb.co/advanced/hooks/" />
@@ -22,22 +22,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bashly.dannyb.co/advanced/hooks/">
-    <meta property="og:title" content="Before/After Hooks | Bashly - Bash CLI Framework">
-    <meta property="og:description" content="In case you need to run common code before or after executing any command, you can add a file named before.sh">
+    <meta property="og:title" content="Function Hooks | Bashly - Bash CLI Framework">
+    <meta property="og:description" content="Bashly provides you with three general purpose hooks that let you inject your own code.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://bashly.dannyb.co/advanced/hooks/">
-    <meta property="twitter:title" content="Before/After Hooks | Bashly - Bash CLI Framework">
-    <meta property="twitter:description" content="In case you need to run common code before or after executing any command, you can add a file named before.sh">
+    <meta property="twitter:title" content="Function Hooks | Bashly - Bash CLI Framework">
+    <meta property="twitter:description" content="Bashly provides you with three general purpose hooks that let you inject your own code.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.733440434920" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.734253072631" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.733440434920" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.734253072631" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.733440434920" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.734253072631" data-turbo-eval="false" defer></script>
 
     <!-- Tachyon page accelerator -->
     <script src="https://unpkg.com/tachyonjs@1.0.1/tachyon.min.js" integrity="sha384-YzRhaEvO+tu7clAuAStGkSR0bVr2+IIq1gXxi28k2Wj0gGAdPOuruYnTSFOXLv0I" type="module" crossorigin defer></script>
@@ -229,16 +229,15 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="beforeafter-hooks" class="break-words">
+<doc-anchor-target id="function-hooks" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#beforeafter-hooks">#</doc-anchor-trigger>
-        <span>Before/After Hooks</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#function-hooks">#</doc-anchor-trigger>
+        <span>Function Hooks</span>
     </h1>
 </doc-anchor-target>
-<p>In case you need to run common code before or after executing <em>any</em> command, you
-can add a file named <code v-pre>before.sh</code> or <code v-pre>after.sh</code> to your source directory.</p>
-<p>Any code within one of these files will be wrapped in its own bash function, and
-executed before or after calling any of the command functions.</p>
+<p>Bashly provides you with three general purpose hooks that let you inject your
+own code. To use a hook, simply create one of the files listed below in your
+<code v-pre>src</code> directory.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-green-500"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -256,20 +255,51 @@ executed before or after calling any of the command functions.</p>
         </div>
     </div>
 </div>
-<p>Note that this is a general purpose feature, that intends to provide a solution
-for use cases that are not covered elsewhere:</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Hook File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>src/initialize.sh</code></td>
+<td>Execute code inside the <code v-pre>initialize()</code> function, which is called before anything else.</td>
+</tr>
+<tr>
+<td><code v-pre>src/before.sh</code></td>
+<td>Execute code before calling any command, but after processing the command line input.</td>
+</tr>
+<tr>
+<td><code v-pre>src/after.sh</code></td>
+<td>Execute code after calling any command.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
+    <span>Hooks Example</span>
+</a></p>
+<doc-anchor-target id="alternatives">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#alternatives">#</doc-anchor-trigger>
+        <span>Alternatives</span>
+    </h2>
+</doc-anchor-target>
+<p>These hooks should be considered last resort, for any functionality that is not
+covered by more native means.</p>
+<p>Below is a list of some related features that can
+be used instead of using these hooks:</p>
 <ul>
 <li>To change bash runtime parameters (e.g. <code v-pre>set -o pipefail</code>), use the <a href="../../usage/settings/#strict"><code v-pre>strict</code> setting</a> instead.</li>
-<li>To add custom initialization code, use the <a href="../../usage/writing-your-scripts/#initialization-function">Initialization Function</a> instead.</li>
 <li>To verify a program is installed, use <a href="../../configuration/command/#dependencies"><code v-pre>dependencies</code></a> instead.</li>
 <li>To verify an environment variable is defined, use <a href="../../configuration/command/#environment_variables"><code v-pre>environment_variables</code></a> instead.</li>
 <li>To perform validation operations, use <a href="../validations/">Custom Validations</a> instead.</li>
 <li>To halt the execution of the command unless certain conditions are met, use <a href="../filters/">Custom Filters</a> instead.</li>
 </ul>
-<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme" class="no-link inline-flex items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
-    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"/><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"/></g></svg></span>
-    <span>Hooks Example</span>
-</a></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -345,6 +375,6 @@ for use cases that are not covered elsewhere:</p>
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Before/After Hooks", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Function Hooks", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
