@@ -19,8 +19,11 @@ $ bashly add settings
 
 which will create the default `settings.yml` file in the working directory.
 
-You can also change the path to this file by setting the environment variable
-`BASHLY_SETTINGS_PATH`.
+Bashly will look for the settings file in one of these paths:
+
+- A path set in the environment variable `BASHLY_SETTINGS_PATH`.
+- A file named `bashly-settings.yml` in the working directory.
+- A file named `settings.yml` in the working directory.
 
 !!!success YAML Tips
 - The words `yes` and `no` are equivalent to `true` and `false`
