@@ -2,7 +2,7 @@ input: src
 output: docs
 url: bashly.dannyb.co
 
-server:
+serve:
   host: 0.0.0.0
   port: 3000
   watch: { polling: 3000 }
