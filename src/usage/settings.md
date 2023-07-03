@@ -78,6 +78,20 @@ lib_dir: lib
 
 Set the path to use for common library files, relative to `source_dir`.
 
+### `commands_dir`
+
+```yaml
+commands_dir: ~
+```
+
+Set the path to use for command files, relative to `source_dir`.
+
+- When set to `nil` (denoted by `~`), command files will be placed directly under `source_dir`.
+- When set to any other string, command files will be placed under this
+  directory, and each command will get its own subdirectory.
+
+[!button variant="primary" icon="code-review" text="Command Paths Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-paths#readme)
+
 ### `strict`
 
 ```yaml
