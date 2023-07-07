@@ -295,7 +295,10 @@ Specify that this command can be extended by external means.
 The path (relative to `src`) to the partial source code file, in case you wish
 to store your source files in a different path than the default one.
 
-This is useful for scripts that contain many commands.
+!!!success Tip
+To instruct bashly to store *all* command files in sub-directories, see 
+[Settings :icon-chevron-right: commands_dir](/usage/settings/#commands_dir)
+!!!
 
 [!button variant="primary" icon="code-review" text="Command Filenames Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-filenames#readme)
 
