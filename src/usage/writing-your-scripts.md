@@ -49,7 +49,7 @@ You will notice that all the arguments of the associative array are printed on
 screen. This is done by the `inspect_args` function that was inserted into the
 generated partial script `src/root_command.sh`.
 
-You can now access these variables by modifying `sec/root_command.sh` like
+You can now access these variables by modifying `src/root_command.sh` like
 this:
 
 ```bash src/root_command.sh
