@@ -70,7 +70,6 @@ All examples are listed below for convenience.
 ## Bashly library features
 
 - [config](https://github.com/DannyBen/bashly/tree/master/examples/config#readme) - using the config with INI-like functions
-- [ini](https://github.com/DannyBen/bashly/tree/master/examples/ini#readme) - using the config with full INI functions
 - [colors](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme) - using the color print feature
 - [yaml](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme) - using the YAML reading functions
 - [completions](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
