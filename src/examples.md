@@ -69,9 +69,10 @@ All examples are listed below for convenience.
 
 ## Bashly library features
 
-- [config-ini](https://github.com/DannyBen/bashly/tree/master/examples/config-ini#readme) - using the config (INI) functions
-- [colors](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme) - using the color print feature
+- [config](https://github.com/DannyBen/bashly/tree/master/examples/config#readme) - using the config functions
+- [ini](https://github.com/DannyBen/bashly/tree/master/examples/ini#readme) - using the INI handling functions
 - [yaml](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme) - using the YAML reading functions
+- [colors](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme) - using the color print feature
 - [completions](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
 - [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding argument validation functions
 - [hooks](https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme) - adding before/after hooks

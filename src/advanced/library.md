@@ -26,9 +26,10 @@ eval $(yaml_load "settings.yml")     # create variables in scope
 
 [!button variant="primary" icon="code-review" text="YAML Example"](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme)
 
-## INI handler
+## Config handler
 
-Adds the ability to create, read and write INI files.
+Adds the ability to create, read and write simple INI-like configuration files
+with `key=value` pairs.
 
 ```bash
 $ bashly add config
@@ -69,7 +70,51 @@ if config_has_key "key" ; then
 fi
 ```
 
-[!button variant="primary" icon="code-review" text="Config Example"](https://github.com/DannyBen/bashly/tree/master/examples/config-ini#readme)
+[!button variant="primary" icon="code-review" text="Config Example"](https://github.com/DannyBen/bashly/tree/master/examples/config#readme)
+
+
+
+
+## INI handler
+
+Adds the ability to create, read and write INI files with `[sections]`
+(optional) and `key=value` pairs.
+
+```bash
+$ bashly add ini
+```
+
+```bash
+# Load an INI file into the `ini` associative array.
+ini_load 'path/to/file.ini'
+
+# Save the associative array back to the INI file.
+ini_save 'path/to/file.ini'
+
+# Having an INI_FILE global variable lets you load and save without providing
+# a path
+INI_FILE=path/to/file.ini
+ini_load
+ini_save
+
+# Access a value
+name=${ini[key]}
+name=${ini[section.key]}
+name=${ini[section.key]:-default}
+
+# Create/update a value
+ini[section.key]="new value"
+ini_save
+
+# Delete a value
+unset ini[section.key]
+ini_save
+
+# Show the loaded values
+ini_show
+```
+
+[!button variant="primary" icon="code-review" text="INI Example"](https://github.com/DannyBen/bashly/tree/master/examples/ini#readme)
 
 ## Color output
 
