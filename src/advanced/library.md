@@ -72,9 +72,6 @@ fi
 
 [!button variant="primary" icon="code-review" text="Config Example"](https://github.com/DannyBen/bashly/tree/master/examples/config#readme)
 
-
-
-
 ## INI handler
 
 Adds the ability to create, read and write INI files with `[sections]`
