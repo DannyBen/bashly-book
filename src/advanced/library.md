@@ -69,7 +69,7 @@ if config_has_key "key" ; then
 fi
 ```
 
-[!button variant="primary" icon="code-review" text="Config Example"](https://github.com/DannyBen/bashly/tree/master/examples/config-ini#readme)
+[!button variant="primary" icon="code-review" text="Config Example"](https://github.com/DannyBen/bashly/tree/master/examples/config#readme)
 
 ## Color output
 
