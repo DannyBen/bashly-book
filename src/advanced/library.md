@@ -6,7 +6,14 @@ order: 90
 # Library Functions
 
 Bashly comes with a set of library functions that can be added to your script
-by running the `bashly add` command.
+by running the `bashly add` command. All libraries are documented inline, and
+the documentation below is a high level overview with examples.
+
+!!!success Tip
+Run `bashly add --list` to see all available libraries.
+!!!
+
+
 
 ## YAML parser
 
@@ -16,7 +23,7 @@ Adds the ability to read YAML files in your bash script.
 $ bashly add yaml
 ````
 
-You can then use the `yaml_load` function anywhere in your script:
+==- :icon-code-review: Usage Example
 
 ```bash
 yaml_load "settings.yml"             # print variables
@@ -24,34 +31,33 @@ yaml_load "settings.yml" "config_"   # use prefix
 eval $(yaml_load "settings.yml")     # create variables in scope
 ````
 
-[!button variant="primary" icon="code-review" text="YAML Example"](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme)
+[!button variant="primary" icon="code-review" text="YAML Example on GitHub"](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme)
 
-## Config handler
+===
 
-Adds the ability to create, read and write simple INI-like configuration files
-with `key=value` pairs.
+
+
+## Config (INI) handler
+
+Adds the ability to create, read and write configuration INI files. This library
+uses the [ini library](#ini-handler) under the hood for loading and saving the
+INI files.
 
 ```bash
 $ bashly add config
 ```
 
-By default, these functions will work on a file named `config.ini` but
-you can change it by setting the `CONFIG_FILE` environment variable in your
-`src/initialize.sh` file.
-
-You can then use thees functions anywhere in your script:
+==- :icon-code-review: Usage Example
 
 ```bash
-# Create a new config file.
-# There is normally no need to use this function, it is used by other
-# functions as needed.
-config_init
+# Add or update a key=value pair in the config.
+config_set username Operations
+
+# Use dot notation to specify an INI section ([login] in this case).
+config_set login.email paul@section.one
 
 # Get the value from the config file.
-result=$(config_get username)
-
-# Add or update a key=value pair in the config.
-config_set username bob
+result=$(config_get login.username)
 
 # Delete a key from the config.
 config_del username
@@ -60,8 +66,8 @@ config_del username
 config_show
 
 # Return an array of the keys in the config file
-for k in $(config_keys); do
-  echo "- $k = $(config_get "$k")";
+for key in $(config_keys); do
+  echo "- $key = $(config_get "$key")";
 done
 
 # Returns true if the specified key exists in the config file
@@ -70,16 +76,22 @@ if config_has_key "key" ; then
 fi
 ```
 
-[!button variant="primary" icon="code-review" text="Config Example"](https://github.com/DannyBen/bashly/tree/master/examples/config#readme)
+[!button variant="primary" icon="code-review" text="Config Example on GitHub"](https://github.com/DannyBen/bashly/tree/master/examples/config#readme)
+
+===
+
+
 
 ## INI handler
 
-Adds the ability to create, read and write INI files with `[sections]`
-(optional) and `key=value` pairs.
+Adds the ability to load and save INI files. This is a low-level library that
+is used by the [config library](#config-ini-handler).
 
 ```bash
 $ bashly add ini
 ```
+
+==- :icon-code-review: Usage Example
 
 ```bash
 # Load an INI file into the `ini` associative array.
@@ -87,12 +99,6 @@ ini_load 'path/to/file.ini'
 
 # Save the associative array back to the INI file.
 ini_save 'path/to/file.ini'
-
-# Having an INI_FILE global variable lets you load and save without providing
-# a path
-INI_FILE=path/to/file.ini
-ini_load
-ini_save
 
 # Access a value
 name=${ini[key]}
@@ -113,6 +119,10 @@ ini_show
 
 [!button variant="primary" icon="code-review" text="INI Example"](https://github.com/DannyBen/bashly/tree/master/examples/ini#readme)
 
+===
+
+
+
 ## Color output
 
 Adds functions for printing colored strings.
@@ -121,7 +131,7 @@ Adds functions for printing colored strings.
 $ bashly add colors
 ```
 
-Then, anywhere in your script:
+==- :icon-code-review: Usage Example
 
 ```bash
 echo "before $(red this is red) after"
@@ -131,6 +141,10 @@ echo "before $(green_bold this is green_bold) after"
 See the generated script in `src/lib/colors.sh` for the full list of colors.
 
 [!button variant="primary" icon="code-review" text="Colors Example"](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme)
+
+===
+
+
 
 ## Auto-update
 
@@ -156,3 +170,7 @@ if you do so, remember to remove this magic comment to prevent accidentally
 overriding it in future runs of `bashly generate --upgrade`.
 
 
+
+## See also
+
+[!ref](/advanced/lib-source/)

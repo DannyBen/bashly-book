@@ -69,8 +69,8 @@ All examples are listed below for convenience.
 
 ## Bashly library features
 
-- [config](https://github.com/DannyBen/bashly/tree/master/examples/config#readme) - using the config functions
-- [ini](https://github.com/DannyBen/bashly/tree/master/examples/ini#readme) - using the INI handling functions
+- [config](https://github.com/DannyBen/bashly/tree/master/examples/config#readme) - using the config library for easy access to INI files
+- [ini](https://github.com/DannyBen/bashly/tree/master/examples/ini#readme) - using the ini library for direct, low level access to INI files
 - [yaml](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme) - using the YAML reading functions
 - [colors](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme) - using the color print feature
 - [completions](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
