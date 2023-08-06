@@ -26,6 +26,7 @@ deps
 dev
 dir
 env
+ERB
 euo
 eval
 fi
@@ -42,8 +43,11 @@ md
 mygit
 myscript
 nowrap
+OpenRefine
+orcli
 pipefail
 png
+pre
 PWD
 repo
 repos
@@ -57,6 +61,7 @@ shfmt
 src
 stdin
 sudo
+td
 Unregister
 uri
 url
