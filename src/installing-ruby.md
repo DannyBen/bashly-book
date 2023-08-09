@@ -37,7 +37,7 @@ $ sudo pacman -Suy
 $ sudo pacman -S base-devel ruby
 
 # add gem bin dir to path (put this in your initialization script if needed)
-$ export PATH="$PATH:$(gem env path | sed 's@[^:]\+@&/bin@g')"
+$ export PATH="$PATH:$(gem env path | sed 's#[^:]\+#&/bin#g')"
 
 $ gem install bashly
 ```
