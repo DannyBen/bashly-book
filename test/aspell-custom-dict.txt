@@ -12,6 +12,7 @@ Bashly
 bashly
 bashly's
 boolean
+CentOS
 changelog
 CLI
 cli
@@ -24,7 +25,9 @@ dannyben
 del
 deps
 dev
+devel
 dir
+dnf
 env
 ERB
 euo
@@ -39,12 +42,14 @@ img
 ini
 INI
 init
+libyaml
 md
 mygit
 myscript
 nowrap
 OpenRefine
 orcli
+pacman
 pipefail
 png
 pre
@@ -55,12 +60,14 @@ respec
 rhodecode
 rspec
 runtime
+sed
 SETI
 shellcheck
 shfmt
 src
 stdin
 sudo
+Suy
 td
 Unregister
 uri

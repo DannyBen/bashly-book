@@ -34,6 +34,10 @@ alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" 
 
 +++
 
+!!!success Tip
+If you need help installing Ruby, see
+[Installing Ruby](/installing-ruby).
+!!!
 
 ## Bash Completions
 
