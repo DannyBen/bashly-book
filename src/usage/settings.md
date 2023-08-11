@@ -88,7 +88,7 @@ Set the path to use for command files, relative to `source_dir`.
 
 - When set to `nil` (denoted by `~`), command files will be placed directly under `source_dir`.
 - When set to any other string, command files will be placed under this
-  directory, and each command will get its own subdirectory.
+  directory, and each command will get its own sub-directory.
 
 In case you plan on creating a large script with many commands, it is
 recommended to enable this by setting it to something like

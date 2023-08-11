@@ -15,6 +15,8 @@ If you have Ruby 3.0 or higher (`ruby -v`), use this installation method:
 gem install bashly
 ```
 
+[!ref](/installing-ruby)
+
 +++ Homebrew
 
 Mac users can enable Ruby gem installation first, and then install bashly:
@@ -33,11 +35,6 @@ alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" 
 ```
 
 +++
-
-!!!success Tip
-If you need help installing Ruby, see
-[Installing Ruby](/installing-ruby).
-!!!
 
 ## Bash Completions
 
