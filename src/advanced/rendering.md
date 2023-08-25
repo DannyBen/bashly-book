@@ -23,6 +23,11 @@ Render markdown documentation by running:
 $ bashly render :markdown docs
 ```
 
+!!!success Tip
+To easily preview your markdown documents, you can use the
+[madness markdown server](https://madness.dannyb.co/).
+!!!
+
 ### Man pages
 
 Render man pages by running:
@@ -33,6 +38,11 @@ $ bashly render :mandoc docs
 
 Note that this command will render specially formatted markdown documents and
 will then use [pandoc](https://command-not-found.com/pandoc) to convert them.
+
+!!!success Tip
+To easily preview your man pages, prefix the command with
+`PREVIEW="cli subcommand"`, specifying the command you wish to preview.
+!!!
 
 ## Custom templates
 
