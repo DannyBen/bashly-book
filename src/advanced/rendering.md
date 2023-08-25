@@ -23,6 +23,17 @@ Render markdown documentation by running:
 $ bashly render :markdown docs
 ```
 
+### Man pages
+
+Render man pages by running:
+
+```bash
+$ bashly render :mandoc docs
+```
+
+Note that this command will render specially formatted markdown documents and
+will then use [pandoc](https://command-not-found.com/pandoc) to convert them.
+
 ## Custom templates
 
 To create custom templates, it is recommended to use one of the built-in
@@ -40,7 +51,9 @@ will be executed by the `bashly render path/to/template-dir` command.
 
 In this file you can:
 
-- Access to the root command, in a variable named `command`.
+- Access your bashly's root command, in a variable named `command`.
+- Access the template source directory, in a variable named `source`.
+- Access the user's requested output directory, in a variable named `target`.
 - Call the `save` method in order to save one or more output files.
 
 This approach allows you to use any template engine that is available in Ruby.
