@@ -1,0 +1,65 @@
+---
+icon: dot
+order: 35
+---
+
+# Rendering Documentation
+
+## Overview
+
+Bashly is capable of rendering documentation for your script based on
+your `bashly.yml` configuration by using the `bashly render` command.
+
+This command can generate any kind of output using either templates that are 
+built in in Bashly (for example Markdown), or by using any custom templates.
+
+## Built-in templates
+
+### Markdown
+
+Render markdown documentation by running:
+
+```bash
+$ bashly render :markdown docs
+```
+
+## Custom templates
+
+To create custom templates, it is recommended to use one of the built-in
+templates as a starting point. To copy the template source code to your project
+run:
+
+```bash
+$ bashly add render_markdown
+```
+
+### Template structure
+
+Template directories are expected to have a `render.rb` file in them. This file
+will be executed by the `bashly render path/to/template-dir` command.
+
+In this file you can:
+
+- Access to the root command, in a variable named `command`.
+- Call the `save` method in order to save one or more output files.
+
+This approach allows you to use any template engine that is available in Ruby.
+
+For example, this `render.rb` file uses GTX to render the markdown
+documentation:
+
+```ruby render.rb
+# Load the GTX template
+template = "#{source}/markdown.gtx"
+gtx = GTX.load_file template
+
+# Render the file for the main command
+save "#{target}/index.md", gtx.parse(command)
+
+# Render a file for each subcommand
+command.deep_commands.reject(&:private).each do |subcommand|
+  save "#{target}/#{subcommand.full_name}.md", gtx.parse(subcommand)
+end
+```
+
+[!button variant="primary" icon="mark-github" text="See it on GitHub"](https://github.com/DannyBen/bashly/tree/master/lib/bashly/libraries/render/markdown)
