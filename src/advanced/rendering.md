@@ -44,6 +44,11 @@ To easily preview your man pages, prefix the command with
 `PREVIEW="cli subcommand"`, specifying the command you wish to preview.
 !!!
 
+!!!success Tip
+To append a footer to all the generated man pages, place a file named
+`_footer.md` in your target directory.
+!!!
+
 ## Custom templates
 
 To create custom templates, it is recommended to use one of the built-in
@@ -52,6 +57,8 @@ run:
 
 ```bash
 $ bashly add render_markdown
+# or
+$ bashly add render_mandoc
 ```
 
 ### Template structure
@@ -72,6 +79,8 @@ For example, this `render.rb` file uses GTX to render the markdown
 documentation:
 
 ```ruby render.rb
+require 'gtx'
+
 # Load the GTX template
 template = "#{source}/markdown.gtx"
 gtx = GTX.load_file template
