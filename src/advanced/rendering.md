@@ -15,41 +15,29 @@ built in in Bashly (for example Markdown), or by using any custom templates.
 
 ## Built-in templates
 
-### Markdown
-
-Render markdown documentation by running:
-
-```bash
-$ bashly render :markdown docs
-```
-
-!!!success Tip
-To easily preview your markdown documents, you can use the
-[madness markdown server](https://madness.dannyb.co/).
-!!!
-
-### Man pages
-
-Render man pages by running:
+Bashly comes with several documentation templates. In order to see a list of
+all templates, run:
 
 ```bash
-$ bashly render :mandoc docs
+$ bashly render --list
 ```
 
-Note that this command will render specially formatted markdown documents and
-will then use [pandoc](https://command-not-found.com/pandoc) to convert them.
+Some built in templates may have special optional features that let you 
+customize the output. Learn more about each template by running:
 
-!!!success Tip
-To easily preview your man pages, prefix the command with
-`PREVIEW="cli subcommand"`, specifying the command you wish to preview.
-!!!
+```bash
+$ bashly render SOURCE --about
+# for example
+$ bashly render :mandoc --about
+```
 
-!!!success Tip
-To append a footer to all the generated man pages, place a file named
-`_footer.md` in your target directory.
-!!!
+## Example
+
+[!button variant="primary" icon="code-review" text="Render Mandoc Example"](https://github.com/DannyBen/bashly/tree/master/examples/render-mandoc#readme)
 
 ## Custom templates
+
+### Create your own
 
 To create custom templates, it is recommended to use one of the built-in
 templates as a starting point. To copy the template source code to your project
