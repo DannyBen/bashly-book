@@ -28,6 +28,7 @@ The design intention is to let you focus on your specific code, without worrying
 Bashly is responsible for:
 
 - Generating a **single, standalone bash script**.
+- Generating a **human readable, shellcheck-compliant and shfmt-compliant script**.
 - Generating **usage texts** and help screens, showing your tool's arguments, flags and commands (works for sub-commands also).
 - Parsing the user's command line and extracting:
   - Optional or required **positional arguments**.
@@ -41,7 +42,8 @@ Bashly is responsible for:
   - **Config file management** (INI format).
   - **YAML parsing**.
   - **Bash completions**.
-  - and more.
+  - *and more*.
+- Auto-generating **markdown and man page documentation** for your script.
 
 ## Sponsored By
 
