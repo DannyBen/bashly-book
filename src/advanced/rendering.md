@@ -114,3 +114,11 @@ end
 ```
 
 [!button variant="primary" icon="mark-github" text="See it on GitHub"](https://github.com/DannyBen/bashly/tree/master/lib/bashly/libraries/render/markdown)
+
+### Custom properties
+
+The `bashly.yml` allows the use of arbitrary properties. Any property that starts with `x_` is
+ignored by the validation process, and is therefore allowed.
+
+You can use this functionality to add properties that can be used in your
+rendering templates. See one of the built-in templates for usage example.
