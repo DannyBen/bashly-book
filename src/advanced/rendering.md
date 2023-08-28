@@ -11,7 +11,8 @@ Bashly is capable of rendering documentation for your script based on
 your `bashly.yml` configuration by using the `bashly render` command.
 
 This command can generate any kind of output using either templates that are 
-built in in Bashly (for example Markdown), or by using any custom templates.
+built in in Bashly (for example Markdown or man pages), or by using
+any custom templates.
 
 ## Built-in templates
 
@@ -33,7 +34,7 @@ $ bashly render :mandoc --about
 
 ## Example
 
-[!button variant="primary" icon="code-review" text="Render Mandoc Example"](https://github.com/DannyBen/bashly/tree/master/examples/render-mandoc#readme)
+[!button variant="primary" icon="code-review" text="Markdown Example"](https://github.com/DannyBen/bashly/tree/master/examples/render-markdown#readme) [!button variant="primary" icon="code-review" text="Mandoc Example"](https://github.com/DannyBen/bashly/tree/master/examples/render-mandoc#readme)
 
 ## Custom templates
 
@@ -49,17 +50,37 @@ $ bashly add render_markdown
 $ bashly add render_mandoc
 ```
 
+!!! Note
+Creating custom templates requires some minimal understanding of Ruby.
+!!!
+
 ### Template structure
 
-Template directories are expected to have a `render.rb` file in them. This file
-will be executed by the `bashly render path/to/template-dir` command.
+Template directories are expected to:
 
-In this file you can:
+1. Have a `render.rb` file  
+   Will be executed when running `bashly render`.
+2. Have a `README.md` file  
+   Will be shown when running with `--about`.
 
-- Access your bashly's root command, in a variable named `command`.
-- Access the template source directory, in a variable named `source`.
-- Access the user's requested output directory, in a variable named `target`.
-- Call the `save` method in order to save one or more output files.
+The `render.rb` file will be executed when running `bashly render` and 
+will have access to these variables and methods:
+
+| Variable  | Description
+|-----------|---------
+| `command` | The root command of your bashly script ([`Bashly::Script::Command`](https://github.com/DannyBen/bashly/blob/master/lib/bashly/script/command.rb)).
+| `source`  | A string containing the path to the template source directory.
+| `target`  | A string containing the path to the target directory, as provided by the user at run time (`bashly render SOURCE TARGET`).
+| `show`    | A string that will contain the value of `--show PATH` if provided by the user at runtime.
+
+| Method | Description
+|--------|-------------
+| `save` | The method your script should call in order to save an output file.
+| `say`  | Print a message with colors (see [Colsole](https://github.com/dannyben/colsole))
+
+The `render.rb` script is executed with the [`Bashly::RenderContext`](https://github.com/DannyBen/bashly/blob/master/lib/bashly/render_context.rb) context.
+
+### Render script example
 
 This approach allows you to use any template engine that is available in Ruby.
 
@@ -67,7 +88,11 @@ For example, this `render.rb` file uses GTX to render the markdown
 documentation:
 
 ```ruby render.rb
+# render script - markdown
 require 'gtx'
+
+# for previewing only (not needed for rendering)
+require 'tty-markdown'
 
 # Load the GTX template
 template = "#{source}/markdown.gtx"
@@ -79,6 +104,12 @@ save "#{target}/index.md", gtx.parse(command)
 # Render a file for each subcommand
 command.deep_commands.reject(&:private).each do |subcommand|
   save "#{target}/#{subcommand.full_name}.md", gtx.parse(subcommand)
+end
+
+# Show one of the files if requested
+if show
+  file = "#{target}/#{show}"
+  puts TTY::Markdown.parse_file(file) if File.exist?(file)
 end
 ```
 
