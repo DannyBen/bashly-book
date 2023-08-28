@@ -62,11 +62,6 @@ All examples are listed below for convenience.
 - [command-function](https://github.com/DannyBen/bashly/tree/master/examples/command-function#readme) - configuring custom internal function names
 - [split-config](https://github.com/DannyBen/bashly/tree/master/examples/split-config#readme) - splitting your `bashly.yml` into several smaller files
 
-## Real-world-like examples
-
-- [docker-like](https://github.com/DannyBen/bashly/tree/master/examples/docker-like#readme) - a sample script with deep commands (like `docker container run`)
-- [git-like](https://github.com/DannyBen/bashly/tree/master/examples/git-like#readme) - a sample script with sub-commands similar to git
-
 ## Bashly library features
 
 - [config](https://github.com/DannyBen/bashly/tree/master/examples/config#readme) - using the config library for easy access to INI files
@@ -77,7 +72,16 @@ All examples are listed below for convenience.
 - [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding argument validation functions
 - [hooks](https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme) - adding before/after hooks
 
-## Other Examples
+## Real-world-like examples
+
+- [docker-like](https://github.com/DannyBen/bashly/tree/master/examples/docker-like#readme) - a sample script with deep commands (like `docker container run`)
+- [git-like](https://github.com/DannyBen/bashly/tree/master/examples/git-like#readme) - a sample script with sub-commands similar to git
+
+## Documentation generation
+
+- [render-mandoc](https://github.com/DannyBen/bashly/tree/master/examples/render-mandoc#readme) - auto-generate man pages for your script
+
+## Other examples
 
 - [heredoc](https://github.com/DannyBen/bashly/tree/master/examples/heredoc#readme) - using heredoc strings
 - [heredoc-alt](https://github.com/DannyBen/bashly/tree/master/examples/heredoc-alt#readme) - using heredoc strings in the lib directory
