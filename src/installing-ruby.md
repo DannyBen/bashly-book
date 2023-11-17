@@ -22,6 +22,13 @@ The general instructions are:
    to alter your `$PATH` so that it includes the path to the location of gem
    executable files.
 
+## `brew` - macOS
+
+```bash
+$ brew install ruby
+$ gem install bashly
+```
+
 ## `apt` - Ubuntu / Debian
 
 ```bash

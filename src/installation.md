@@ -7,24 +7,15 @@ order: 99
 
 Install bashly using one of these methods.
 
-+++ Gem
++++ Ruby Gem
 
-If you have Ruby 3.0 or higher (`ruby -v`), use this installation method:
+Bashly requires Ruby 3.0 or higher (`ruby -v`).
 
 ```shell
 gem install bashly
 ```
 
 [!ref](/installing-ruby)
-
-+++ Homebrew
-
-Mac users can enable Ruby gem installation first, and then install bashly:
-
-```shell
-brew install brew-gem
-brew gem install bashly
-```
 
 +++ Docker
 
