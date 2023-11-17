@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.753344117887">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.753523466039">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.753344117887" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.753523466039" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.753344117887" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.753523466039" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.753344117887" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.753344117887" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.753523466039" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.753523466039" defer></script>
 
     <!-- Tachyon page accelerator -->
     <script src="https://unpkg.com/tachyonjs@1.0.1/tachyon.min.js" integrity="sha384-YzRhaEvO+tu7clAuAStGkSR0bVr2+IIq1gXxi28k2Wj0gGAdPOuruYnTSFOXLv0I" type="module" crossorigin defer></script>
@@ -235,9 +235,9 @@
 </doc-anchor-target>
 <p>Install bashly using one of these methods.</p>
 <doc-tabs>
-<doc-tab v-cloak id="gem">
-<template #title>Gem</template>
-<p>If you have Ruby 3.0 or higher (<code v-pre>ruby -v</code>), use this installation method:</p>
+<doc-tab v-cloak id="ruby-gem">
+<template #title>Ruby Gem</template>
+<p>Bashly requires Ruby 3.0 or higher (<code v-pre>ruby -v</code>).</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">gem install bashly</code></pre>
 </doc-codeblock></div>
@@ -255,14 +255,6 @@
     <a href="../installing-ruby/" class="absolute block inset-0"></a>
 </div>
 </p>
-</doc-tab>
-<doc-tab v-cloak id="homebrew">
-<template #title>Homebrew</template>
-<p>Mac users can enable Ruby gem installation first, and then install bashly:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">brew install brew-gem
-brew gem install bashly</code></pre>
-</doc-codeblock></div>
 </doc-tab>
 <doc-tab v-cloak id="docker">
 <template #title>Docker</template>
