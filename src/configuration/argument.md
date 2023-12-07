@@ -105,6 +105,13 @@ you will need to convert to array with something like
 
 [!button variant="primary" icon="code-review" text="Repeatable Argument Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-arg#readme)
 
+### unique
+
+[!badge Boolean]
+
+Specify that the values for this `repeatable` argument must be unique.
+Non-unique values will be ignored.
+
 
 ### validate
 
