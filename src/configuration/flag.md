@@ -182,6 +182,15 @@ something like `eval "data=(${args[--data]})"`.
 
 [!button variant="primary" icon="code-review" text="Repeatable Flag Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-flag#readme)
 
+### unique
+
+[!badge Boolean]
+
+Specify that the values for this flag must be unique. Non-unique values will be
+ignored.
+
+This option only applies to flags that have both `repeatable: true` and an `arg`
+specified.
 
 ### validate
 
