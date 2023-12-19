@@ -105,10 +105,14 @@ If the flag requires an argument, specify its name here.
 
 ### default
 
-[!badge String]
+[!badge String / Array of Strings]
 
 The value to use in case it is not provided by the user. Implies that this flag
 is optional, and only makes sense when the flag has an argument.
+
+When using [`repeatable`](#repeatable), you may provide an array here. It will
+be provided to your script as a space delimited string (similar to how it is
+provided when the user inputs values).
 
 [!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
 
