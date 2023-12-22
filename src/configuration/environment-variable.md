@@ -7,6 +7,22 @@ order: 70
 
 Specify environment variables (required or optional) used by your script.
 
+==- :icon-code-review: Show Me How
+```yaml bashly.yml
+environment_variables:
+  - name: config_path
+    help: Location of the config file
+    default: ~/config.ini
+  - name: api_key
+    help: Your API key
+    required: true
+  - name: app_env
+    help: Application environment
+    allowed: [dev, prod, test]
+    default: dev
+```
+===
+
 If an environment variable is defined as required (false by default), the
 execution of the script will be halted with a friendly error if it is not set.
 
@@ -17,19 +33,8 @@ will be used in case the user has not defined it in their environment.
 Most properties are optional, unless specified otherwise.
 !!!
 
-==- :icon-code-review: Show Me How
-```yaml bashly.yml
-environment_variables:
-  - name: config_path
-    help: Location of the config file
-    default: ~/config.ini
-  - name: api_key
-    help: Your API key
-    required: true
-```
-===
 
-
+[!button variant="primary" icon="code-review" text="Environment Variables Example"](https://github.com/DannyBen/bashly/tree/master/examples/environment-variables#readme)
 
 ## Basic Options
 
@@ -59,8 +64,6 @@ The message to display when using `--help`. Can have multiple lines.
 The value to use in case it is not provided by the user. Implies that this
 environment variable is optional.
 
-[!button variant="primary" icon="code-review" text="Environment Variables Example"](https://github.com/DannyBen/bashly/tree/master/examples/environment-variables#readme)
-
 ### private
 
 [!badge Boolean]
@@ -74,3 +77,11 @@ text.
 
 Specify if this variable is required.
 
+## Advanced Options
+
+### allowed
+
+[!badge Array of Strings]
+
+Limit the allowed values to a specified whitelist. Can be used in conjunction
+with [`default`](#default) or [`required`](#required).

@@ -7,13 +7,6 @@ order: 90
 
 Specify positional arguments (required or optional) used by your script.
 
-The argument's value will be available to you as `${args[name]}` in your bash
-function.
-
-!!! Note
-Most properties are optional, unless specified otherwise.
-!!!
-
 ==- :icon-code-review: Show Me How
 ```yaml bashly.yml
 args:
@@ -33,6 +26,14 @@ args:
     validate: file_exists
 ```
 ===
+
+
+The argument's value will be available to you as `${args[name]}` in your bash
+function.
+
+!!! Note
+Most properties are optional, unless specified otherwise.
+!!!
 
 
 ## Basic Options

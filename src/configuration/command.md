@@ -10,13 +10,6 @@ The `command` object serves two purposes, it:
 1. Defines the root CLI application (command).
 2. Defines any nested sub-commands, if any.
 
-Unless otherwise specified, these definitions can be used for both the root
-command and sub-commands (under the `commands` definition).
-
-!!! Note
-Most properties are optional, unless specified otherwise.
-!!!
-
 ==- :icon-code-review: Show Me How
 ```yaml bashly.yml
 name: rush
@@ -58,6 +51,12 @@ commands:
 ```
 ===
 
+Unless otherwise specified, these definitions can be used for both the root
+command and sub-commands (under the `commands` definition).
+
+!!! Note
+Most properties are optional, unless specified otherwise.
+!!!
 
 
 ## Basic Options
