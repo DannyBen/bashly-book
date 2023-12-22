@@ -9,15 +9,6 @@ Specify a list of required external dependencies (commands). The script
 execution will be halted with a friendly error unless all dependency commands
 exist.
 
-This configuration option can be provided in one of three ways:
-
-- A simple array, just listing the needed dependencies.
-- A hash specifying an additional help message to show in case the dependency is
-  not installed (for example, to provide installation instructions).
-- A hash of hashes, providing a list of commands for a single dependency, and
-  an optional help message. This is designed to provide an "or" functionality
-  for a single dependency (for example: curl or wget).
-
 ==- :icon-code-review: Show Me How
 ```yaml bashly.yml
 # Array syntax
@@ -39,6 +30,15 @@ dependencies:
     help: Run 'sudo apt install curl' or 'sudo apt install wget'
 ```
 ===
+
+This configuration option can be provided in one of three ways:
+
+- A simple array, just listing the needed dependencies.
+- A hash specifying an additional help message to show in case the dependency is
+  not installed (for example, to provide installation instructions).
+- A hash of hashes, providing a list of commands for a single dependency, and
+  an optional help message. This is designed to provide an "or" functionality
+  for a single dependency (for example: curl or wget).
 
 When a command defines `dependencies`, it will also have the paths of the found
 dependencies in an associative array named `deps`. Call the `inspect_args`

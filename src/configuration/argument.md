@@ -7,13 +7,6 @@ order: 90
 
 Specify positional arguments (required or optional) used by your script.
 
-The argument's value will be available to you as `${args[name]}` in your bash
-function.
-
-!!! Note
-Most properties are optional, unless specified otherwise.
-!!!
-
 ==- :icon-code-review: Show Me How
 ```yaml bashly.yml
 args:
@@ -33,6 +26,14 @@ args:
     validate: file_exists
 ```
 ===
+
+
+The argument's value will be available to you as `${args[name]}` in your bash
+function.
+
+!!! Note
+Most properties are optional, unless specified otherwise.
+!!!
 
 
 ## Basic Options
@@ -61,10 +62,14 @@ The message to display when using `--help`. Can have multiple lines.
 
 ### default
 
-[!badge String]
+[!badge String / Array of Strings]
 
 The value to use in case it is not provided by the user. Implies that this
 argument is optional.
+
+When using [`repeatable`](#repeatable), you may provide an array here. It will
+be provided to your script as a space delimited string (similar to how it is
+provided when the user inputs values).
 
 [!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
 

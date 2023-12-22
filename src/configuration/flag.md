@@ -7,22 +7,6 @@ order: 80
 
 Specify flags (required or optional) used by your script.
 
-The flag's value will be available to you as `${args[--output]}` in your bash
-function (regardless of whether the user provided it with the long or short
-form).
-
-!!! Note
-Bashly supports these additional flag formats as input:
-
-- `-abc` same as `-a -b -c`
-- `-a=arg` same as `-a arg`
-- `--flag=arg` same as `--flag arg`
-!!!
-
-!!! Note
-Most properties are optional, unless specified otherwise.
-!!!
-
 ==- :icon-code-review: Show Me How
 ```yaml bashly.yml
 flags:
@@ -57,6 +41,22 @@ flags:
 ```
 ===
 
+
+The flag's value will be available to you as `${args[--output]}` in your bash
+function (regardless of whether the user provided it with the long or short
+form).
+
+!!! Note
+Bashly supports these additional flag formats as input:
+
+- `-abc` same as `-a -b -c`
+- `-a=arg` same as `-a arg`
+- `--flag=arg` same as `--flag arg`
+!!!
+
+!!! Note
+Most properties are optional, unless specified otherwise.
+!!!
 
 ## Basic Options
 
@@ -105,10 +105,14 @@ If the flag requires an argument, specify its name here.
 
 ### default
 
-[!badge String]
+[!badge String / Array of Strings]
 
 The value to use in case it is not provided by the user. Implies that this flag
 is optional, and only makes sense when the flag has an argument.
+
+When using [`repeatable`](#repeatable), you may provide an array here. It will
+be provided to your script as a space delimited string (similar to how it is
+provided when the user inputs values).
 
 [!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
 
