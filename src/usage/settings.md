@@ -139,11 +139,17 @@ Specify how the generated script should treat flags in the form of `-abc`
 env: development
 ```
 
-Specify if the generated script should include development related comments or
-not.
+Specify if the generated script should include development related comments and
+functions or not.
 
-- `env: development` - Generate with file markers.
-- `env: production` -  Generate a smaller script, without file markers.
+- `env: development` - Generate with file markers and development functions, such as `inspect_args()`.
+- `env: production` -  Generate a smaller script, without file markers and development functions.
+
+!!!success File Markers
+File markers are special comments that are injected to the final script and
+specify the name of the internal bashly template (view) or the path to the
+user's partial code files.
+!!!
 
 ### `partials_extension`
 
