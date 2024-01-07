@@ -48,6 +48,7 @@ All examples are listed below for convenience.
 - [stdin](https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme) - reading input from stdin
 - [filters](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme) - preventing commands from running unless custom conditions are met
 - [commands-expose](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme) - showing sub-commands in the parent's help
+- [key-value-pairs](https://github.com/DannyBen/bashly/tree/master/examples/key-value-pairs#readme) - parsing key=value arguments and flags
 
 ## Customization
 
@@ -80,6 +81,7 @@ All examples are listed below for convenience.
 ## Documentation generation
 
 - [render-mandoc](https://github.com/DannyBen/bashly/tree/master/examples/render-mandoc#readme) - auto-generate man pages for your script
+- [render-markdown](https://github.com/DannyBen/bashly/tree/master/examples/render-markdown#readme) - auto-generate markdown documentation for your script
 
 ## Other examples
 
