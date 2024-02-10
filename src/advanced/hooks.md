@@ -10,7 +10,7 @@ own code. To use a hook, simply create one of the files listed below in your
 `src` directory.
 
 !!!success Tip
-Run `bashly add hooks` to create the two hook files in your source directory.
+Run `bashly add hooks` to create the hook files in your source directory.
 !!!
 
 | Hook File           | Description
