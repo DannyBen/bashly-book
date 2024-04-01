@@ -133,6 +133,18 @@ Specify how the generated script should treat flags in the form of `-abc`
 - `compact_short_flags: true` - Expand `-abc` to `-a -b -c`.
 - `compact_short_flags: false` - Do not expand `-abc` (consider this an invalid input).
 
+### `conjoined_flag_args`
+
+```yaml
+conjoined_flag_args: true
+```
+
+Specify how the generated script should treat flags in the form of `--flag=value`
+or `-f=value`
+
+- `conjoined_flag_args: true` - Expand `--flag=value` to `--flag value` and `-f=value` to `-f value`.
+- `conjoined_flag_args: false` - Do not expand `--flag=value` or `-f=value` (consider this an invalid input).
+
 ### `env`
 
 ```yaml
