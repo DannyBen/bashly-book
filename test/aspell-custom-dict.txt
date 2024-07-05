@@ -34,6 +34,7 @@ euo
 eval
 fi
 github
+gtx
 heredoc
 Homebrew
 href
@@ -43,6 +44,8 @@ ini
 INI
 init
 libyaml
+macOS
+mandoc
 md
 mygit
 myscript
@@ -54,6 +57,8 @@ pipefail
 png
 pre
 PWD
+rb
+readme
 repo
 repos
 respec
@@ -66,9 +71,11 @@ shellcheck
 shfmt
 src
 stdin
+subcommand
 sudo
 Suy
 td
+tty
 Unregister
 uri
 url
