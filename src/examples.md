@@ -49,6 +49,7 @@ All examples are listed below for convenience.
 - [filters](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme) - preventing commands from running unless custom conditions are met
 - [commands-expose](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme) - showing sub-commands in the parent's help
 - [key-value-pairs](https://github.com/DannyBen/bashly/tree/master/examples/key-value-pairs#readme) - parsing key=value arguments and flags
+- [command-examples-on-error](https://github.com/DannyBen/bashly/tree/master/examples/command-examples-on-error#readme) - showing examples on error
 
 ## Customization
 

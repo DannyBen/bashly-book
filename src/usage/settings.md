@@ -171,6 +171,20 @@ partials_extension: sh
 
 Set the extension to use when reading/writing partial script snippets.
 
+
+### `show_examples_on_error`
+
+```yaml
+show_examples_on_error: false
+```
+
+Specify if you want to show the
+[command examples](/configuration/command/#examples) whenever the user fails to 
+provide the required arguments.
+
+[!button variant="primary" icon="code-review" text="Show Examples on Error Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-examples-on-error#readme)
+
+
 ### `usage_colors`
 
 ```yaml
