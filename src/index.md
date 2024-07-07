@@ -6,9 +6,13 @@ label: Welcome
 
 # Welcome to Bashly
 
-**Bashly** is a command line application (written in Ruby) that lets you generate feature-rich bash command line tools.
+Bashly is a command line application (written in Ruby) that lets you
+generate feature-rich bash command line tools.
 
-The design intention is to let you focus on your specific code, without worrying about command line argument parsing, usage texts, error messages and other functions that are usually handled by a framework in any other programming language.
+Bashly lets you focus on your specific code, without worrying
+about command line argument parsing, usage texts, error messages and other
+functions that are usually handled by a framework in any other programming
+language.
 
 [![Bashly Demo](/assets/cast.gif)](/demo/)
 

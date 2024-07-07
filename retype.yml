@@ -16,7 +16,7 @@ branding:
   label: v1.2.0
 
 meta:
-  title: " | Bashly - Bash CLI Framework"
+  title: " | Bashly - Bash Command Line Framework"
 
 edit:
   repo: https://github.com/DannyBen/bashly-book/
