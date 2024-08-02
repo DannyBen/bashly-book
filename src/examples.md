@@ -44,6 +44,7 @@ All examples are listed below for convenience.
 - [repeatable-flag](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-flag#readme) - allowing flags to be provided multiple times
 - [reusable-flags](https://github.com/DannyBen/bashly/tree/master/examples/reusable-flags#readme) - reuse flag definition for multiple commands
 - [conflicts](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme) - defining mutually exclusive flags
+- [needs](https://github.com/DannyBen/bashly/tree/master/examples/needs#readme) - defining flags that need other flags
 - [command-private](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme) - hiding commands from the command list
 - [stdin](https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme) - reading input from stdin
 - [filters](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme) - preventing commands from running unless custom conditions are met
