@@ -85,3 +85,11 @@ Specify if this variable is required.
 
 Limit the allowed values to a specified whitelist. Can be used in conjunction
 with [`default`](#default) or [`required`](#required).
+
+### validate
+
+[!badge String]
+
+Apply a custom validation function.
+
+[!ref](/advanced/validations)

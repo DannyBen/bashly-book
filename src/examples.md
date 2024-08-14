@@ -72,7 +72,7 @@ All examples are listed below for convenience.
 - [yaml](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme) - using the YAML reading functions
 - [colors](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme) - using the color print feature
 - [completions](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
-- [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding argument validation functions
+- [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding validation functions for arguments, flags or environment variables
 - [hooks](https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme) - adding before/after hooks
 
 ## Real-world-like examples
