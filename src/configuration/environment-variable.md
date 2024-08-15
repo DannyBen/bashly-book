@@ -71,6 +71,11 @@ environment variable is optional.
 Setting this to `true` on any environment variable, will hide it from the help
 text.
 
+!!!success Tip
+To allow users to see private environment variables, see
+[Settings :icon-chevron-right: private_reveal_key](/usage/settings/#private_reveal_key)
+!!!
+
 ### required
 
 [!badge Boolean]

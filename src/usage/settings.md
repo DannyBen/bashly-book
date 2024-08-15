@@ -48,6 +48,7 @@ When setting environment variables, you can use:
 ### `source_dir`
 
 ```yaml
+# default
 source_dir: src
 ```
 
@@ -56,6 +57,7 @@ Set the path containing the bashly source files.
 ### `config_path`
 
 ```yaml
+# default
 config_path: "%{source_dir}/bashly.yml"
 ```
 
@@ -65,6 +67,7 @@ reference the value of the `source_dir` option.
 ### `target_dir`
 
 ```yaml
+# default
 target_dir: .
 ```
 
@@ -73,6 +76,7 @@ Set the path to use for creating the final bash script.
 ### `lib_dir`
 
 ```yaml
+# default
 lib_dir: lib
 ```
 
@@ -81,7 +85,11 @@ Set the path to use for common library files, relative to `source_dir`.
 ### `commands_dir`
 
 ```yaml
+# default
 commands_dir: ~
+
+# example
+commands_dir: commands
 ```
 
 Set the path to use for command files, relative to `source_dir`.
@@ -99,7 +107,13 @@ recommended to enable this by setting it to something like
 ### `strict`
 
 ```yaml
+# default
 strict: false
+
+# examples
+strict: true
+strict: ''
+strict: set -o pipefail
 ```
 
 Specify which bash options to apply on initialization.
@@ -113,6 +127,7 @@ Specify which bash options to apply on initialization.
 ### `tab_indent`
 
 ```yaml
+# default
 tab_indent: false
 ```
 
@@ -125,6 +140,7 @@ Specify the indentation style of the generated script.
 ### `compact_short_flags`
 
 ```yaml
+# default
 compact_short_flags: true
 ```
 
@@ -136,6 +152,7 @@ Specify how the generated script should treat flags in the form of `-abc`
 ### `conjoined_flag_args`
 
 ```yaml
+# default
 conjoined_flag_args: true
 ```
 
@@ -148,6 +165,7 @@ or `-f=value`
 ### `env`
 
 ```yaml
+# default
 env: development
 ```
 
@@ -166,7 +184,11 @@ user's partial code files.
 ### `partials_extension`
 
 ```yaml
+# default
 partials_extension: sh
+
+# example
+partials_extension: bash
 ```
 
 Set the extension to use when reading/writing partial script snippets.
@@ -175,6 +197,7 @@ Set the extension to use when reading/writing partial script snippets.
 ### `show_examples_on_error`
 
 ```yaml
+# default
 show_examples_on_error: false
 ```
 
@@ -185,15 +208,41 @@ provide the required arguments.
 [!button variant="primary" icon="code-review" text="Show Examples on Error Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-examples-on-error#readme)
 
 
+### `private_reveal_key`
+
+```yaml
+# default
+private_reveal_key: ~
+
+# example
+private_reveal_key: ADVANCED_FEATURES
+```
+
+When using private commands, flags, or environment variables, you may set 
+this option to a name of an environment variable that, if set, will reveal
+all the private elements in the usage texts, as if they were public.
+
+[!button variant="primary" icon="code-review" text="Private Reveal Example"](https://github.com/DannyBen/bashly/tree/master/examples/private-reveal#readme)
+
+
 ### `usage_colors`
 
 ```yaml
+# default
 usage_colors:
   caption: ~
   command: ~
   arg: ~
   flag: ~
   environment_variable: ~
+
+# example
+usage_colors:
+  caption: bold
+  command: green_underlined
+  arg: blue
+  flag: magenta
+  environment_variable: cyan_bold
 ```
 
 Enable color output for several aspects of the help message of the generated

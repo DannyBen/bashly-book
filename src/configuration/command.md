@@ -345,4 +345,9 @@ as a "last resort" mechanism to help in solving more complex scenarios.
 
 Setting this to `true` on any command, will hide it from the command list.
 
+!!!success Tip
+To allow users to see private commands, see
+[Settings :icon-chevron-right: private_reveal_key](/usage/settings/#private_reveal_key)
+!!!
+
 [!button variant="primary" icon="code-review" text="Private Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme)
