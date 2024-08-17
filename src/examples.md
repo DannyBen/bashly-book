@@ -44,6 +44,7 @@ All examples are listed below for convenience.
 - [repeatable-flag](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-flag#readme) - allowing flags to be provided multiple times
 - [reusable-flags](https://github.com/DannyBen/bashly/tree/master/examples/reusable-flags#readme) - reuse flag definition for multiple commands
 - [conflicts](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme) - defining mutually exclusive flags
+- [needs](https://github.com/DannyBen/bashly/tree/master/examples/needs#readme) - defining flags that need other flags
 - [command-private](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme) - hiding commands from the command list
 - [stdin](https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme) - reading input from stdin
 - [filters](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme) - preventing commands from running unless custom conditions are met
@@ -71,7 +72,7 @@ All examples are listed below for convenience.
 - [yaml](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme) - using the YAML reading functions
 - [colors](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme) - using the color print feature
 - [completions](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
-- [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding argument validation functions
+- [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding validation functions for arguments, flags or environment variables
 - [hooks](https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme) - adding before/after hooks
 
 ## Real-world-like examples

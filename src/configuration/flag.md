@@ -142,7 +142,7 @@ Remember to set the [`arg`](#arg) name when using this option.
 [!badge Array of Strings]
 
 Specify that this flag is mutually exclusive with one or more other flags.
-The values of this array should be the long versions of the flags:
+The values of this array should be the long versions of the flags:  
 `conflicts: [--other, --another]`
 
 !!! Note
@@ -163,11 +163,32 @@ Remember to set the [`arg`](#arg) name when using this option.
 
 [!ref](/advanced/bash-completion.md)
 
+
+### needs
+
+[!badge Array of Strings]
+
+Specify that this flag needs one or more other flags when executed.
+The values of this array should be the long versions of the flags:  
+`needs: [--other, --another]`
+
+!!! Note
+This option should be specified on both sides of the requirement.
+!!!
+
+[!button variant="primary" icon="code-review" text="Needy Flags Example"](https://github.com/DannyBen/bashly/tree/master/examples/needs#readme)
+
+
 ### private
 
 [!badge Boolean]
 
 Setting this to `true` on any flag, will hide it from the help text.
+
+!!!success Tip
+To allow users to see private flags, see
+[Settings :icon-chevron-right: private_reveal_key](/usage/settings/#private_reveal_key)
+!!!
 
 ### repeatable
 

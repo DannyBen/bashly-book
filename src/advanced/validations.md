@@ -5,8 +5,8 @@ order: 80
 
 # Custom Validations
 
-Bashly supports custom validation functions for your arguments, and flag
-arguments. This is how it works:
+Bashly supports custom validation functions for your arguments, flag
+arguments, and environment variables. This is how it works:
 
 1. In your bashly configuration file, arguments and flags (with arguments)
    may have a `validate: function_name` option.
