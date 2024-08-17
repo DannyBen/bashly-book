@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.775885573438">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.777181524263">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.775885573438" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.777181524263" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.775885573438" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.777181524263" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.775885573438" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.775885573438" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.777181524263" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.777181524263" defer></script>
 
     <!-- Tachyon page accelerator -->
     <script src="https://unpkg.com/tachyonjs@1.0.1/tachyon.min.js" integrity="sha384-YzRhaEvO+tu7clAuAStGkSR0bVr2+IIq1gXxi28k2Wj0gGAdPOuruYnTSFOXLv0I" type="module" crossorigin defer></script>
@@ -304,7 +304,8 @@ and prefixed by <code v-pre>BASHLY_</code> - for example: <code v-pre>BASHLY_SOU
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">source_dir: src</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+source_dir: src</code></pre>
 </doc-codeblock></div>
 <p>Set the path containing the bashly source files.</p>
 <doc-anchor-target id="config_path">
@@ -314,7 +315,8 @@ and prefixed by <code v-pre>BASHLY_</code> - for example: <code v-pre>BASHLY_SOU
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">config_path: &quot;%{source_dir}/bashly.yml&quot;</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+config_path: &quot;%{source_dir}/bashly.yml&quot;</code></pre>
 </doc-codeblock></div>
 <p>Set the path to bashly.yml. You can use the special token <code v-pre>%{source_dir}</code> to
 reference the value of the <code v-pre>source_dir</code> option.</p>
@@ -325,7 +327,8 @@ reference the value of the <code v-pre>source_dir</code> option.</p>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">target_dir: .</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+target_dir: .</code></pre>
 </doc-codeblock></div>
 <p>Set the path to use for creating the final bash script.</p>
 <doc-anchor-target id="lib_dir">
@@ -335,7 +338,8 @@ reference the value of the <code v-pre>source_dir</code> option.</p>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">lib_dir: lib</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+lib_dir: lib</code></pre>
 </doc-codeblock></div>
 <p>Set the path to use for common library files, relative to <code v-pre>source_dir</code>.</p>
 <doc-anchor-target id="commands_dir">
@@ -345,7 +349,11 @@ reference the value of the <code v-pre>source_dir</code> option.</p>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">commands_dir: ~</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+commands_dir: ~
+
+# example
+commands_dir: commands</code></pre>
 </doc-codeblock></div>
 <p>Set the path to use for command files, relative to <code v-pre>source_dir</code>.</p>
 <ul>
@@ -367,7 +375,13 @@ recommended to enable this by setting it to something like
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">strict: false</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+strict: false
+
+# examples
+strict: true
+strict: ''
+strict: set -o pipefail</code></pre>
 </doc-codeblock></div>
 <p>Specify which bash options to apply on initialization.</p>
 <ul>
@@ -384,7 +398,8 @@ recommended to enable this by setting it to something like
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">tab_indent: false</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+tab_indent: false</code></pre>
 </doc-codeblock></div>
 <p>Specify the indentation style of the generated script.</p>
 <ul>
@@ -399,7 +414,8 @@ to a tab character).</li>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">compact_short_flags: true</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+compact_short_flags: true</code></pre>
 </doc-codeblock></div>
 <p>Specify how the generated script should treat flags in the form of <code v-pre>-abc</code></p>
 <ul>
@@ -413,7 +429,8 @@ to a tab character).</li>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">conjoined_flag_args: true</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+conjoined_flag_args: true</code></pre>
 </doc-codeblock></div>
 <p>Specify how the generated script should treat flags in the form of <code v-pre>--flag=value</code>
 or <code v-pre>-f=value</code></p>
@@ -428,7 +445,8 @@ or <code v-pre>-f=value</code></p>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">env: development</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+env: development</code></pre>
 </doc-codeblock></div>
 <p>Specify if the generated script should include development related comments and
 functions or not.</p>
@@ -462,7 +480,11 @@ user&#x27;s partial code files.</p>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">partials_extension: sh</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+partials_extension: sh
+
+# example
+partials_extension: bash</code></pre>
 </doc-codeblock></div>
 <p>Set the extension to use when reading/writing partial script snippets.</p>
 <doc-anchor-target id="show_examples_on_error">
@@ -472,7 +494,8 @@ user&#x27;s partial code files.</p>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">show_examples_on_error: false</code></pre>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+show_examples_on_error: false</code></pre>
 </doc-codeblock></div>
 <p>Specify if you want to show the
 <a href="../../configuration/command/#examples">command examples</a> whenever the user fails to
@@ -481,6 +504,26 @@ provide the required arguments.</p>
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 0 1-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 0 1 1.06.04Zm3.44 1.06a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.908-2.7-2.908-2.7Z"/><path d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 0 1-1.75 1.75h-9.69l-3.573 3.573A1.458 1.458 0 0 1 5 21.043V18.5H3.25a1.75 1.75 0 0 1-1.75-1.75ZM3.25 4a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 .75.75v3.19l3.72-3.72a.749.749 0 0 1 .53-.22h10a.25.25 0 0 0 .25-.25V4.25a.25.25 0 0 0-.25-.25Z"/></g></svg></span>
     <span>Show Examples on Error Example</span>
 </a></p>
+<doc-anchor-target id="private_reveal_key">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#private_reveal_key">#</doc-anchor-trigger>
+        <span><code v-pre>private_reveal_key</code></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+private_reveal_key: ~
+
+# example
+private_reveal_key: ADVANCED_FEATURES</code></pre>
+</doc-codeblock></div>
+<p>When using private commands, flags, or environment variables, you may set
+this option to a name of an environment variable that, if set, will reveal
+all the private elements in the usage texts, as if they were public.</p>
+<p><a href="https://github.com/DannyBen/bashly/tree/master/examples/private-reveal#readme" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-blue-500 hover:bg-blue-700 text-white px-4 h-10 text-sm rounded-md">
+    <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M10.3 6.74a.75.75 0 0 1-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 0 1 1.06.04Zm3.44 1.06a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.908-2.7-2.908-2.7Z"/><path d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 0 1-1.75 1.75h-9.69l-3.573 3.573A1.458 1.458 0 0 1 5 21.043V18.5H3.25a1.75 1.75 0 0 1-1.75-1.75ZM3.25 4a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 .75.75v3.19l3.72-3.72a.749.749 0 0 1 .53-.22h10a.25.25 0 0 0 .25-.25V4.25a.25.25 0 0 0-.25-.25Z"/></g></svg></span>
+    <span>Private Reveal Example</span>
+</a></p>
 <doc-anchor-target id="usage_colors">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#usage_colors">#</doc-anchor-trigger>
@@ -488,12 +531,21 @@ provide the required arguments.</p>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">usage_colors:
+<pre class="language-yaml"><code v-pre class="language-yaml"># default
+usage_colors:
   caption: ~
   command: ~
   arg: ~
   flag: ~
-  environment_variable: ~</code></pre>
+  environment_variable: ~
+
+# example
+usage_colors:
+  caption: bold
+  command: green_underlined
+  arg: blue
+  flag: magenta
+  environment_variable: cyan_bold</code></pre>
 </doc-codeblock></div>
 <p>Enable color output for several aspects of the help message of the generated
 script. Each of these options may be a name of a color function that exists in
