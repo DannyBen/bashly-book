@@ -46,6 +46,7 @@ All examples are listed below for convenience.
 - [conflicts](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme) - defining mutually exclusive flags
 - [needs](https://github.com/DannyBen/bashly/tree/master/examples/needs#readme) - defining flags that need other flags
 - [command-private](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme) - hiding commands from the command list
+- [private-reveal](https://github.com/DannyBen/bashly/tree/master/examples/private-reveal#readme) - allowing users to reveal private commands, flags or environment variables
 - [stdin](https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme) - reading input from stdin
 - [filters](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme) - preventing commands from running unless custom conditions are met
 - [commands-expose](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme) - showing sub-commands in the parent's help
