@@ -16,6 +16,12 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      # This should not be needed, but it is a workaround
+      # ref: https://github.com/retypeapp/retype/issues/711
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+
       - name: Build site
         uses: retypeapp/action-build@latest
 
