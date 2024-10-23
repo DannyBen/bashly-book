@@ -8,7 +8,7 @@ order: 100
 The `command` object serves two purposes, it:
 
 1. Defines the root CLI application (command).
-2. Defines any nested sub-commands, if any.
+2. Defines any nested subcommands, if any.
 
 ==- :icon-code-review: Show Me How
 ```yaml bashly.yml
@@ -52,7 +52,7 @@ commands:
 ===
 
 Unless otherwise specified, these definitions can be used for both the root
-command and sub-commands (under the `commands` definition).
+command and subcommands (under the `commands` definition).
 
 !!! Note
 Most properties are optional, unless specified otherwise.
@@ -66,13 +66,13 @@ Most properties are optional, unless specified otherwise.
 [!badge String]
 [!badge variant="danger" text="Required"]
 
-The name of the script or sub-command.
+The name of the script or subcommand.
 
 
 ### alias
 
 [!badge String / Array of Strings]
-[!badge variant="warning" text="Sub-Commands Only"]
+[!badge variant="warning" text="Subcommands Only"]
 
 !!! Note
 This command used to be called `short` in bashly < 0.8.0
@@ -124,9 +124,9 @@ Specify the array of positional arguments this script needs.
 Specify the array of option flags this script needs.
 
 !!! Note
-Flags that are defined in a command that has sub-commands, are considered
-"global flags", and will be available to all sub-commands, in addition to any
-flag defined in any of the sub-commands themselves.
+Flags that are defined in a command that has subcommands, are considered
+"global flags", and will be available to all subcommands, in addition to any
+flag defined in any of the subcommands themselves.
 
 The [docker-like example](https://github.com/DannyBen/bashly/tree/master/examples/docker-like#readme)
 demonstrates this feature.
@@ -145,7 +145,7 @@ Specify the array of commands. Each command will have its own args and flags.
 Using `commands` on a given command implies that this command does not have flags or args.
 !!!
 
-[!button variant="primary" icon="code-review" text="Commands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands#readme) [!button variant="primary" icon="code-review" text="Sub-Commands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-nested#readme) 
+[!button variant="primary" icon="code-review" text="Commands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands#readme) [!button variant="primary" icon="code-review" text="Subcommands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-nested#readme) 
 
 
 
@@ -164,7 +164,7 @@ The string to display when using `--version`.
 ### default
 
 [!badge Boolean / String]
-[!badge variant="warning" text="Sub-Commands Only"]
+[!badge variant="warning" text="Subcommands Only"]
 
 - Setting this to `true` on any command, will cause any **unrecognized**
   command line to be passed to this command.
@@ -204,7 +204,7 @@ Add a custom message that will be displayed at the end of the `--help` text.
 ### group
 
 [!badge String]
-[!badge variant="warning" text="Sub-Commands Only"]
+[!badge variant="warning" text="Subcommands Only"]
 
 In case you have many commands, use this option to specify a caption to display
 before this command.
@@ -213,7 +213,13 @@ This option is purely for display purposes.
 
 [!button variant="primary" icon="code-review" text="Command Groups Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme)
 
+### variables
 
+[!badge Array of Variables]
+
+Specify an array of variables that can be accessed globally in your script, or subcommands.
+
+[!ref](variable.md)
 
 ## Advanced Options
 
@@ -261,17 +267,17 @@ script.
 ### expose
 
 [!badge Boolean / String]
-[!badge variant="warning" text="Sub-Commands Only"]
+[!badge variant="warning" text="Subcommands Only"]
 
-Setting this to `true` or `always` on any command that has sub-commands, will
-show its sub-commands in the help or usage text of the parent command.
+Setting this to `true` or `always` on any command that has subcommands, will
+show its subcommands in the help or usage text of the parent command.
 
-- Set to `true` to show the sub-commands only when the parent command is
+- Set to `true` to show the subcommands only when the parent command is
   executed with `--help`.
-- Set to `always` to show the sub-commands also when the parent command is
+- Set to `always` to show the subcommands also when the parent command is
   executed without any arguments.
 
-You can use `expose` with the [`group`](#group) option, to show sub-commands
+You can use `expose` with the [`group`](#group) option, to show subcommands
 in a logical, visual grouping.
 
 [!button variant="primary" icon="code-review" text="Commands Expose Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme)
@@ -341,7 +347,7 @@ as a "last resort" mechanism to help in solving more complex scenarios.
 ### private
 
 [!badge Boolean]
-[!badge variant="warning" text="Sub-Commands Only"]
+[!badge variant="warning" text="Subcommands Only"]
 
 Setting this to `true` on any command, will hide it from the command list.
 
