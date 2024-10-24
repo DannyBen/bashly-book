@@ -24,7 +24,7 @@ GEM
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       llhttp-ffi (~> 0.5.0)
-    http-cookie (1.0.6)
+    http-cookie (1.0.7)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     httpme (0.2.2)
@@ -40,16 +40,16 @@ GEM
       colsole (>= 0.8.1, < 2)
       docopt_ng (~> 0.7, >= 0.7.1)
     module_methods (0.1.0)
-    mustermann (3.0.0)
+    mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.7.3)
-    nokogiri (1.16.6-x86_64-linux)
+    nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
-    public_suffix (6.0.0)
-    puma (6.4.2)
+    public_suffix (6.0.1)
+    puma (6.4.3)
       nio4r (~> 2.0)
-    racc (1.8.0)
-    rack (3.1.6)
+    racc (1.8.1)
+    rack (3.1.8)
     rack-contrib (2.5.0)
       rack (< 4)
     rack-protection (4.0.0)
@@ -84,4 +84,4 @@ DEPENDENCIES
   sla
 
 BUNDLED WITH
-   2.5.14
+   2.5.22

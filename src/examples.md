@@ -16,8 +16,8 @@ All examples are listed below for convenience.
 ## Basic use
 
 - [minimal](https://github.com/DannyBen/bashly/tree/master/examples/minimal#readme) - the most basic "hello world" example
-- [commands](https://github.com/DannyBen/bashly/tree/master/examples/commands#readme) - a script with sub-commands
-- [commands-nested](https://github.com/DannyBen/bashly/tree/master/examples/commands-nested#readme) - a script with nested sub-commands
+- [commands](https://github.com/DannyBen/bashly/tree/master/examples/commands#readme) - a script with subcommands
+- [commands-nested](https://github.com/DannyBen/bashly/tree/master/examples/commands-nested#readme) - a script with nested subcommands
 
 ## Basic features
 
@@ -28,6 +28,7 @@ All examples are listed below for convenience.
 - [dependencies](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme) - halting script execution unless certain dependencies are installed
 - [dependencies-alt](https://github.com/DannyBen/bashly/tree/master/examples/dependencies-alt#readme) - halting script execution unless one of the required dependencies is installed
 - [environment-variables](https://github.com/DannyBen/bashly/tree/master/examples/environment-variables#readme) - halting script execution unless certain environment variables are set
+- [variables](https://github.com/DannyBen/bashly/tree/master/examples/variables#readme) - defining bash variables
 - [default-values](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme) - arguments and flags with default values
 - [minus-v](https://github.com/DannyBen/bashly/tree/master/examples/minus-v#readme) - using `-v` and `-h` in your script
 - [multiline](https://github.com/DannyBen/bashly/tree/master/examples/multiline#readme) - help messages with multiple lines
@@ -49,14 +50,14 @@ All examples are listed below for convenience.
 - [private-reveal](https://github.com/DannyBen/bashly/tree/master/examples/private-reveal#readme) - allowing users to reveal private commands, flags or environment variables
 - [stdin](https://github.com/DannyBen/bashly/tree/master/examples/stdin#readme) - reading input from stdin
 - [filters](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme) - preventing commands from running unless custom conditions are met
-- [commands-expose](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme) - showing sub-commands in the parent's help
+- [commands-expose](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme) - showing subcommands in the parent's help
 - [key-value-pairs](https://github.com/DannyBen/bashly/tree/master/examples/key-value-pairs#readme) - parsing key=value arguments and flags
 - [command-examples-on-error](https://github.com/DannyBen/bashly/tree/master/examples/command-examples-on-error#readme) - showing examples on error
 
 ## Customization
 
 - [colors-usage](https://github.com/DannyBen/bashly/tree/master/examples/colors-usage#readme) - adding colors to the usage text
-- [command-groups](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme) - grouping sub-commands in logical sections
+- [command-groups](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme) - grouping subcommands in logical sections
 - [custom-strings](https://github.com/DannyBen/bashly/tree/master/examples/custom-strings#readme) - configuring the script's error and usage texts
 - [custom-includes](https://github.com/DannyBen/bashly/tree/master/examples/custom-includes#readme) - adding and organizing your custom functions
 - [custom-script-header](https://github.com/DannyBen/bashly/tree/master/examples/custom-script-header#readme) - configuring a different script header
@@ -79,7 +80,7 @@ All examples are listed below for convenience.
 ## Real-world-like examples
 
 - [docker-like](https://github.com/DannyBen/bashly/tree/master/examples/docker-like#readme) - a sample script with deep commands (like `docker container run`)
-- [git-like](https://github.com/DannyBen/bashly/tree/master/examples/git-like#readme) - a sample script with sub-commands similar to git
+- [git-like](https://github.com/DannyBen/bashly/tree/master/examples/git-like#readme) - a sample script with subcommands similar to git
 
 ## Documentation generation
 

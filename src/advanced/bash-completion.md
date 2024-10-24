@@ -39,7 +39,7 @@ By running `bashly generate --upgrade`, your completions function
 
 ## Custom command completions
 
-In addition to the automatic suggestion of sub-commands and flags, you can
+In addition to the automatic suggestion of subcommands and flags, you can
 instruct bashly to also suggest files, directories, users, git branches and
 more. To do this, add another option in your `bashly.yml` on the command you
 wish to alter:
