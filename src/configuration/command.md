@@ -74,10 +74,6 @@ The name of the script or subcommand.
 [!badge String / Array of Strings]
 [!badge variant="warning" text="Subcommands Only"]
 
-!!! Note
-This command used to be called `short` in bashly < 0.8.0
-!!!
-
 One or more additional optional names for this command. This can be used to
 create a shortcut for a command, or provide alternative names for it.
 
