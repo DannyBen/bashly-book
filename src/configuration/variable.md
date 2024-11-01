@@ -37,8 +37,9 @@ variables:
 ===
 
 !!!success Tip 
-Variables defined in the root command are available globally, while those
-defined in subcommands are only accessible within those specific commands.
+Variables defined in the root command are available globally (in the
+`initialize()` function), while those defined in subcommands are only accessible
+within those specific commands.
 !!!
 
 [!button variant="primary" icon="code-review" text="Variables Example"](https://github.com/DannyBen/bashly/tree/master/examples/variables#readme)
