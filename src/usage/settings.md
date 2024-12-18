@@ -43,7 +43,7 @@ When setting environment variables, you can use:
 - `0`, `false` or `no` to represent false
 - `1`, `true` or `yes` to represent true
 
-## Options
+## Path Options
 
 ### `source_dir`
 
@@ -104,6 +104,20 @@ recommended to enable this by setting it to something like
 
 [!button variant="primary" icon="code-review" text="Command Paths Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-paths#readme)
 
+### `partials_extension`
+
+```yaml
+# default
+partials_extension: sh
+
+# example
+partials_extension: bash
+```
+
+Set the extension to use when reading/writing partial script snippets.
+
+## Format Options
+
 ### `strict`
 
 ```yaml
@@ -137,6 +151,8 @@ Specify the indentation style of the generated script.
 - `tab_indent: true` - Indent with Tab (every 2 leading spaces will be converted
    to a tab character).
 
+## Interface Options
+
 ### `compact_short_flags`
 
 ```yaml
@@ -162,19 +178,6 @@ or `-f=value`
 - `conjoined_flag_args: true` - Expand `--flag=value` to `--flag value` and `-f=value` to `-f value`.
 - `conjoined_flag_args: false` - Do not expand `--flag=value` or `-f=value` (consider this an invalid input).
 
-### `partials_extension`
-
-```yaml
-# default
-partials_extension: sh
-
-# example
-partials_extension: bash
-```
-
-Set the extension to use when reading/writing partial script snippets.
-
-
 ### `show_examples_on_error`
 
 ```yaml
@@ -187,7 +190,6 @@ Specify if you want to show the
 provide the required arguments.
 
 [!button variant="primary" icon="code-review" text="Show Examples on Error Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-examples-on-error#readme)
-
 
 ### `private_reveal_key`
 
@@ -204,6 +206,40 @@ this option to a name of an environment variable that, if set, will reveal
 all the private elements in the usage texts, as if they were public.
 
 [!button variant="primary" icon="code-review" text="Private Reveal Example"](https://github.com/DannyBen/bashly/tree/master/examples/private-reveal#readme)
+
+### `usage_colors`
+
+```yaml
+# default
+usage_colors:
+  caption: ~
+  command: ~
+  arg: ~
+  flag: ~
+  environment_variable: ~
+
+# example
+usage_colors:
+  caption: bold
+  command: green_underlined
+  arg: blue
+  flag: magenta
+  environment_variable: cyan_bold
+```
+
+Enable color output for several aspects of the help message of the generated
+script. Each of these options may be a name of a color function that exists in
+your script, for example: `green` or `bold`.
+
+You can run `bashly add colors` to add a standard colors library.
+
+!!! Note
+This option cannot be set using environment variables.
+!!!
+
+[!button variant="primary" icon="code-review" text="Usage Colors Example"](https://github.com/DannyBen/bashly/tree/master/examples/colors-usage#readme)
+
+## Feature Toggles
 
 ### `env`
 
@@ -294,35 +330,3 @@ Specify if you want to populate the `$env_var_names` bash array.
 
 This is applicable only if your script uses the
 [Environment Variable](/configuration/environment-variable) configuration option.
-
-### `usage_colors`
-
-```yaml
-# default
-usage_colors:
-  caption: ~
-  command: ~
-  arg: ~
-  flag: ~
-  environment_variable: ~
-
-# example
-usage_colors:
-  caption: bold
-  command: green_underlined
-  arg: blue
-  flag: magenta
-  environment_variable: cyan_bold
-```
-
-Enable color output for several aspects of the help message of the generated
-script. Each of these options may be a name of a color function that exists in
-your script, for example: `green` or `bold`.
-
-You can run `bashly add colors` to add a standard colors library.
-
-!!! Note
-This option cannot be set using environment variables.
-!!!
-
-[!button variant="primary" icon="code-review" text="Usage Colors Example"](https://github.com/DannyBen/bashly/tree/master/examples/colors-usage#readme)
