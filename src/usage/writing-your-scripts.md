@@ -105,7 +105,7 @@ Any code within the `src/initialize.sh` file will be called before anything else
 in your generated bash script. 
 
 !!!success Tip
-If your script defines [`Environment Variables`](/configuration/environment-variable)
+If your script defines [Environment Variables](/configuration/environment-variable)
 with [`default`](/configuration/environment-variable/#default) values, these
 values will be available to you in the `initialize.sh` file.
 !!!
@@ -126,6 +126,11 @@ content in `src/header.sh`.
 !!! Note
 Be sure to start your header with a shebang:
 `#!/usr/bin/env bash`{style="white-space: nowrap;"}
+!!!
+
+!!!success Tip
+If you just want to remove the header comment, you can adjust the
+[`enable_header_comment`](/usage/settings/#enable_header_comment) setting instead.
 !!!
 
 ## Hidden comments
