@@ -330,3 +330,33 @@ Specify if you want to populate the `$env_var_names` bash array.
 
 This is applicable only if your script uses the
 [Environment Variable](/configuration/environment-variable) configuration option.
+
+## Scripting Options
+
+### `var_aliases`
+
+```yaml
+# default
+var_aliases:
+  args: ~
+  other_args: ~
+  deps: ~
+  env_var_names: ~
+
+# example
+var_aliases:
+  args: ARGS
+  other_args: catch_all
+  deps: dependencies
+  env_var_names: ENV_VARS
+```
+
+Update one or more of these options in case you wish to change the name of the
+public global array that bashly uses for storing data.
+
+Note that this feature will not change the original name, but rather create
+an alias using `declare -gn`.
+
+!!! Note
+This option cannot be set using environment variables.
+!!!
