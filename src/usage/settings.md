@@ -43,7 +43,7 @@ When setting environment variables, you can use:
 - `0`, `false` or `no` to represent false
 - `1`, `true` or `yes` to represent true
 
-## Options
+## Path Options
 
 ### `source_dir`
 
@@ -104,6 +104,20 @@ recommended to enable this by setting it to something like
 
 [!button variant="primary" icon="code-review" text="Command Paths Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-paths#readme)
 
+### `partials_extension`
+
+```yaml
+# default
+partials_extension: sh
+
+# example
+partials_extension: bash
+```
+
+Set the extension to use when reading/writing partial script snippets.
+
+## Format Options
+
 ### `strict`
 
 ```yaml
@@ -137,6 +151,8 @@ Specify the indentation style of the generated script.
 - `tab_indent: true` - Indent with Tab (every 2 leading spaces will be converted
    to a tab character).
 
+## Interface Options
+
 ### `compact_short_flags`
 
 ```yaml
@@ -162,38 +178,6 @@ or `-f=value`
 - `conjoined_flag_args: true` - Expand `--flag=value` to `--flag value` and `-f=value` to `-f value`.
 - `conjoined_flag_args: false` - Do not expand `--flag=value` or `-f=value` (consider this an invalid input).
 
-### `env`
-
-```yaml
-# default
-env: development
-```
-
-Specify if the generated script should include development related comments and
-functions or not.
-
-- `env: development` - Generate with file markers and development functions, such as `inspect_args()`.
-- `env: production` -  Generate a smaller script, without file markers and development functions.
-
-!!!success File Markers
-File markers are special comments that are injected to the final script and
-specify the name of the internal bashly template (view) or the path to the
-user's partial code files.
-!!!
-
-### `partials_extension`
-
-```yaml
-# default
-partials_extension: sh
-
-# example
-partials_extension: bash
-```
-
-Set the extension to use when reading/writing partial script snippets.
-
-
 ### `show_examples_on_error`
 
 ```yaml
@@ -206,7 +190,6 @@ Specify if you want to show the
 provide the required arguments.
 
 [!button variant="primary" icon="code-review" text="Show Examples on Error Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-examples-on-error#readme)
-
 
 ### `private_reveal_key`
 
@@ -223,7 +206,6 @@ this option to a name of an environment variable that, if set, will reveal
 all the private elements in the usage texts, as if they were public.
 
 [!button variant="primary" icon="code-review" text="Private Reveal Example"](https://github.com/DannyBen/bashly/tree/master/examples/private-reveal#readme)
-
 
 ### `usage_colors`
 
@@ -256,3 +238,125 @@ This option cannot be set using environment variables.
 !!!
 
 [!button variant="primary" icon="code-review" text="Usage Colors Example"](https://github.com/DannyBen/bashly/tree/master/examples/colors-usage#readme)
+
+## Feature Toggles
+
+### `env`
+
+```yaml
+# default
+env: development
+```
+
+Specify one of two script rendering environments:
+
+- `env: development` - Generate a script suitable for development, which is usually slightly larger
+   and contains additional development-specific features.
+- `env: production` -  Generate a script suitable for distribution, which is usually smaller.
+
+Use the `enable_*` options below to adjust settings for each environment.
+
+!!! Note
+It is recommended to leave this set to `development` in the settings file, and
+use either the `BASHLY_ENV` environment variable or the
+`bashly generate --production` command when the slimmer production script is needed.
+!!!
+
+
+### `enable_header_comment`
+
+```yaml
+# default (allowed: always, never, development, production)
+enable_header_comment: always
+```
+
+Specify if you wish to render the "do not modify" comment at the beginning of
+the script.
+
+### `enable_bash3_bouncer`
+
+```yaml
+# default (allowed: always, never, development, production)
+enable_bash3_bouncer: always
+```
+
+Specify if you wish to render the piece of code that aborts the script execution
+when bash version is < 4.
+
+### `enable_view_markers`
+
+```yaml
+# default (allowed: always, never, development, production)
+enable_view_markers: development
+```
+
+Specify if you want the rendered script to include view marker comments.
+
+View markers provide the name of the internal bashly template (view) or the
+path to the user's partial code files in the final script, to help locate
+the source file for each piece of code.
+
+### `enable_inspect_args`
+
+```yaml
+# default (allowed: always, never, development, production)
+enable_inspect_args: development
+```
+
+Specify if you want the rendered script to include the `inspect_args()` function.
+
+The `inspect_args()` function can help in reviewing the input for each command.
+
+### `enable_deps_array`
+
+```yaml
+# default (allowed: always, never, development, production)
+enable_deps_array: always
+```
+
+Specify if you want to populate the `$deps` bash array.
+
+This is applicable only if your script uses the
+[Dependency](/configuration/dependency) configuration option.
+
+### `enable_env_var_names_array`
+
+```yaml
+# default (allowed: always, never, development, production)
+enable_env_var_names_array: always
+```
+
+Specify if you want to populate the `$env_var_names` bash array.
+
+This is applicable only if your script uses the
+[Environment Variable](/configuration/environment-variable) configuration option.
+
+## Scripting Options
+
+### `var_aliases`
+
+```yaml
+# default
+var_aliases:
+  args: ~
+  other_args: ~
+  deps: ~
+  env_var_names: ~
+
+# example
+var_aliases:
+  args: ARGS
+  other_args: catch_all
+  deps: dependencies
+  env_var_names: ENV_VARS
+```
+
+Update one or more of these options in case you wish to change the name of the
+public global array that bashly uses for storing data.
+
+Note that this feature will not change the original name, but rather create
+an alias using `declare -gn`.
+
+!!! Note
+This option cannot be set using environment variables.
+!!!
