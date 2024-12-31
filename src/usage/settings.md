@@ -331,6 +331,16 @@ Specify if you want to populate the `$env_var_names` bash array.
 This is applicable only if your script uses the
 [Environment Variable](/configuration/environment-variable) configuration option.
 
+### `enable_sourcing`
+
+```yaml
+# default (allowed: always, never, development, production)
+enable_sourcing: development
+```
+
+Specify if you want the generated script to include a condition that checks if
+the script was sourced and only execute it if it is not.
+
 ## Scripting Options
 
 ### `var_aliases`
