@@ -25,6 +25,12 @@ If you have docker installed, you can create an alias that will run the docker i
 alias bashly='docker run --rm -it --user $(id -u):$(id -g) --volume "$PWD:/app" dannyben/bashly'
 ```
 
+The bashly docker image can also be installed using Whalebrew:
+
+```shell
+whalebrew install dannyben/bashly
+```
+
 +++
 
 ## Bash Completions
