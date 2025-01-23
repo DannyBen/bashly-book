@@ -1,6 +1,6 @@
 input: src
 output: docs
-url: bashly.dannyb.co
+url: bashly.dev
 
 serve:
   host: 0.0.0.0
