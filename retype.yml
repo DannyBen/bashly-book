@@ -47,6 +47,11 @@ footer:
     - text: Site Source
       link: https://github.com/DannyBen/bashly-book
       target: blank
+      icon: mark-github
+    - text: Changelog
+      link: https://github.com/DannyBen/bashly/blob/master/CHANGELOG.md#changelog
+      target: blank
+      icon: log
 
 # Add {{ nowrap }} after `...` to prevent line break
 # ref: https://github.com/retypeapp/retype/issues/509
