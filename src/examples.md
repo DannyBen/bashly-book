@@ -97,27 +97,6 @@ All examples are listed below for convenience.
 
 ## Real world examples
 
-These tools were developed using bashly. You can review their code to learn more about using bashly.
-
-{.compact}
-Tool | Description | Discussion
------|-------------|-------------
-[Alf][alf] | a generator for bash aliases and sub-aliases
-[git-changelog][git-changelog] | a change log generator
-[kbgrep][kbgrep] | a search tool optimized for knowledgebases | [:icon-comment-discussion: Discussion](https://github.com/DannyBen/bashly/discussions/515)
-[orcli][orcli] | OpenRefine command line interface | [:icon-comment-discussion: Discussion](https://github.com/DannyBen/bashly/discussions/390)
-[pls][pls] | project level shortcut | [:icon-comment-discussion: Discussion](https://github.com/DannyBen/bashly/discussions/542)
-[Respec][respec] | a convenience wrapper for ruby's rspec
-[Rush][rush] | a personal package manager
-[slack-emoji-toolkit][slack-emoji-toolkit] | liberate your custom Slack emojis | [:icon-comment-discussion: Discussion](https://github.com/DannyBen/bashly/discussions/262)
-[zxz][zxz] | a CLI for quick file sharing via https://0x0.st | [:icon-comment-discussion: Discussion](https://github.com/DannyBen/bashly/discussions/599)
-
-[alf]: https://github.com/DannyBen/alf
-[git-changelog]: https://github.com/DannyBen/git-changelog
-[kbgrep]: https://github.com/pcrockett/kbgrep
-[pls]: https://github.com/codevogel/pls
-[respec]: https://github.com/DannyBen/respec
-[rush]: https://github.com/DannyBen/rush-cli
-[slack-emoji-toolkit]: https://github.com/wilhelm-murdoch/slack-emoji-toolkit
-[orcli]: https://github.com/opencultureconsulting/orcli
-[zxz]: https://github.com/meleu/zxz
+If you're interested in real-world examples developed by the bashly community,
+check out the [Made with Bashly](https://github.com/DannyBen/bashly/wiki/Made-with-Bashly)
+wiki page.
