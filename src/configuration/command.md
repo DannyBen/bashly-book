@@ -260,6 +260,16 @@ script.
 
 [!ref](dependency.md)
 
+### help_header_override
+
+[!badge String]
+
+Provide an alternative bash code or function call to be executed at the start of
+the help message. This is useful for displaying ASCII art when running your CLI
+with the `--help` option.
+
+[!button variant="primary" icon="code-review" text="Help Header Override Example"](https://github.com/DannyBen/bashly/tree/master/examples/help-header-override#readme)
+
 ### expose
 
 [!badge Boolean / String]

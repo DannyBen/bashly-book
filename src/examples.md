@@ -53,6 +53,7 @@ All examples are listed below for convenience.
 - [commands-expose](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme) - showing subcommands in the parent's help
 - [key-value-pairs](https://github.com/DannyBen/bashly/tree/master/examples/key-value-pairs#readme) - parsing key=value arguments and flags
 - [command-examples-on-error](https://github.com/DannyBen/bashly/tree/master/examples/command-examples-on-error#readme) - showing examples on error
+- [internal-run](https://github.com/DannyBen/bashly/tree/master/examples/internal-run#readme) - calling other commands internally
 
 ## Customization
 
@@ -61,6 +62,7 @@ All examples are listed below for convenience.
 - [custom-strings](https://github.com/DannyBen/bashly/tree/master/examples/custom-strings#readme) - configuring the script's error and usage texts
 - [custom-includes](https://github.com/DannyBen/bashly/tree/master/examples/custom-includes#readme) - adding and organizing your custom functions
 - [custom-script-header](https://github.com/DannyBen/bashly/tree/master/examples/custom-script-header#readme) - configuring a different script header
+- [help-header-override](https://github.com/DannyBen/bashly/tree/master/examples/help-header-override#readme) - replacing the header of the help message
 - [footer](https://github.com/DannyBen/bashly/tree/master/examples/footer#readme) - adding a footer to the help message
 - [command-filenames](https://github.com/DannyBen/bashly/tree/master/examples/command-filenames#readme) - overriding filenames for your source scripts
 - [command-paths](https://github.com/DannyBen/bashly/tree/master/examples/command-paths#readme) - configuring nested paths for your source scripts
