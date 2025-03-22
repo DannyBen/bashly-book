@@ -2,6 +2,8 @@
 icon: home
 order: 100
 label: Welcome
+meta:
+  title: "Bashly - Bash Command Line Framework"
 ---
 
 # Welcome to Bashly
