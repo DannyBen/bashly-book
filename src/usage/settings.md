@@ -259,7 +259,7 @@ Use the `enable_*` options below to adjust settings for each environment.
 !!! Note
 It is recommended to leave this set to `development` in the settings file, and
 use either the `BASHLY_ENV` environment variable or the
-`bashly generate --production` command when the slimmer production script is needed.
+`bashly generate --env production` command when the slimmer production script is needed.
 !!!
 
 
