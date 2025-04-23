@@ -370,3 +370,27 @@ an alias using `declare -gn`.
 !!! Note
 This option cannot be set using environment variables.
 !!!
+
+### `function_names`
+
+```yaml
+# default
+function_names:
+  run: ~
+  initialize: ~
+
+# example
+function_names:
+  run: bashly_run
+  initialize: bashly_initialize
+```
+
+Update one or more of these options in case you wish to change the name of the
+equivalent internal bashly function.
+
+This feature can be useful when you wish to reserve the function name `run` or
+`initialize` for something else.
+
+!!! Note
+This option cannot be set using environment variables.
+!!!
