@@ -9,7 +9,7 @@ Install bashly using one of these methods.
 
 +++ Ruby Gem
 
-Bashly requires Ruby 3.0 or higher (`ruby -v`).
+Bashly requires Ruby 3.2 or higher (`ruby -v`).
 
 ```shell
 gem install bashly
