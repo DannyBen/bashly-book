@@ -78,6 +78,7 @@ All examples are listed below for convenience.
 - [completions](https://github.com/DannyBen/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
 - [validations](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme) - adding validation functions for arguments, flags or environment variables
 - [hooks](https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme) - adding before/after hooks
+- [stacktrace](https://github.com/DannyBen/bashly/tree/master/examples/stacktrace#readme) - adding stacktrace on error
 
 ## Real-world-like examples
 
