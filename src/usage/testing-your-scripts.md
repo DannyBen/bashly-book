@@ -32,9 +32,9 @@ In cases where your scripts are more elaborate, or when you wish to ensure
 your scripts behave as expected, you can use any bash testing framework to test
 your scripts.
 
-One such lightweight framework, is
+One such lightweight framework is
 [Approvals.bash](https://github.com/dannyben/approvals.bash#readme), which lets
-you test any command in your script, and prompting you for interactive approval
+you test any command in your script and prompts you for interactive approval
 of its output. Whenever the output changes, you will be prompted again to approve it.
 
 A sample test script looks like this:

@@ -5,11 +5,11 @@ order: 60
 
 # Bash Completion
 
-Bashly comes with built-in bash completions generator, provided by the
+Bashly comes with a built-in bash completions generator, provided by the
 [completely][completely] gem.
 
-By running `bashly add completions` commands, you can add this functionality
-to your script in one of three ways:
+By running `bashly add completions`, you can add this functionality to your
+script in one of three ways:
 
 
 ==- `bashly add completions`
@@ -91,7 +91,7 @@ these will be automatically added to the completions list as well.
 
 If you are using Oh-My-Zsh, bash completions should already be enabled,
 otherwise, you should enable completion by adding this to your `~/.zshrc`
-(if is it not already there):
+(if it is not already there):
 
 ```bash
 # Load completion functions
