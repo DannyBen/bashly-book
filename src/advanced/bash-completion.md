@@ -8,8 +8,8 @@ order: 60
 Bashly comes with a built-in bash completions generator, provided by the
 [completely][completely] gem.
 
-By running `bashly add completions` command, you can add this functionality
-to your script in one of three ways:
+By running `bashly add completions`, you can add this functionality to your
+script in one of three ways:
 
 
 ==- `bashly add completions`
