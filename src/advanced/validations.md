@@ -10,7 +10,7 @@ arguments, and environment variables. This is how it works:
 
 1. In your bashly configuration file, arguments and flags (with arguments)
    may have a `validate: function_name` option.
-2. Whenever your run your script, it will look for a function with that name,
+2. Whenever you run your script, it will look for a function with that name,
    prefixed by `validate_` and will run it before allowing the user
    input to pass.
 3. If the function returns any string, it is considered an error. The

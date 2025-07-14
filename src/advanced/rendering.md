@@ -11,7 +11,7 @@ Bashly is capable of rendering documentation for your script based on
 your `bashly.yml` configuration by using the `bashly render` command.
 
 This command can generate any kind of output using either templates that are 
-built in in Bashly (for example Markdown or man pages), or by using
+built into Bashly (for example Markdown or man pages), or by using
 any custom templates.
 
 ## Built-in templates
@@ -23,7 +23,7 @@ all templates, run:
 $ bashly render --list
 ```
 
-Some built in templates may have special optional features that let you 
+Some built-in templates may have special optional features that let you
 customize the output. Learn more about each template by running:
 
 ```bash

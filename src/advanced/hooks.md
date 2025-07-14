@@ -23,7 +23,7 @@ Run `bashly add hooks` to create the hook files in your source directory.
 
 ## Alternatives
 
-These hooks should be considered last resort, for any functionality that is not 
+These hooks should be considered a last resort, for any functionality that is not
 covered by more native means.
 
 Below is a list of some related features that can
