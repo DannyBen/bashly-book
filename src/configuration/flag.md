@@ -154,8 +154,8 @@ This option should be specified on both sides of the exclusivity.
 
 [!badge Array of Strings]
 
-Specify an array of additional completion suggestions when used in conjunction
-with `bashly add completions`.
+Specify an array of additional completion suggestions for this flag's value
+when used in conjunction with `bashly add completions`.
 
 Remember to set the [`arg`](#arg) name when using this option.
 

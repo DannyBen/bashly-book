@@ -37,29 +37,39 @@ By running `bashly generate --upgrade`, your completions function
 (generated with `bashly add completions`) will be regenerated.
 !!!
 
-## Custom command completions
+## Custom argument completions
 
 In addition to the automatic suggestion of subcommands and flags, you can
 instruct bashly to also suggest files, directories, users, git branches and
-more. To do this, add another option in your `bashly.yml` on the command you
-wish to alter:
+more.
+
+For positional arguments, add `completions` to the argument that should receive
+these suggestions:
 
 ```yaml bashly.yml
 commands:
 - name: upload
   help: Upload a file
-  completions:
-  - <directory>
-  - <user>
-  - $(git branch 2> /dev/null)
+  args:
+  - name: source
+    help: File to upload
+    required: true
+    completions:
+    - <file>
+    - <directory>
+    - $(git branch 2> /dev/null)
 
 ```
 
+The `completions` option is still supported on commands as a fallback for
+positional arguments, but it is discouraged for new configurations. Prefer
+placing completions directly on the relevant `args` entry.
+
 ## Custom flag completions
 
-The `completions` option is also available on flags that have an `arg`.
-Similarly to the `allowed` option for arguments, the allowed list is added
-to the suggestions automatically (without the need to use `completions`).
+For flag values, add `completions` to flags that have an `arg`. Similarly to
+the `allowed` option for arguments and flags, the allowed list is added to the
+suggestions automatically (without the need to use `completions`).
 
 ```yaml bashly.yml
 commands:
@@ -78,7 +88,7 @@ commands:
 ```
 
 - Anything between `<...>` will be added using the `compgen -A action` flag.
-- Anything else, will be appended to the `compgen -W` flag.
+- Anything else will be appended to the `compgen -W` flag.
 
 !!! Note
 In case you are using the
