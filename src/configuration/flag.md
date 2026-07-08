@@ -16,6 +16,7 @@ flags:
 
   - long: --user
     short: -u
+    alias: --username
     arg: name
     help: Repository user name.
     required: true
@@ -81,6 +82,20 @@ for example: `${args[-f]}`.
 
 !!! Special handling for -v and -h
 The `-v` and `-h` flags will be used as the short options for `--version` and `--help` respectively **only if you are not using them in any of your own flags**.
+!!!
+
+
+### alias
+
+[!badge String / Array of Strings]
+
+One or more additional spellings for this flag. Each alias must include the
+`--` or `-` prefix.
+
+!!! Note
+Aliases only affect how the flag is entered by the user. In your script, the
+value will still be available using the flag's canonical name, for example:
+`${args[--user]}`.
 !!!
 
 
