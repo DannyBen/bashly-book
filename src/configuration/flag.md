@@ -32,13 +32,10 @@ flags:
     help: Verbosity level (up to -vvv)
     repeatable: true
 
-  - long: --cache
-    help: Enable cache
-    conflicts: [--no-cache]
-
-  - long: --no-cache
-    help: Disable cache
-    conflicts: [--cache]
+  - long: --color
+    short: -c
+    help: Enable color output
+    negatable: true
 ```
 ===
 
@@ -128,6 +125,25 @@ be provided to your script as a space delimited string (similar to how it is
 provided when the user inputs values).
 
 [!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/bashly-framework/bashly/tree/master/examples/default-values#readme)
+
+### negatable
+
+[!badge Boolean]
+
+Allow a boolean long flag to also be disabled with its `--no-` form.
+This is helpful for overriding flag values defined in an
+[`argfile`](command.md#argfile).
+
+This accepts both `--color` and `--no-color`. The generated help will show
+`--[no-]color`.
+
+When `--no-color` is used, Bashly unsets the canonical flag value. In your
+script, check `${args[--color]}` as usual.
+
+!!! Note
+This option only applies to long flags without an argument. It cannot be used
+with `arg`, `repeatable`, or `required`.
+!!!
 
 ### required
 

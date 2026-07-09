@@ -230,6 +230,9 @@ for a file named `.mycli` in the current working directory".
 This is useful for keeping default flags in a file while still allowing
 explicit CLI flags to override them.
 
+For boolean long flags, [`negatable`](flag.md#negatable) can be used to let
+users disable an argfile-provided flag with its `--no-` form.
+
 The argfile format is intentionally simple:
 
 - Only lines that start with `-` or `--` are considered
