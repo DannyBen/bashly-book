@@ -12,7 +12,7 @@ editor:
   enabled: false
 
 branding:
-  label: v1.3.8
+  label: v1.4.0
   logo: assets/logo.svg
   logoDark: assets/logo-dark.svg
   # logoWidth: 143

@@ -16,6 +16,7 @@ flags:
 
   - long: --user
     short: -u
+    alias: --username
     arg: name
     help: Repository user name.
     required: true
@@ -31,13 +32,10 @@ flags:
     help: Verbosity level (up to -vvv)
     repeatable: true
 
-  - long: --cache
-    help: Enable cache
-    conflicts: [--no-cache]
-
-  - long: --no-cache
-    help: Disable cache
-    conflicts: [--cache]
+  - long: --color
+    short: -c
+    help: Enable color output
+    negatable: true
 ```
 ===
 
@@ -84,6 +82,20 @@ The `-v` and `-h` flags will be used as the short options for `--version` and `-
 !!!
 
 
+### alias
+
+[!badge String / Array of Strings]
+
+One or more additional spellings for this flag. Each alias must include the
+`--` or `-` prefix.
+
+!!! Note
+Aliases only affect how the flag is entered by the user. In your script, the
+value will still be available using the flag's canonical name, for example:
+`${args[--user]}`.
+!!!
+
+
 ### help
 
 [!badge String]
@@ -113,6 +125,25 @@ be provided to your script as a space delimited string (similar to how it is
 provided when the user inputs values).
 
 [!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/bashly-framework/bashly/tree/master/examples/default-values#readme)
+
+### negatable
+
+[!badge Boolean]
+
+Allow a boolean long flag to also be disabled with its `--no-` form.
+This is helpful for overriding flag values defined in an
+[`argfile`](command.md#argfile).
+
+This accepts both `--color` and `--no-color`. The generated help will show
+`--[no-]color`.
+
+When `--no-color` is used, Bashly unsets the canonical flag value. In your
+script, check `${args[--color]}` as usual.
+
+!!! Note
+This option only applies to long flags without an argument. It cannot be used
+with `arg`, `repeatable`, or `required`.
+!!!
 
 ### required
 
@@ -154,8 +185,8 @@ This option should be specified on both sides of the exclusivity.
 
 [!badge Array of Strings]
 
-Specify an array of additional completion suggestions when used in conjunction
-with `bashly add completions`.
+Specify an array of additional completion suggestions for this flag's value
+when used in conjunction with `bashly add completions`.
 
 Remember to set the [`arg`](#arg) name when using this option.
 

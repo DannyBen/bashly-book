@@ -94,7 +94,19 @@ define required arguments after it.
 Limit the allowed values to a specified whitelist. Can be used in conjunction
 with [`default`](#default) or [`required`](#required).
 
+Allowed values are also added to generated bash completions automatically.
+
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/bashly-framework/bashly/tree/master/examples/whitelist#readme)
+
+
+### completions
+
+[!badge Array of Strings]
+
+Specify an array of additional completion suggestions when used in conjunction
+with `bashly add completions`.
+
+[!ref](/advanced/bash-completion.md)
 
 
 ### repeatable

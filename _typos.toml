@@ -1,0 +1,10 @@
+# [default]
+# extend-ignore-identifiers-re = [
+#   "fo",
+# ]
+
+[files]
+extend-exclude = [
+  "*.svg",
+]
+

@@ -230,6 +230,9 @@ for a file named `.mycli` in the current working directory".
 This is useful for keeping default flags in a file while still allowing
 explicit CLI flags to override them.
 
+For boolean long flags, [`negatable`](flag.md#negatable) can be used to let
+users disable an argfile-provided flag with its `--no-` form.
+
 The argfile format is intentionally simple:
 
 - Only lines that start with `-` or `--` are considered
@@ -294,6 +297,11 @@ To access arguments captured by `catch_all` in your script, use the
 
 Specify an array of additional completion suggestions when used in conjunction
 with `bashly add completions`.
+
+This command-level option is supported as a fallback for positional arguments,
+but it is discouraged for new configurations. Prefer setting
+[`completions`](argument.md#completions) on the relevant argument, or on the
+relevant [`flag`](flag.md#completions) when completing a flag value.
 
 [!ref](/advanced/bash-completion.md)
 
