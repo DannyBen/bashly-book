@@ -28,15 +28,28 @@ If your application provides a completion script:
 3. Enable runtime completions in your Bashly settings file:
 
    ```yaml settings.yml
-   enable_completions: always
+   completions: full
    ```
 
 4. Regenerate your application. Existing commands or flags that call
    `send_completions` can continue to do so.
 
-The generated `send_completions` function currently supports Bash. For
-example, an application can expose it through a `completions` command whose
-handler contains:
+The generated `send_completions` function supports Bash and Zsh. For example,
+an application can expose it through a `completions` command whose shell
+argument allows both adapters:
+
+```yaml bashly.yml
+commands:
+- name: completions
+  help: Generate a shell completion script
+  args:
+  - name: shell
+    help: Shell to generate completions for
+    allowed: [bash, zsh]
+    default: bash
+```
+
+Its handler can then dispatch to the requested adapter:
 
 ```bash
 send_completions "${args[shell]}"

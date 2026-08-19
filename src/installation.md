@@ -63,8 +63,8 @@ sudo apt install bash-completion
 ```
 
 !!!success Tip
-To generate bash completions for your own scripts, see  
-[Advanced Features :icon-chevron-right: Bash Completion](/advanced/bash-completion/)
+To generate runtime completions for your own scripts, see [Advanced Features
+:icon-chevron-right: Runtime Completions](/advanced/bash-completion/)
 !!!
 
 ## Prerequisites

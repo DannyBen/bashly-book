@@ -311,6 +311,37 @@ This option cannot be set using environment variables.
 
 ## Feature Toggles
 
+### `completions`
+
+```yaml
+# Generate the runtime engine and all available shell adapters
+completions: full
+
+# default
+completions: ~
+```
+
+Specify which native runtime completion components to include in the generated
+script:
+
+- `~` or `false`: generate no completion code (default).
+- `minimal`: generate the internal `__complete` runtime engine without
+  `send_completions` or shell adapters.
+- `bash`: generate the runtime engine and Bash adapter.
+- `zsh`: generate the runtime engine and Zsh adapter.
+- `bash,zsh` or `bash, zsh`: generate the runtime engine and the selected
+  adapters.
+- `full`: generate the runtime engine and every available adapter.
+
+When at least one adapter is selected, Bashly generates the
+`send_completions` function. Bash and Zsh adapters are currently available.
+
+The same values can be provided through `BASHLY_COMPLETIONS`. Like other
+settings, this setting can use an environment suffix, such as
+`completions_production`.
+
+[!ref](/advanced/bash-completion/)
+
 ### `env`
 
 ```yaml
@@ -352,19 +383,6 @@ enable_bash_version_bouncer: always
 
 Specify if you wish to render the piece of code that aborts the script execution
 when bash version is < 4.2.
-
-### `enable_completions`
-
-```yaml
-# default (allowed: always, never, development, production)
-enable_completions: never
-```
-
-Specify if you want the generated script to include native runtime completion
-support, including the `send_completions` function and internal `__complete`
-command.
-
-[!ref](/advanced/bash-completion/)
 
 ### `enable_view_markers`
 

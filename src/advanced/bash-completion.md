@@ -3,20 +3,22 @@ icon: dot
 order: 60
 ---
 
-# Bash Completion
+# Runtime Completions
 
 Bashly can generate native runtime completions for your application. The
 generated completion script suggests commands, aliases, flags, positional
 arguments with `allowed` values, and flag arguments with `allowed` values.
 
-Runtime completions are disabled by default and currently support Bash only.
+Runtime completions are disabled by default. Bashly provides adapters for Bash
+and Zsh.
 
 ## Enable runtime completions
 
-Enable completions in your Bashly settings file:
+Enable the runtime engine and all available shell adapters in your Bashly
+settings file:
 
 ```yaml settings.yml
-enable_completions: always
+completions: full
 ```
 
 Add a command that users can call to generate the completion script:
@@ -28,7 +30,7 @@ commands:
   args:
   - name: shell
     help: Shell to generate completions for
-    allowed: [bash]
+    allowed: [bash, zsh]
     default: bash
 ```
 
@@ -39,10 +41,14 @@ send_completions "${args[shell]}"
 ```
 
 After regenerating your application, users can load its completion script in
-Bash:
+their shell:
 
 ```bash
-source <(cli completions)
+# Bash
+source <(cli completions bash)
+
+# Zsh
+source <(cli completions zsh)
 ```
 
 Replace `cli` with the name or path of your generated application.
@@ -171,13 +177,13 @@ cli __complete deploy --config ""
 ```
 
 Candidate lines are written to standard output, followed by an internal
-`:options=` line used by the Bash completion script. This makes `__complete`
+`:options=` line used by the shell adapters. This makes `__complete`
 useful when testing custom `static`, `dynamic`, or filesystem completions.
 
 !!! Note
 `__complete` is an internal completion endpoint intended for testing and shell
 integration. Users should normally load completions with
-`source <(cli completions)`.
+`source <(cli completions bash)` or `source <(cli completions zsh)`.
 !!!
 
 [!button variant="primary" icon="code-review" text="Advanced Completions Example"](https://github.com/bashly-framework/bashly/tree/master/examples/completions-advanced#readme)
