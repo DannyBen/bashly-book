@@ -343,11 +343,11 @@ enable_header_comment: always
 Specify if you wish to render the "do not modify" comment at the beginning of
 the script.
 
-### `enable_bash3_bouncer`
+### `enable_bash_version_bouncer`
 
 ```yaml
 # default (allowed: always, never, development, production)
-enable_bash3_bouncer: always
+enable_bash_version_bouncer: always
 ```
 
 Specify if you wish to render the piece of code that aborts the script execution
