@@ -504,11 +504,13 @@ This option cannot be set using environment variables.
 ```yaml
 # default
 function_names:
+  start: ~
   run: ~
   initialize: ~
 
 # example
 function_names:
+  start: bashly_start
   run: bashly_run
   initialize: bashly_initialize
 ```
@@ -516,8 +518,8 @@ function_names:
 Update one or more of these options in case you wish to change the name of the
 equivalent internal bashly function.
 
-This feature can be useful when you wish to reserve the function name `run` or
-`initialize` for something else.
+This feature can be useful when you wish to reserve the function name `start`,
+`run`, or `initialize` for something else.
 
 !!! Note
 This option cannot be set using environment variables.
