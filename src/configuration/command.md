@@ -291,21 +291,6 @@ To access arguments captured by `catch_all` in your script, use the
 [!button variant="primary" icon="code-review" text="Catch All Example"](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all#readme) [!button variant="primary" icon="code-review" text="Catch All Advanced Example"](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all-advanced#readme)
 
 
-### completions
-
-[!badge Array of Strings]
-
-Specify an array of additional completion suggestions when used in conjunction
-with `bashly add completions`.
-
-This command-level option is supported as a fallback for positional arguments,
-but it is discouraged for new configurations. Prefer setting
-[`completions`](argument.md#completions) on the relevant argument, or on the
-relevant [`flag`](flag.md#completions) when completing a flag value.
-
-[!ref](/advanced/bash-completion.md)
-
-
 ### dependencies
 
 [!badge Array of Strings / Hash / Array of Dependencies]

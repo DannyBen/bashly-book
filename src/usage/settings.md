@@ -353,6 +353,19 @@ enable_bash3_bouncer: always
 Specify if you wish to render the piece of code that aborts the script execution
 when bash version is < 4.2.
 
+### `enable_completions`
+
+```yaml
+# default (allowed: always, never, development, production)
+enable_completions: never
+```
+
+Specify if you want the generated script to include native runtime completion
+support, including the `send_completions` function and internal `__complete`
+command.
+
+[!ref](/advanced/bash-completion/)
+
 ### `enable_view_markers`
 
 ```yaml

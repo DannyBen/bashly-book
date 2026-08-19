@@ -9,7 +9,7 @@ Install bashly using one of these methods.
 
 +++ Ruby Gem
 
-Bashly requires Ruby 3.2 or higher (`ruby -v`).
+Bashly requires Ruby 3.3 or higher (`ruby -v`).
 
 ```shell
 gem install bashly
@@ -35,11 +35,23 @@ whalebrew install dannyben/bashly
 
 ## Bash Completions
 
-To enable bash completions for the `bashly` executable itself run:
+To load completions for the `bashly` executable in the current Bash session,
+run:
 
 ```shell
-bashly completions --install
+source <(bashly completions)
 ```
+
+For a persistent per-user installation, save the script as `bashly` in the
+standard user completions directory:
+
+```shell
+mkdir -p ~/.local/share/bash-completion/completions
+bashly completions > ~/.local/share/bash-completion/completions/bashly
+```
+
+The `bash-completion` package will load this file on demand when completing the
+`bashly` command.
 
 You might need to install the `bash-completion` package for your operating
 system if it is not already installed. For example:
