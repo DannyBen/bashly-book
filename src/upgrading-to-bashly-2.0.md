@@ -11,6 +11,11 @@ used by earlier versions.
 
 This guide explains how to update an existing Bashly project.
 
+## Rename the Bash version bouncer setting
+
+Rename `enable_bash3_bouncer` to `enable_bash_version_bouncer` in your Bashly
+settings file. Its allowed values and behavior remain unchanged.
+
 ## Migrate generated completion support
 
 If your application provides a completion script:
