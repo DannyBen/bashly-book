@@ -17,6 +17,14 @@ gem install bashly
 
 [!ref](/installing-ruby)
 
++++ Homebrew
+
+If you have Homebrew installed, you can install Bashly from the official tap:
+
+```shell
+brew install bashly-framework/tap/bashly
+```
+
 +++ Docker
 
 If you have docker installed, you can create an alias that will run the docker image:
