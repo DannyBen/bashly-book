@@ -5,18 +5,18 @@ order: 55
 
 # Upgrading to Bashly 2.0
 
-Bashly 2.0 is mostly backward compatible. The main breaking change is the new
-native runtime completion system, which replaces the Completely-based system
-used by earlier versions.
+Bashly 2.0 is mostly backward compatible. Review the settings changes and shell
+completion migration steps below before regenerating your application.
 
-This guide explains how to update an existing Bashly project.
+## Settings
 
-## Rename the Bash version bouncer setting
+- Rename `enable_bash3_bouncer` to `enable_bash_version_bouncer`.
+- Delete `watch_evented`. Evented file watching is no longer supported; Bashly
+  now uses polling.
 
-Rename `enable_bash3_bouncer` to `enable_bash_version_bouncer` in your Bashly
-settings file. Its allowed values and behavior remain unchanged.
+## Shell Completion
 
-## Migrate generated completion support
+### Generated completion support
 
 If your application provides a completion script:
 
@@ -59,13 +59,13 @@ send_completions "${args[shell]}"
 
 [!button variant="primary" icon="code-review" text="Runtime Completions Example"][completions-example]
 
-## Migrate custom completions
+### Custom completions
 
 The `completions` directive in `bashly.yml` now uses a structured runtime
 format and is supported only on arguments and flags. The old array syntax and
 command-level `completions` are no longer supported.
 
-### Literal candidates
+#### Literal candidates
 
 Move literal candidates to `static`:
 
@@ -87,7 +87,7 @@ Use [`allowed`](/configuration/argument/#allowed) when values should be
 validated. Use `completions.static` when they should only be suggested.
 !!!
 
-### Commands and functions
+#### Commands and functions
 
 Move shell commands and Bash functions to `dynamic`, without wrapping them in
 `$()`:
@@ -118,7 +118,7 @@ Dynamic entries run whenever the user requests a completion. Use fast,
 side-effect-free commands and functions.
 !!!
 
-### Files and directories
+#### Files and directories
 
 Move file and directory completion to `options`:
 
@@ -148,7 +148,7 @@ Normal spacing is the default. Use `no-space` only when the user should
 continue typing immediately after the inserted candidate. Candidate
 de-duplication is always enabled and is not configurable.
 
-### Command-level completions
+#### Command-level completions
 
 Remove `completions` from commands and configure the relevant positional
 argument or flag argument instead:
@@ -170,7 +170,7 @@ commands:
         - git branch --format='%(refname:short)'
 ```
 
-### Completely actions
+#### Completely actions
 
 Completely-specific actions such as `<user>`, `<hostname>`, and `<service>` no
 longer have built-in equivalents. Replace them with a dynamic command or
