@@ -19,10 +19,10 @@ gem install bashly
 
 +++ Homebrew
 
-If you have Homebrew installed, you can install Bashly from the official tap:
+If you have Homebrew installed, you can install Bashly directly from Homebrew Core:
 
 ```shell
-brew install bashly-framework/tap/bashly
+brew install bashly
 ```
 
 +++ Docker
